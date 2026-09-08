@@ -1,0 +1,26 @@
+Telugu devotional PDFs downloaded for the Saptarishi book library.
+
+Source list (as suggested via freegurukul / pithapuram-in links):
+
+- FreeGurukul free-learning hub:  https://www.freegurukul.org/free-learning
+  (JS app; its Telugu book PDFs are mirrored on archive.org under the
+  creator "www.freegurukul.org" and the companion devotional collections,
+  e.g. https://archive.org/details/sridevi-bhagavatham )
+
+- Pithapuram free PDF devotional-books post (links the puranas below):
+  https://www.pithapuram.in/2020/05/free-pdf-devotional-books-download.html
+
+Files (all from the archive.org collection
+"SaiRealAttitudeManagement-Telugu-Devotional-Spiritual-Free-eBooks-Puranalu",
+mirroring the same Telugu devotional e-books):
+
+  BrahmaPuranamu.pdf      PU040-BrahmaPuranamu.pdf
+  DeviBhagavatham.pdf     PU035-DeviBhagavatham.pdf
+  GarudaPuranamu.pdf      PU043-GarudaPuranamu.pdf
+  KarthikaPuranamu.pdf    PU030-SkandaPurananthargatha-KaartheekaPuranam.pdf
+  PadmaPuranamu.pdf       PU042-PadmaPuranamu.pdf
+  SivaThandavamu.pdf      PU027-SivaThandavamu.pdf
+  SriDattaPuranam.pdf     PU049-SriDattaPuranam.pdf
+  VishnuPuranamu.pdf      PU047-VishnuPuranam.pdf
+
+Download date: 2026-09-06.

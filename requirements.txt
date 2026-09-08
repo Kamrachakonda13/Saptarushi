@@ -1,0 +1,39 @@
+# Saptarushi — project dependencies (reference)
+#
+# NOTE: Saptarushi is a static site. There are NO Python packages and no
+# pip requirements — a Python virtual environment is not needed to build or
+# serve it. This file is a *reference index* of every external dependency,
+# pinned to the exact versions the site uses.
+
+# ---------------------------------------------------------------------------
+# 1. Runtime tooling (system)
+# ---------------------------------------------------------------------------
+node:            >= 20            # runs build.js and serve.js (uses only Node built-ins)
+
+# ---------------------------------------------------------------------------
+# 2. Runtime engine (VENDORED locally — no install required)
+# ---------------------------------------------------------------------------
+@ishubhamx/panchangam-js  == 3.0.0   # Swiss-Ephemeris panchangam engine (MIT)
+astronomy-engine          == 2.1.19  # ephemeris core (MIT), transitive dep
+                                      # Copied into assets/vendor/ (see
+                                      # assets/vendor/LICENSES.md), so the
+                                      # almanac computes fully offline.
+                                      # To refresh: npm install
+                                      #   @ishubhamx/panchangam-js@3.0.0 and
+                                      #   astronomy-engine@2.1.19, re-bundle or
+                                      #   copy the jsDelivr +esm output.
+
+# ---------------------------------------------------------------------------
+# 3. Runtime CDN assets (fetched in the browser; no install required)
+# ---------------------------------------------------------------------------
+leaflet                  == 1.9.4    # temples map (unpkg), tile layer from
+                                      # https://tile.openstreetmap.org
+google-fonts             (fraunces / karla / noto-serif-telugu)
+openstreetmap            (tiles, no API key)
+
+# ---------------------------------------------------------------------------
+# 4. Local build & dev workflow
+# ---------------------------------------------------------------------------
+#   node build.js        -> regenerates all HTML from data.js / stotras.json /
+#                           temples.json (bump ?v=N in build.js head() on CSS change)
+#   node serve.js        -> static server on http://localhost:4173

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" data-text-size="base">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Books — Telugu devotional reading | Saptarushi</title>
+<meta name="description" content="Telugu devotional books and guides you can read comfortably right in the browser."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;600;700&family=Noto+Serif+Telugu:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css?v=39"/>
+
+</head>
+<body>
+<div class="bg-parch text-ink min-h-screen">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><svg class="brand-logo" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false">
+  <circle cx="24" cy="24" r="23.5" fill="#2e1418"/>
+  <circle cx="24" cy="24" r="22.25" fill="rgba(242, 166, 58, 0.07)"/>
+  <circle cx="24" cy="24" r="23.5" fill="none" stroke="rgba(242,166,58,0.4)" stroke-width="1"/>
+  <g fill="#f2a63a">
+    <circle cx="12" cy="13" r="1.15"/><circle cx="16.9" cy="8.5" r="1.15"/>
+    <circle cx="21.6" cy="6.6" r="1.15"/><circle cx="24" cy="6.2" r="1.15"/>
+    <circle cx="26.4" cy="6.6" r="1.15"/><circle cx="31.1" cy="8.5" r="1.15"/>
+    <circle cx="36" cy="13" r="1.15"/>
+  </g>
+  <g fill="#f2a63a">
+    <circle cx="24" cy="14" r="3"/>
+    <path d="M21.7 16.3c.7 1.2 1.9 1.7 2.3 1.7s1.6-.5 2.3-1.7"/>
+    <path d="M20.3 18.5c-2.6 2.4-3.9 5.9-3.4 9.7.3 2.3.2 3.6.2 3.6h12.2h.2s-.1-1.3.2-3.6c.5-3.8-.8-7.3-3.4-9.7-2.1.9-5.1.9-7.2 0z"/>
+    <path d="M18.8 32.4c2.3 1.9 6 1.9 8.3 0"/>
+  </g>
+</svg></span>
+        <span class="leading-none">
+          <span class="brand-name">Saptarushi</span>
+          <span class="brand-tag">తెలుగు భక్తి</span>
+        </span>
+      </a>
+      <nav class="main-nav">
+        <a href="audio.html">Audio</a>
+        <a href="books.html" class="active">Books</a>
+        <a href="temples.html">Temples</a>
+        <a href="panchangam.html">Panchang</a>
+        <a href="about.html">About</a>
+        <a href="admin.html" class="nav-admin">Admin</a>
+      </nav>
+      <div class="header-right">
+        <span class="textsize-label">Text size</span>
+        <div class="textsize-group" role="group" aria-label="Text size">
+          <button class="textsize-btn" data-size="base" aria-label="Text size A">A</button>
+          <button class="textsize-btn" data-size="large" aria-label="Text size A+">A+</button>
+          <button class="textsize-btn" data-size="xlarge" aria-label="Text size A++">A++</button>
+        </div>
+        <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="audio.html">Audio</a>
+    <a href="books.html" class="active">Books</a>
+    <a href="temples.html">Temples</a>
+    <a href="panchangam.html">Panchang</a>
+    <a href="about.html">About</a>
+    <a href="admin.html" class="nav-admin">Admin</a>
+  </nav>
+<nav class="back-bar" aria-label="Back"><a class="back-btn" href="index.html">← Home</a></nav>
+<main>
+  <section class="section-page py-top">
+    <div class="page-head">
+      <h1>Books</h1>
+      <p>Open any book and read it here. Use the “Text size” buttons at the top right if you'd like bigger words.</p>
+    </div>
+    <div class="grid-books" style="margin-top:1.5rem"><a class="book-card" href="books/venkateswara-mahatyam.html">
+    <img class="book-cover-img" src="assets/deities/venkateswara.jpg" alt="The Hill of Grace — a devotee&#39;s guide" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ వేంకటేశ్వర మహాత్మ్యం</p>
+      <p class="book-en">The Hill of Grace — a devotee&#39;s guide</p>
+      <p class="book-meta">Compiled for daily reading</p>
+    </div>
+  </a>
+<a class="book-card" href="books/shiva-daily.html">
+    <img class="book-cover-img" src="assets/deities/shiva.jpg" alt="Mondays with Shiva" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శివ ఆరాధన</p>
+      <p class="book-en">Mondays with Shiva</p>
+      <p class="book-meta">Compiled for daily reading</p>
+    </div>
+  </a>
+<a class="book-card" href="books/rama-katha.html">
+    <img class="book-cover-img" src="assets/deities/rama.jpg" alt="The story of Rama, retold simply" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">రామ కథ</p>
+      <p class="book-en">The story of Rama, retold simply</p>
+      <p class="book-meta">Compiled for daily reading</p>
+    </div>
+  </a>
+<a class="book-card" href="books/krishna-gita-notes.html">
+    <img class="book-cover-img" src="assets/deities/krishna.png" alt="Reading the Gita, chapter by chapter" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">గీతా పఠన సూచనలు</p>
+      <p class="book-en">Reading the Gita, chapter by chapter</p>
+      <p class="book-meta">Reader&#39;s notes · Coming soon</p>
+    </div>
+  </a>
+<a class="book-card" href="books/ganesha-prayers.html">
+    <img class="book-cover-img" src="assets/deities/ganesha.jpg" alt="Prayers to begin with" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">వినాయక ప్రార్థనలు</p>
+      <p class="book-en">Prayers to begin with</p>
+      <p class="book-meta">Compiled for daily reading · Coming soon</p>
+    </div>
+  </a>
+<a class="book-card" href="books/hanuman-readings.html">
+    <img class="book-cover-img" src="assets/deities/hanuman.jpg" alt="Saturday readings" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శనివార పఠనాలు</p>
+      <p class="book-en">Saturday readings</p>
+      <p class="book-meta">Compiled for daily reading · Coming soon</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-lingashtakam.html">
+    <img class="book-cover-img" src="assets/deities/shiva.jpg" alt="Lingashtakam" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">లింగాష్టకం</p>
+      <p class="book-en">Lingashtakam</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-sankata-nasana.html">
+    <img class="book-cover-img" src="assets/deities/ganesha.jpg" alt="Sri Sankata Nasana Ganesha Stotram" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ సంకటనాశన గణేశ స్తోత్రం</p>
+      <p class="book-en">Sri Sankata Nasana Ganesha Stotram</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-govinda-namalu.html">
+    <img class="book-cover-img" src="assets/deities/venkateswara.jpg" alt="Sri Govinda Namalu" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ గోవింద నామాలు</p>
+      <p class="book-en">Sri Govinda Namalu</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-aparajitha.html">
+    <img class="book-cover-img" src="assets/deities/durga.jpg" alt="Aparajitha Stotram (Telugu Meaning)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">అపరాజితా స్తోత్రం</p>
+      <p class="book-en">Aparajitha Stotram (Telugu Meaning)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-ekashloki.html">
+    <img class="book-cover-img" src="assets/deities/navagraha.jpg" alt="Ekashloki Navagraha Stotram (with Telugu Meaning)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">ఏకశ్లోకీ నవగ్రహ స్తోత్రం</p>
+      <p class="book-en">Ekashloki Navagraha Stotram (with Telugu Meaning)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-ayyappa-pancharatnam.html">
+    <img class="book-cover-img" src="assets/deities/ayyappa.jpg" alt="Sri Ayyappa Pancharatnam" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ శాస్తా (అయ్యప్ప) పంచరత్నం</p>
+      <p class="book-en">Sri Ayyappa Pancharatnam</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-navagraha-stotram.html">
+    <img class="book-cover-img" src="assets/deities/navagraha.jpg" alt="Navagraha Stotram (Vadiraja Krutam) (with Telugu Meaning)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">నవగ్రహ స్తోత్రం (వాదిరాజయతి కృతం)</p>
+      <p class="book-en">Navagraha Stotram (Vadiraja Krutam) (with Telugu Meaning)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-durga-ashtakam.html">
+    <img class="book-cover-img" src="assets/deities/durga.jpg" alt="Sri Durga Ashtakam (Telugu Meaning)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ దుర్గాష్టకం</p>
+      <p class="book-en">Sri Durga Ashtakam (Telugu Meaning)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-sai-bhupali.html">
+    <img class="book-cover-img" src="assets/deities/saibaba.jpg" alt="Shirdi Sai Bhupali Aarathi (with Telugu Meaning)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">భూపాళీ ఆరతీ</p>
+      <p class="book-en">Shirdi Sai Bhupali Aarathi (with Telugu Meaning)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-hanuman-chalisa.html">
+    <img class="book-cover-img" src="assets/deities/hanuman.jpg" alt="Hanuman Chalisa (Tulsidas)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">హనుమాన్ చాలీసా (తులసీదాస కృతం)</p>
+      <p class="book-en">Hanuman Chalisa (Tulsidas)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-rudrashtakam.html">
+    <img class="book-cover-img" src="assets/deities/shiva.jpg" alt="Rudra Ashtakam" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">రుద్రాష్టకం</p>
+      <p class="book-en">Rudra Ashtakam</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-trailokya-lakshmi.html">
+    <img class="book-cover-img" src="assets/deities/lakshmi.jpg" alt="Trailokya Mangala Lakshmi Stotram" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ లక్ష్మీ స్తోత్రం (త్రైలోక్య మంగళం)</p>
+      <p class="book-en">Trailokya Mangala Lakshmi Stotram</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-tandava.html">
+    <img class="book-cover-img" src="assets/deities/shiva.jpg" alt="Shiva Tandava Stotram" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శివ తాండవ స్తోత్రం</p>
+      <p class="book-en">Shiva Tandava Stotram</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-bhujangam.html">
+    <img class="book-cover-img" src="assets/deities/subrahmanya.jpg" alt="Sri Subrahmanya Bhujangam (Telugu Meaning)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ సుబ్రహ్మణ్య భుజంగం</p>
+      <p class="book-en">Sri Subrahmanya Bhujangam (Telugu Meaning)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-rama-stotram.html">
+    <img class="book-cover-img" src="assets/deities/rama.jpg" alt="Indra Kruta Sri Rama Stotram" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ రామ స్తోత్రం (ఇంద్ర కృతం)</p>
+      <p class="book-en">Indra Kruta Sri Rama Stotram</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-vajra-panjara.html">
+    <img class="book-cover-img" src="assets/deities/subrahmanya.jpg" alt="Sri Subrahmanya Vajra Panjara Kavacham (with Telugu Meaning)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ సుబ్రహ్మణ్య వజ్రపంజర కవచం</p>
+      <p class="book-en">Sri Subrahmanya Vajra Panjara Kavacham (with Telugu Meaning)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-harivarasanam.html">
+    <img class="book-cover-img" src="assets/deities/ayyappa.jpg" alt="Harivarasanam (Harihara Atmaja Ashtakam)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ హరిహరాత్మజాష్టకం (హరివరాసనం)</p>
+      <p class="book-en">Harivarasanam (Harihara Atmaja Ashtakam)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-sare-venkateshwara-stotram.html">
+    <img class="book-cover-img" src="assets/deities/venkateswara.jpg" alt="Sri Venkateshwara Stotram (Telugu Meaning)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ వేంకటేశ్వర స్తోత్రం</p>
+      <p class="book-en">Sri Venkateshwara Stotram (Telugu Meaning)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-sai-karavalamba.html">
+    <img class="book-cover-img" src="assets/deities/saibaba.jpg" alt="Sri Sainatha Karavalamba Stotram (with Telugu Meaning)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ సాయినాథ కరావలంబ స్తోత్రం</p>
+      <p class="book-en">Sri Sainatha Karavalamba Stotram (with Telugu Meaning)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-anjaneya-stotram.html">
+    <img class="book-cover-img" src="assets/deities/hanuman.jpg" alt="Sri Anjaneya Stotram (Telugu Meaning)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ ఆంజనేయ స్తోత్రం</p>
+      <p class="book-en">Sri Anjaneya Stotram (Telugu Meaning)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-kanakadhara.html">
+    <img class="book-cover-img" src="assets/deities/lakshmi.jpg" alt="Kanakadhara Stotram (Variation)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">కనకధారా స్తోత్రం (పాఠాంతరం)</p>
+      <p class="book-en">Kanakadhara Stotram (Variation)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-krishna-kavacham.html">
+    <img class="book-cover-img" src="assets/deities/krishna.png" alt="Sri Krishna Kavacham" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ కృష్ణ కవచం</p>
+      <p class="book-en">Sri Krishna Kavacham</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-krishnashtakam.html">
+    <img class="book-cover-img" src="assets/deities/krishna.png" alt="Sri Krishna Ashtakam (Adi Shankaracharya Krutam)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ కృష్ణాష్టకం</p>
+      <p class="book-en">Sri Krishna Ashtakam (Adi Shankaracharya Krutam)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-rama-raksha.html">
+    <img class="book-cover-img" src="assets/deities/rama.jpg" alt="Sri Rama Raksha Stotram (with Telugu Meaning)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ రామ రక్షా స్తోత్రం</p>
+      <p class="book-en">Sri Rama Raksha Stotram (with Telugu Meaning)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a>
+<a class="book-card" href="books/sn-s-ganesha-pancharatnam.html">
+    <img class="book-cover-img" src="assets/deities/ganesha.jpg" alt="Ganesha Pancharatnam (Telugu Meaning)" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ గణేశ పంచరత్నం</p>
+      <p class="book-en">Ganesha Pancharatnam (Telugu Meaning)</p>
+      <p class="book-meta">Stotra Nidhi · పారాయణ పాఠం · శ్లో. తా.</p>
+    </div>
+  </a></div>
+  <div id="adminBooks" style="margin-top:1.5rem"></div>
+
+  <!-- Paste text panel -->
+  <div class="paste-panel" id="pastePanel">
+    <div class="paste-head">
+      <h3>✍️ Paste your devotional text</h3>
+      <span class="pill-hint">Add or read your own text in English or Telugu</span>
+    </div>
+    <p style="color:var(--ink-70);margin-top:0.4rem;font-size:0.9rem">Type or paste devotional stotras, slokas, or purana verses below. Switch between <b>English · తెలుగు</b> to add parallel text, or use the transliterate buttons.</p>
+
+    <div class="paste-grid">
+      <div>
+        <div class="paste-field">
+          <label for="pTitle">Book / Stotra Title (English)</label>
+          <input id="pTitle" placeholder="e.g. Sri Lalitha Sahasranamam"/>
+        </div>
+        <div class="paste-field" style="margin-top:0.75rem">
+          <label for="pTitleTe">శీర్షిక (తెలుగు)</label>
+          <input id="pTitleTe" class="font-te" placeholder="ఉదా. శ్రీ లలితా సహస్రనామం" lang="te"/>
+        </div>
+        <div class="paste-field" style="margin-top:0.75rem">
+          <label for="pDeity">Associated deity</label>
+          <select id="pDeity" class="home-temple-select" style="width:100%">
+            <option value="library">General Library</option>
+            <option value="venkateswara">Venkateswara</option>
+            <option value="shiva">Shiva</option>
+            <option value="rama">Rama</option>
+            <option value="krishna">Krishna</option>
+            <option value="ganesha">Ganesha</option>
+            <option value="hanuman">Hanuman</option>
+            <option value="durga">Durga / Devi</option>
+            <option value="lakshmi">Lakshmi</option>
+            <option value="saibaba">Saibaba</option>
+            <option value="ayyappa">Ayyappa</option>
+            <option value="subrahmanya">Subrahmanya</option>
+            <option value="navagraha">Navagraha</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.5rem">
+          <div class="lang-switch-row" id="pLangSwitch">
+            <button type="button" class="lang-btn active" data-lang="en">English</button>
+            <button type="button" class="lang-btn" data-lang="te">తెలుగు</button>
+          </div>
+          <div style="display:flex;gap:0.4rem">
+            <button type="button" class="admin-btn ghost" id="pToTe" style="padding:0.35rem 0.75rem;font-size:0.8rem">→ తెలుగు</button>
+          </div>
+        </div>
+
+        <div class="paste-field">
+          <label id="pTextLabel">Content — English</label>
+          <textarea id="pText" placeholder="Paste your English text or Roman IAST here..."></textarea>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-top:1rem;flex-wrap:wrap">
+          <button type="button" class="btn btn-primary" id="pSaveBtn">Save to library</button>
+          <span class="paste-save-msg" id="pSaveMsg"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p style="margin-top:1.5rem;color:var(--ink-70);max-width:62ch;font-size:0.95rem">Every book opens with <b>English · తెలుగు</b> tabs on its reading page, so you can switch languages on the same page. Books added through the Admin portal appear automatically above with their narration audio and PDF text.</p>
+  </section>
+  </main>
+  <!-- Ask Rushi chat -->
+  <div class="fab-zone">
+    <div class="chat-panel" id="chatPanel" aria-hidden="true">
+      <div class="chat-head">
+        <span class="chat-avatar"><svg class="brand-logo" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true" focusable="false">
+  <circle cx="24" cy="24" r="23.5" fill="#2e1418"/>
+  <circle cx="24" cy="24" r="22.25" fill="rgba(242, 166, 58, 0.07)"/>
+  <circle cx="24" cy="24" r="23.5" fill="none" stroke="rgba(242,166,58,0.4)" stroke-width="1"/>
+  <g fill="#f2a63a">
+    <circle cx="12" cy="13" r="1.15"/><circle cx="16.9" cy="8.5" r="1.15"/>
+    <circle cx="21.6" cy="6.6" r="1.15"/><circle cx="24" cy="6.2" r="1.15"/>
+    <circle cx="26.4" cy="6.6" r="1.15"/><circle cx="31.1" cy="8.5" r="1.15"/>
+    <circle cx="36" cy="13" r="1.15"/>
+  </g>
+  <g fill="#f2a63a">
+    <circle cx="24" cy="14" r="3"/>
+    <path d="M21.7 16.3c.7 1.2 1.9 1.7 2.3 1.7s1.6-.5 2.3-1.7"/>
+    <path d="M20.3 18.5c-2.6 2.4-3.9 5.9-3.4 9.7.3 2.3.2 3.6.2 3.6h12.2h.2s-.1-1.3.2-3.6c.5-3.8-.8-7.3-3.4-9.7-2.1.9-5.1.9-7.2 0z"/>
+    <path d="M18.8 32.4c2.3 1.9 6 1.9 8.3 0"/>
+  </g>
+</svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="chat-head-strong">Ask Rushi</div>
+          <span class="chat-head-sub"><i></i> online · plays from library</span>
+        </div>
+        <button class="chat-min" id="chatMin" aria-label="Close chat">–</button>
+      </div>
+      <div class="chat-msgs" id="chatMsgs"></div>
+      <div class="chat-sugg" id="chatSugg"></div>
+      <form class="chat-form" id="chatForm">
+        <input id="chatInput" placeholder="Ask: play Suprabhatam…" autocomplete="off"/>
+        <button class="chat-send" aria-label="Send">➤</button>
+      </form>
+    </div>
+    <button id="askBtn" class="askbtn" aria-expanded="false"><span class="ask-icon">✦</span>Ask Rushi</button>
+  </div>
+
+  <!-- in-page player -->
+  <div class="player-bar" id="player" aria-hidden="true">
+    <span class="mp-eq"><span></span><span></span><span></span><span></span><span></span></span>
+    <div class="mp-info">
+      <div class="mp-te" id="mpTe"></div>
+      <div class="mp-en" id="mpEn"></div>
+    </div>
+    <button class="mp-action" id="mpToggle" aria-label="Play or pause">⏸</button>
+    <button class="mp-action" id="mpStop" aria-label="Stop">⏹</button>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="stotras-runtime.js"></script>
+  <script src="lang-editor.js"></script>
+  <script src="media-player.js"></script>
+  <script src="text-editor.js"></script>
+  <script src="app.js" data-base=""></script>
+  
+  <script>
+    (function () {
+      var cache = { en: '', te: '' };
+      var curLang = 'en';
+      var txt = document.getElementById('pText');
+      var lbl = document.getElementById('pTextLabel');
+      var switchRow = document.getElementById('pLangSwitch');
+      var msg = document.getElementById('pSaveMsg');
+
+      function setLang(lang) {
+        if (txt) cache[curLang] = txt.value;
+        curLang = lang === 'te' ? 'te' : 'en';
+        if (switchRow) {
+          switchRow.querySelectorAll('.lang-btn').forEach(function (b) {
+            b.classList.toggle('active', b.dataset.lang === lang);
+          });
+        }
+        if (lbl) lbl.textContent = 'Content — ' + (lang === 'te' ? 'తెలుగు' : 'English');
+        if (txt) {
+          txt.value = cache[lang] || '';
+          txt.classList.remove('font-te', 'font-en');
+          txt.classList.add(lang === 'te' ? 'font-te' : 'font-en');
+          txt.placeholder = lang === 'te' ? 'తెలుగు పాఠాన్ని ఇక్కడ అతికించండి...' : 'Paste your English text here...';
+        }
+      }
+
+      if (switchRow) {
+        switchRow.addEventListener('click', function (e) {
+          var b = e.target.closest('.lang-btn');
+          if (b && b.dataset.lang) setLang(b.dataset.lang);
+        });
+      }
+
+      var toTeBtn = document.getElementById('pToTe');
+      if (toTeBtn) {
+        toTeBtn.addEventListener('click', function () {
+          if (!txt) return;
+          txt.value = window.LangLib ? LangLib.toTelugu(txt.value) : txt.value;
+          setLang('te');
+        });
+      }
+
+      var saveBtn = document.getElementById('pSaveBtn');
+      if (saveBtn) {
+        saveBtn.addEventListener('click', function () {
+          if (txt) cache[curLang] = txt.value;
+          var title = (document.getElementById('pTitle').value || '').trim();
+          var titleTe = (document.getElementById('pTitleTe').value || '').trim();
+                    var deity = (document.getElementById('pDeity').value || 'library');
+          var text = cache[curLang] || cache.te || cache.en || '';
+
+          if (!title && !titleTe) {
+            msg.textContent = '⚠️ Please enter at least one title.';
+            msg.style.color = '#9a3d2c';
+            return;
+          }
+          if (!text) {
+            msg.textContent = '⚠️ Please paste or type some text first.';
+            msg.style.color = '#9a3d2c';
+            return;
+          }
+
+          var slug = (title || titleTe).toLowerCase().replace(/[^\w\u0C00-\u0C7F]+/g, '-').replace(/^-+|-+$/g, '') || ('book-' + Date.now());
+          // latin-only slug for clean URLs
+          var cleanSlug = title.toLowerCase().replace(/[^\w]+/g, '-').replace(/^-+|-+$/g, '') || ('book-' + Date.now());
+
+          var payload = {
+            slug: cleanSlug,
+            title: title || titleTe,
+            titleTe: titleTe,
+                        te: titleTe,
+                        en: title,
+            text: text,
+            textEn: cache.en || '',
+            textTe: cache.te || '',
+                        sub: 'From the library · User contributed',
+            meta: 'User contributed',
+            deity: deity,
+            lang: curLang === 'te' ? 'te' : 'en',
+            audioUrl: '',
+            updated: new Date().toISOString()
+          };
+
+          var token = localStorage.getItem('saptarushi-admin-token') || '';
+          var headers = { 'Content-Type': 'application/json' };
+          if (token) headers['X-Admin-Token'] = token;
+
+          msg.textContent = 'Saving…';
+          msg.style.color = 'var(--ink-70)';
+
+          fetch('api/book', {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify({ data: JSON.stringify(payload) })
+          })
+            .then(function (r) {
+              if (r.status === 401) {
+                throw new Error('Please log in as Admin first (use the Admin link).');
+              }
+              return r.json();
+            })
+            .then(function (d) {
+              if (d && d.ok) {
+                msg.innerHTML = '✓ Saved! <a href="books/' + encodeURIComponent(d.slug || cleanSlug) + '.html" style="text-decoration:underline;font-weight:700">Open reading page →</a>';
+                msg.style.color = '#3f6d3a';
+                setTimeout(function () { location.reload(); }, 2500);
+              } else {
+                msg.textContent = '✗ ' + ((d && d.error) || 'Failed to save');
+                msg.style.color = '#9a3d2c';
+              }
+            })
+            .catch(function (err) {
+              msg.innerHTML = err.message || '✗ Error saving';
+              msg.style.color = '#9a3d2c';
+            });
+        });
+      }
+    })();
+  </script>
+  </body>
+</html>

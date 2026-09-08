@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" data-text-size="base">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Saptarushi · Admin Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;600;700&family=Noto+Serif+Telugu:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css?v=39"/>
+</head>
+<body>
+<div class="bg-parch text-ink min-h-screen">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="admin.html">
+        <span class="brand-mark">✦</span>
+        <span class="leading-none">
+          <span class="brand-name">Admin Console</span>
+          <span class="brand-tag">Saptarushi · content manager</span>
+        </span>
+      </a>
+      <div class="header-right">
+        <button class="admin-btn ghost" id="viewSiteBtn" type="button">View site ↗</button>
+        <button class="admin-btn ghost" id="logoutBtn" type="button">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Login ===== -->
+  <main id="loginView" class="admin-wrap">
+    <div class="admin-login">
+      <div class="brand-mark" style="width:72px;height:72px;margin:0 auto 1.25rem;font-size:2rem">✦</div>
+      <h2 style="font-family:var(--font-display);font-size:1.75rem;font-weight:600">Welcome back</h2>
+      <p style="color:var(--ink-70);margin-top:0.5rem">Enter the admin username and password to manage content.</p>
+      <form id="loginForm" class="admin-card" style="margin-top:1.5rem;text-align:left">
+        <div class="admin-field">
+          <label for="user">Username</label>
+          <input id="user" type="text" autocomplete="username" placeholder="admin"/>
+        </div>
+        <div class="admin-field">
+          <label for="pass">Password</label>
+          <input id="pass" type="password" autocomplete="current-password" placeholder="••••••••"/>
+        </div>
+        <button class="admin-btn" style="width:100%" type="submit">Log in</button>
+        <p id="loginMsg" class="save-err" style="margin-top:0.75rem;text-align:center"></p>
+      </form>
+    </div>
+  </main>
+
+  <!-- ===== Console ===== -->
+  <main id="consoleView" class="admin-wrap" style="display:none">
+    <div class="admin-tabs" id="adminTabs">
+      <button class="admin-tab active" data-tab="home">🏠 Home</button>
+      <button class="admin-tab" data-tab="audio">🔊 Audio</button>
+      <button class="admin-tab" data-tab="books">📖 Books</button>
+      <button class="admin-tab" data-tab="pages">✍️ Pages</button>
+      <button class="admin-tab" data-tab="media">🗂 Media library</button>
+      <button class="admin-tab" data-tab="security">🔐 Security</button>
+    </div>
+
+    <!-- ============ HOME TAB ============ -->
+    <section class="admin-panel active" data-panel="home">
+      <div class="admin-card">
+        <h3>Home page hero</h3>
+        <div class="admin-field"><label>Eyebrow</label><input id="heroEyebrow"/></div>
+        <div class="admin-field"><label>Title</label><input id="heroTitle"/></div>
+        <div class="admin-field"><label>Description</label><textarea id="heroDesc"></textarea></div>
+        <button class="admin-btn" id="saveHomeBtn">Save home content</button> <span id="homeSaveMsg" class="save-ok"></span>
+      </div>
+
+      <div class="admin-card">
+        <h3>Today's Saṅkalpam (home card)</h3>
+        <div class="admin-toolbar" style="margin-bottom:0.6rem">
+          <span class="tool-label">Language:</span>
+          <div class="lang-switch-row">
+            <button class="lang-btn active" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="te">తెలుగు</button>
+          </div>
+          <button class="admin-btn ghost" id="sankalpamAutoBtn" type="button">Auto-compute for today</button>
+        </div>
+        <div class="admin-field"><label>Saṅkalpam text</label><textarea id="sankalpamText" class="font-te" style="font-family:'Noto Serif Telugu',serif;font-size:1.15rem;line-height:2"></textarea></div>
+        <div class="admin-toolbar" style="margin-bottom:0.6rem">
+          <span class="tool-label">IAST → script:</span>
+          <button class="admin-btn ghost" id="sankalpamToTe" type="button">→ తెలుగు</button>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <h3>Deity order <span style="font-size:0.85rem;color:var(--ink-70);font-weight:500">(drag the cards to reorder)</span></h3>
+        <div id="deitySort" class="dropzone" style="text-align:left;padding:1rem"></div>
+      </div>
+    </section>
+
+    <!-- ============ AUDIO TAB ============ -->
+    <section class="admin-panel" data-panel="audio">
+      <div class="admin-card">
+        <h3>Upload audio</h3>
+        <p style="color:var(--ink-70);margin-bottom:0.9rem">Drop one or more audio files here, or pick a whole folder of mp3s. Every playable format works — mp3, wav, ogg, m4a, aac, flac, opus, webm.</p>
+        <div class="admin-row" style="margin-bottom:0.9rem">
+          <div class="admin-field" style="flex:1;min-width:200px;margin:0"><label>Album / folder name</label><input id="uploadFolder" placeholder="e.g. Venkateswara Suprabhatam"/></div>
+          <div class="admin-field" style="min-width:180px;margin:0"><label>Category</label><select id="uploadDeity">
+            <option value="library">General library</option>
+            <option>Venkateswara</option><option>Shiva</option><option>Rama</option><option>Krishna</option>
+            <option>Ganesha</option><option>Hanuman</option><option>Durga / Devi</option><option>Lakshmi</option>
+            <option>Saibaba</option><option>Ayyappa</option><option>Subrahmanya</option><option>Navagraha</option>
+          </select></div>
+        </div>
+        <div id="audioDrop" class="dropzone">
+          <p style="font-size:1.05rem">📁 <strong>Drop audio files here</strong> or click to choose a folder</p>
+          <p style="font-size:0.85rem;color:var(--ink-70);margin-top:0.35rem">Tip: choose “Upload folder” when the file picker opens to upload an entire album at once.</p>
+          <div class="dropzone-actions">
+            <button type="button" class="admin-btn ghost" data-pick-files>Choose audio files</button>
+            <button type="button" class="admin-btn ghost" data-pick-folder>Choose folder</button>
+          </div>
+          <input type="file" id="audioFiles" multiple accept="audio/*,.mp3,.wav,.ogg,.m4a,.aac,.flac,.opus,.webm"/>
+          <input type="file" id="audioFolder" webkitdirectory directory multiple accept="audio/*,.mp3,.wav,.ogg,.m4a,.aac,.flac,.opus,.webm"/>
+        </div>
+        <div id="uploadProgress" class="empty-note" style="display:none;margin-top:0.75rem"></div>
+      </div>
+
+      <div class="admin-card">
+        <h3>Uploaded audio <span id="audioCount" style="font-size:0.85rem;color:var(--ink-70);font-weight:500"></span></h3>
+        <div id="adminAudioList"></div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKS TAB ============ -->
+    <section class="admin-panel" data-panel="books">
+      <div class="admin-card">
+        <h3>Books</h3>
+        <div class="admin-row">
+          <div class="admin-field" style="flex:1;min-width:220px;margin:0"><label>New book title</label><input id="newBookTitle" placeholder="e.g. Sri Vishnu Sahasranama"/></div>
+          <button class="admin-btn" id="addBookBtn" type="button">+ Add book</button>
+        </div>
+        <div id="bookList" style="margin-top:1rem"></div>
+      </div>
+
+      <div class="admin-card" id="bookEditor" style="display:none">
+        <h3 id="bookEditorTitle">Edit book</h3>
+        <div class="admin-row" style="margin-bottom:0.9rem">
+          <div class="admin-field" style="flex:1;min-width:200px;margin:0"><label>Title (English)</label><input id="bkTitle"/></div>
+          <div class="admin-field" style="flex:1;min-width:200px;margin:0"><label>Title (తెలుగు)</label><input id="bkTitleTe" class="font-te"/></div>
+          <div class="admin-field" style="flex:1;min-width:200px;margin:0"><label>Title (संस्कृत)</label><input id="bkTitleSa" class="font-sa"/></div>
+        </div>
+        <div class="admin-row" style="margin-bottom:0.9rem">
+          <div class="admin-field" style="min-width:200px;margin:0"><label>Deity</label><select id="bkDeity" style="width:100%"></select></div>
+          <div class="admin-field" style="flex:1;min-width:200px;margin:0"><label>Subtitle / author</label><input id="bkSub"/></div>
+        </div>
+        <div class="admin-field">
+          <label for="bkCoverText">Text under cover image (optional)</label>
+          <textarea id="bkCoverText" placeholder="Add a short note, dedication, or description for the cover image…" style="min-height:90px"></textarea>
+        </div>
+
+        <!-- narration audio -->
+        <div class="admin-card" style="background:var(--parch);padding:1rem;margin:0 0 1rem">
+          <h3 style="font-size:1rem">🎙 Narration audio (optional)</h3>
+          <p style="color:var(--ink-70);font-size:0.9rem;margin-bottom:0.6rem">Upload an mp3 of this book being read aloud. A player will appear on the reader page.</p>
+          <div id="bkAudioDrop" class="dropzone">
+            <p>🎧 Drop an audio file here or click to choose one</p>
+            <input type="file" id="bkAudioFile" accept="audio/*"/>
+          </div>
+          <div id="bkAudioInfo" class="empty-note" style="display:none;margin-top:0.6rem"></div>
+        </div>
+
+        <!-- PDF import -->
+        <div class="admin-card" style="background:var(--parch);padding:1rem;margin:0 0 1rem">
+          <h3 style="font-size:1rem">📄 Import from PDF</h3>
+          <p style="color:var(--ink-70);font-size:0.9rem;margin-bottom:0.6rem">Upload a PDF — its text is extracted and placed into the editor below as clean, re-flowable text (never a scanned image).</p>
+          <div id="bkPdfDrop" class="dropzone">
+            <p>📄 Drop a PDF here or click to choose</p>
+            <input type="file" id="bkPdfFile" accept="application/pdf"/>
+          </div>
+          <div id="bkPdfInfo" class="empty-note" style="display:none;margin-top:0.6rem"></div>
+        </div>
+
+        <!-- language tabs -->
+        <div class="admin-toolbar" style="margin-bottom:0.6rem">
+          <span class="tool-label">Write in:</span>
+          <div class="lang-switch-row" id="bkLangSwitch">
+            <button class="lang-btn active" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="te">తెలుగు</button>
+          </div>
+          <button class="admin-btn ghost" id="bkToTe" type="button">IAST → తెలుగు</button>
+        </div>
+        <div class="admin-field">
+          <label id="bkTextLabel">Content</label>
+          <textarea id="bkText" placeholder="Paste the book text here…" style="min-height:320px;font-size:1.02rem;line-height:1.9"></textarea>
+        </div>
+        <div class="admin-row">
+          <button class="admin-btn" id="bkSaveBtn" type="button">💾 Save book</button>
+          <span id="bkSaveMsg" class="save-ok"></span>
+          <button class="admin-btn danger" id="bkDeleteBtn" type="button" style="margin-left:auto">Delete book</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PAGES TAB ============ -->
+    <section class="admin-panel" data-panel="pages">
+      <div class="admin-card page-manager-hero">
+        <div>
+          <span class="admin-kicker">CONTENT STUDIO</span>
+          <h2>Manage every page</h2>
+          <p>Edit page text, manage sections, and publish books/audio on any public page. Visitors can switch between English and Telugu.</p>
+        </div>
+        <div class="page-manager-badge">EN · తెలుగు</div>
+      </div>
+      <div class="admin-card cms-studio-card">
+        <div class="admin-kicker">PAGE CONTENT</div>
+        <h3>Sections & library items</h3>
+        <p class="admin-help">Create a section on the selected page, add books or audio to it, reorder items, and publish/unpublish the section. New items appear as the same polished tiles used by the existing site.</p>
+        <div class="admin-row">
+          <div class="admin-field" style="flex:1;margin:0"><label>Section title (English)</label><input id="cmsSectionTitleEn" placeholder="e.g. Ganesha Books"/></div>
+          <div class="admin-field" style="flex:1;margin:0"><label>Section title (తెలుగు)</label><input id="cmsSectionTitleTe" class="font-te" placeholder="ఉదా. గణేశ పుస్తకాలు"/></div>
+          <div class="admin-field" style="flex:0 0 150px;margin:0"><label>Section type</label><select id="cmsSectionType"><option value="books">Books</option><option value="audio">Audio</option><option value="media">OCR / Media</option></select></div>
+          <button class="admin-btn" id="cmsAddSectionBtn" type="button">＋ Add section</button>
+        </div>
+        <div class="admin-row">
+          <div class="admin-field" style="flex:1;margin:0"><label>Item type</label><select id="cmsItemType"><option value="book">Book</option><option value="audio">Audio</option><option value="media">OCR / media</option></select></div>
+          <div class="admin-field" style="flex:2;margin:0"><label>Library item</label><select id="cmsItemSelect"></select></div>
+          <button class="admin-btn ghost" id="cmsAddItemBtn" type="button">＋ Add to section</button>
+        </div>
+        <div id="cmsSectionsList"></div>
+        <div class="admin-row"><button class="admin-btn" id="cmsSaveBtn" type="button">💾 Save page layout</button><span id="cmsSaveMsg" class="save-ok"></span></div>
+      </div>
+      <div class="admin-card cms-entity-editor">
+        <div class="admin-kicker">ENTITY EDITOR</div>
+        <h3>Edit audio / media properties</h3>
+        <div class="admin-row">
+          <div class="admin-field" style="flex:1;margin:0"><label>Entity</label><select id="cmsEntitySelect"></select></div>
+          <div class="admin-field" style="flex:1;margin:0"><label>English name</label><input id="cmsEntityName"/></div>
+          <div class="admin-field" style="flex:1;margin:0"><label>Telugu name</label><input id="cmsEntityTe" class="font-te"/></div>
+        </div>
+        <div class="admin-row">
+          <div class="admin-field" style="flex:1;margin:0"><label>Deity / category</label><input id="cmsEntityDeity"/></div>
+          <div class="admin-field" style="flex:2;margin:0"><label>Image URL (optional)</label><input id="cmsEntityImage" placeholder="e.g. assets/deities/ganesha.jpg"/></div>
+          <button class="admin-btn" id="cmsSaveEntityBtn" type="button">Save entity</button>
+        </div>
+        <span id="cmsEntityMsg" class="save-ok"></span>
+      </div>
+      <div class="admin-card">
+        <div class="admin-row page-picker-row">
+          <div class="admin-field" style="flex:1;margin:0"><label for="pageSelect">Page</label><select id="pageSelect"></select></div>
+          <button class="admin-btn ghost" id="openPageBtn" type="button">Open page ↗</button>
+        </div>
+        <div class="admin-toolbar page-lang-toolbar">
+          <span class="tool-label">Editing language</span>
+          <div class="lang-switch-row" id="pageLangSwitch">
+            <button class="lang-btn active" data-lang="en" type="button">English</button>
+            <button class="lang-btn" data-lang="te" type="button">తెలుగు</button>
+          </div>
+        </div>
+        <div class="admin-field"><label>Page title</label><input id="pageTitle"/></div>
+        <div class="admin-field"><label>Page description</label><textarea id="pageDescription"></textarea></div>
+        <div class="admin-field"><label>Additional page content</label><textarea id="pageBody" style="min-height:260px" placeholder="Add page-level content here…"></textarea></div>
+        <div class="admin-row"><button class="admin-btn" id="savePageBtn" type="button">💾 Save page</button><span id="pageSaveMsg" class="save-ok"></span></div>
+      </div>
+    </section>
+
+    <!-- ============ SECURITY TAB ============ -->
+    <section class="admin-panel" data-panel="security">
+      <div class="admin-card security-card">
+        <span class="admin-kicker">ACCOUNT SECURITY</span>
+        <h2>Change admin password</h2>
+        <p>Your password is never displayed, returned by the API, or stored in plaintext. Enter it only in the secure fields below.</p>
+        <form id="passwordForm">
+          <div class="admin-row">
+            <div class="admin-field" style="flex:1;margin:0"><label for="currentPassword">Current password</label><input id="currentPassword" type="password" autocomplete="current-password" required/></div>
+            <div class="admin-field" style="flex:1;margin:0"><label for="newPassword">New password</label><input id="newPassword" type="password" autocomplete="new-password" minlength="10" required/></div>
+            <div class="admin-field" style="flex:1;margin:0"><label for="confirmPassword">Confirm new password</label><input id="confirmPassword" type="password" autocomplete="new-password" minlength="10" required/></div>
+          </div>
+          <button class="admin-btn" type="submit">Update password</button>
+          <span id="passwordMsg" class="save-ok"></span>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ MEDIA TAB ============ -->
+    <section class="admin-panel" data-panel="media">
+      <div class="admin-card">
+        <h3>Upload files</h3>
+        <p style="color:var(--ink-70);margin-bottom:0.9rem">Upload images, PDFs, audio, video or other site assets. Files are stored in the managed media library.</p>
+        <div class="admin-row">
+          <div class="admin-field" style="flex:1;margin:0"><label for="siteFileFolder">Folder</label><input id="siteFileFolder" value="site-files" placeholder="e.g. festivals"/></div>
+          <div class="admin-field" style="flex:1;margin:0"><label for="siteFiles">Files</label><input id="siteFiles" type="file" multiple/></div>
+        </div>
+        <button class="admin-btn" id="uploadSiteFilesBtn" type="button">⬆ Upload files</button>
+        <span id="siteFileMsg" class="save-ok"></span>
+      </div>
+      <div class="admin-card">
+        <h3>Scan to readable text (OCR)</h3>
+        <p style="color:var(--ink-70);margin-bottom:0.9rem">Upload a scanned PDF or image. Saptarushi extracts English/Telugu text and keeps the OCR result available to publish as a readable page section.</p>
+        <div class="admin-row">
+          <div class="admin-field" style="flex:1;margin:0"><label for="ocrFile">Scanned PDF / image</label><input id="ocrFile" type="file" accept=".pdf,.png,.jpg,.jpeg,.webp,.bmp,.tif,.tiff"/></div>
+          <button class="admin-btn" id="ocrBtn" type="button">✦ Extract text</button>
+        </div>
+        <textarea id="ocrResult" style="min-height:220px;margin-top:0.8rem" placeholder="OCR result will appear here…"></textarea>
+        <div class="admin-row"><button class="admin-btn ghost" id="ocrSaveAssetBtn" type="button">Save OCR result to media library</button><span id="ocrMsg" class="save-ok"></span></div>
+      </div>
+      <div class="admin-card">
+        <h3>Media library</h3>
+        <p style="color:var(--ink-70);margin-bottom:0.9rem">Everything uploaded to the site. Click ▶ to preview, 🔁 to repeat, ✕ to delete.</p>
+        <div id="mediaList"></div>
+      </div>
+    </section>
+  </main>
+
+  <button class="admin-btn" id="topBtn" type="button" style="position:fixed;right:1.25rem;bottom:1.5rem;display:none">↑ Top</button>
+</div>
+
+<script src="data.js"></script>
+<script src="lang-editor.js"></script>
+<script src="media-player.js"></script>
+<script src="text-editor.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (s) { return document.querySelector(s); };
+  var $$ = function (s) { return Array.from(document.querySelectorAll(s)); };
+  var token = localStorage.getItem('saptarushi-admin-token') || '';
+  var STORE = null;
+
+  function toast(msg, err) {
+    var t = document.createElement('div'); t.className = 'toast' + (err ? ' error' : ''); t.textContent = msg;
+    document.body.appendChild(t);
+    setTimeout(function () { t.classList.add('show'); }, 10);
+    setTimeout(function () { t.classList.remove('show'); setTimeout(function () { t.remove(); }, 400); }, 2600);
+  }
+
+  function api(path, opts) {
+    opts = opts || {};
+    var headers = Object.assign({}, opts.headers || {});
+    if (token) headers['X-Admin-Token'] = token;
+    return fetch(path, Object.assign({}, opts, { headers: headers }))
+      .then(function (r) { return r.json().catch(function () { return {}; }); })
+      .then(function (d) { if (d && d.error === 'Not authorised') { token = ''; localStorage.removeItem('saptarushi-admin-token'); } return d; });
+  }
+
+  function esc(s) { return String(s || '').replace(/[&<>"']/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]; }); }
+
+  function login(user, pass) {
+    return fetch('api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user: user, pass: pass, username: user, password: pass })
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.ok && d.token) {
+          token = d.token;
+          localStorage.setItem('saptarushi-admin-token', token);
+          localStorage.setItem('saptarushi-admin-user', d.user || user || 'admin');
+          return true;
+        }
+        return false;
+      });
+  }
+
+  function logout() { token = ''; localStorage.removeItem('saptarushi-admin-token'); location.reload(); }
+
+  function showConsole(on) {
+    $('#loginView').style.display = on ? 'none' : '';
+    $('#consoleView').style.display = on ? '' : 'none';
+  }
+
+  /* ---------------- tabs ---------------- */
+  $('#adminTabs').addEventListener('click', function (e) {
+    var tab = e.target.closest('.admin-tab'); if (!tab) return;
+    $$('.admin-tab').forEach(function (t) { t.classList.toggle('active', t === tab); });
+    $$('.admin-panel').forEach(function (p) { p.classList.toggle('active', p.dataset.panel === tab.dataset.tab); });
+  });
+
+  /* ---------------- generic drag & drop sortable ---------------- */
+  function makeSortable(container, onReorder) {
+    var dragEl = null;
+    container.addEventListener('dragstart', function (e) {
+      var item = e.target.closest('.draggable'); if (!item) return;
+      dragEl = item; item.classList.add('dragging'); e.dataTransfer.effectAllowed = 'move';
+      try { e.dataTransfer.setData('text/html', item.innerHTML); } catch (_) {}
+    });
+    container.addEventListener('dragover', function (e) {
+      e.preventDefault();
+      var item = e.target.closest('.draggable'); if (!item || item === dragEl) return;
+      var box = item.getBoundingClientRect();
+      var after = (e.clientY - box.top) > box.height / 2;
+      container.insertBefore(dragEl, after ? item.nextSibling : item);
+    });
+    container.addEventListener('dragend', function () {
+      if (dragEl) { dragEl.classList.remove('dragging'); dragEl = null; }
+      Array.prototype.forEach.call(container.children, function (c) { c.classList.remove('drag-over'); });
+      if (onReorder) onReorder(Array.prototype.map.call(container.children, function (c) { return c.dataset.value; }));
+    });
+  }
+
+  /* ==================================================================
+     HOME
+  ================================================================== */
+  function renderDeitySort() {
+    var box = $('#deitySort');
+    var deities = (STORE.home && STORE.home.deityOrder) || [];
+    if (!Array.isArray(deities) || (!deities.length && window.DeepamData)) deities = window.DeepamData.deities.map(function (d) { return d.slug; });
+    box.innerHTML = '<div class="mp-playlist">' + deities.map(function (slug, i) {
+      return '<div class="sortable-item draggable" draggable="true" data-value="' + esc(slug) + '"><span class="grip"></span><span class="font-telugu" style="font-size:1.1rem">✦</span><span style="font-weight:600">' + esc(Array.isArray(slug) ? slug.join(',') : slug) + '</span></div>';
+    }).join('') + '</div>';
+    makeSortable(box, function (order) {
+      STORE.home = STORE.home || {};
+      STORE.home.deityOrder = order;
+      persistHome();
+    });
+  }
+
+  function persistHome() {
+    return api('api/content', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ data: JSON.stringify({ home: STORE.home }) }) }).then(function (d) {
+      var m = $('#homeSaveMsg'); if (d.ok) { m.textContent = '✓ saved'; } else { m.textContent = '✗ ' + (d.error || 'failed'); m.className = 'save-err'; }
+      setTimeout(function () { m.textContent = ''; m.className = 'save-ok'; }, 2500);
+      return d;
+    });
+  }
+
+  /* ==================================================================
+     AUDIO — upload files / folders
+  ================================================================== */
+  function wireDropzone(zone, input, onFiles, folderInput) {
+    zone.addEventListener('click', function (e) {
+      if (folderInput && e.target.closest('[data-pick-folder]')) { e.stopPropagation(); folderInput.click(); return; }
+      if (e.target.closest('[data-pick-files]')) { e.stopPropagation(); input.click(); return; }
+      if (!e.target.closest('button')) input.click();
+    });
+    input.addEventListener('change', function () { onFiles(Array.prototype.slice.call(input.files)); input.value = ''; });
+    if (folderInput) folderInput.addEventListener('change', function () { onFiles(Array.prototype.slice.call(folderInput.files)); folderInput.value = ''; });
+    ['dragover', 'dragenter'].forEach(function (ev) {
+      zone.addEventListener(ev, function (e) { e.preventDefault(); zone.classList.add('drag'); });
+    });
+    ['dragleave', 'drop'].forEach(function (ev) {
+      zone.addEventListener(ev, function (e) { e.preventDefault(); zone.classList.remove('drag'); });
+    });
+    zone.addEventListener('drop', function (e) { onFiles(Array.prototype.slice.call(e.dataTransfer.files)); });
+  }
+
+  function uploadFiles(files, folder, dest) {
+    if (!files.length) return Promise.resolve();
+    var prog = $('#uploadProgress');
+    prog.style.display = 'block';
+    var fd = new FormData();
+    fd.append('folder', folder || 'library');
+    fd.append('dest', dest || 'audio');
+    files.forEach(function (f) { fd.append('files', f, f.webkitRelativePath || f.name); });
+    var bar = document.createElement('p'); bar.textContent = 'Uploading ' + files.length + ' file(s)…'; prog.innerHTML = ''; prog.appendChild(bar);
+    return api('api/upload?path=' + encodeURIComponent((dest || 'audio') + '/' + (folder || 'library')), { method: 'POST', body: fd })
+      .then(function (d) {
+        if (d.ok) { toast('Uploaded ' + d.count + ' file(s)'); currentAudio = d.audioIndex || []; renderAdminAudio(); renderMediaList(); loadAudioCatalog(); }
+        else toast('Upload failed: ' + (d.error || '?'), true);
+        setTimeout(function () { prog.style.display = 'none'; prog.innerHTML = ''; }, 1200);
+        return d;
+      }).catch(function (e) { toast('Upload error: ' + e.message, true); prog.style.display = 'none'; });
+  }
+
+  var currentAudio = [];
+  function loadAudioCatalog() {
+    api('api/media').then(function (d) { if (d && d.audio) { currentAudio = d.audio; renderAdminAudio(); renderMediaList(); } });
+  }
+
+  function renderAdminAudio() {
+    var list = $('#adminAudioList');
+    MediaPlayer.renderFolders(list, currentAudio);
+    $('#audioCount').textContent = '(' + currentAudio.length + ' tracks)';
+    list.querySelectorAll('.mp-row').forEach(function (row) {
+      var remove = document.createElement('button');
+      remove.className = 'admin-btn danger audio-delete';
+      remove.type = 'button';
+      remove.textContent = '✕';
+      remove.title = 'Delete file';
+      remove.dataset.rm = row.dataset.url;
+      row.appendChild(remove);
+    });
+    list.onclick = function (e) {
+      var remove = e.target.closest('.audio-delete[data-rm]');
+      if (!remove || !confirm('Delete this file from the library?')) return;
+      fetch('api/media/' + remove.dataset.rm.replace(/^\/media\//, ''), { method: 'DELETE', headers: { 'X-Admin-Token': token } }).then(function () { loadAudioCatalog(); });
+    };
+  }
+
+  /* ==================================================================
+     BOOKS
+  ================================================================== */
+  var editingSlug = null;
+  var editingPdfUrl = '';
+  function renderBookList() {
+    var books = (window.DeepamData && DeepamData.books ? DeepamData.books : []).concat(STORE.books || []).concat(adminSeedBooks());
+    var seen = {}; books = books.filter(function (b) { if (seen[b.slug]) return false; seen[b.slug] = 1; return true; });
+    $('#bookList').innerHTML = books.length
+      ? '<div class="mp-playlist">' + books.map(function (b) {
+          var lang = b.lang || 'en';
+          return '<div class="sortable-item" style="cursor:pointer" data-slug="' + esc(b.slug) + '"><span style="flex:1;font-weight:600">' + esc(b.title || b.en) + '</span><span class="sri-decor">[' + lang.toUpperCase() + ']</span><button class="admin-btn ghost edit-book" type="button" data-slug="' + esc(b.slug) + '">Edit</button></div>';
+        }).join('') + '</div>'
+      : '<p class="empty-note">No admin books yet. Create your first below.</p>';
+  }
+
+  function adminSeedBooks() {
+    return (STORE && STORE.books) ? [] : [
+      { slug: 'venkateswara-mahatyam', title: 'The Hill of Grace', en: 'The Hill of Grace', lang: 'en' },
+      { slug: 'shiva-daily', title: 'Mondays with Shiva', en: 'Mondays with Shiva', lang: 'en' },
+    ];
+  }
+
+  var bkTextCache = { en: '', te: '' };
+
+  function openBookEditor(book) {
+    editingSlug = book && book.slug;
+    editingPdfUrl = (book && book.pdfUrl) || '';
+    $('#bookEditor').style.display = '';
+    $('#bookEditorTitle').textContent = book ? 'Edit book — ' + book.title : 'New book';
+    $('#bkTitle').value = book.title || book.en || '';
+    $('#bkTitleTe').value = book.titleTe || book.te || '';
+    $('#bkSub').value = book.sub || book.meta || '';
+    $('#bkCoverText').value = book.coverText || '';
+    $('#bkDeity').value = book.deity || 'library';
+    bkTextCache = {
+      en: book.textEn || book.text || '',
+      te: book.textTe || (detectLang(book.text || '') === 'te' ? book.text : ''),
+      sa: book.textSa || (detectLang(book.text || '') === 'sa' ? book.text : ''),
+    };
+    if (!bkTextCache.en && !bkTextCache.te && !bkTextCache.sa && book.text) bkTextCache.en = book.text;
+    $('#bkText').value = bkTextCache[book && book.lang && bkTextCache[book.lang] ? book.lang : detectLang(book.text || 'en') === 'te' ? 'te' : detectLang(book.text || 'en') === 'sa' ? 'sa' : 'en'] ;
+    $('#bkSaveMsg').textContent = '';
+    if (book && book.audioUrl) { showBookAudio(book); } else { $('#bkAudioInfo').style.display = 'none'; $('#bkAudioInfo').innerHTML = ''; }
+    syncBookLang(book && book.lang || detectLang(book && book.text) || 'en');
+    window.scrollTo({ top: $('#bookEditor').offsetTop - 90, behavior: 'smooth' });
+  }
+
+  function detectLang(text) {
+    if (!text) return 'en';
+    var te = text.match(/[\u0C00-\u0C7F]/);
+    if (te) return 'te'; return 'en';
+  }
+
+  function syncBookLang(lang) {
+    var area = $('#bkText');
+    // stash what the user typed in the previous language before switching away
+    var prev = $$('#bkLangSwitch .lang-btn').find(function (b) { return b.classList.contains('active'); });
+    if (prev && prev.dataset.lang !== lang) {
+      var old = $('#bkText').value;
+      if (old) {
+        var v = old, key = prev.dataset.lang;
+        if (key === 'te' && detectLang(old) === 'sa') v = LangLib ? LangLib.toTelugu(old) : old;
+        if (key === 'sa' && detectLang(old) === 'te') v = LangLib ? LangLib.toDevanagari(old) : old;
+        bkTextCache[key] = v;
+      }
+      area.value = bkTextCache[lang] || '';
+    }
+    area.classList.remove('font-sa', 'font-te', 'font-en');
+    area.classList.add(lang === 'sa' ? 'font-sa' : lang === 'te' ? 'font-te' : 'font-en');
+    $('#bkTextLabel').textContent = 'Content' + (lang === 'sa' ? ' — ' : lang === 'te' ? ' — తెలుగు' : ' — English');
+    $$('#bkLangSwitch .lang-btn').forEach(function (b) { b.classList.toggle('active', b.dataset.lang === lang); });
+  }
+
+  function saveBook() {
+    var activeLang = $$('#bkLangSwitch .lang-btn').find(function (b) { return b.classList.contains('active'); }).dataset.lang;
+    bkTextCache[activeLang] = $('#bkText').value;
+    var text = bkTextCache[activeLang] || bkTextCache.te || bkTextCache.en || '';
+    var payload = {
+      slug: editingSlug || $('#bkTitle').value.trim().toLowerCase().replace(/[^\w]+/g, '-'),
+      title: $('#bkTitle').value.trim() || 'Untitled',
+      titleTe: $('#bkTitleTe').value.trim(),
+            te: $('#bkTitleTe').value.trim(),
+      en: $('#bkTitle').value.trim(),
+      text: text,
+      textEn: bkTextCache.en || '',
+      textTe: bkTextCache.te || '',
+      sub: $('#bkSub').value.trim(),
+      meta: $('#bkSub').value.trim(),
+      coverText: $('#bkCoverText').value.trim(),
+      deity: $('#bkDeity').value,
+      lang: activeLang,
+      audioUrl: $('#bkAudioInfo').dataset.url || '',
+      pdfUrl: editingPdfUrl || '',
+      updated: new Date().toISOString(),
+    };
+    if (!editingSlug) editingSlug = payload.slug;
+    api('api/book', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ data: JSON.stringify(payload) }) }).then(function (d) {
+      var m = $('#bkSaveMsg');
+      if (d.ok) { m.textContent = '✓ Book saved — see it on the Books page'; loadStore().then(function(){ renderBookList(); }); }
+      else m.textContent = '✗ ' + (d.error || 'failed');
+      setTimeout(function () { m.textContent = ''; }, 3500);
+    });
+  }
+
+  function showBookAudio(book) {
+    var info = $('#bkAudioInfo');
+    info.style.display = '';
+    info.dataset.url = book.audioUrl || '';
+    info.innerHTML = book.audioUrl
+      ? '<div class="mp-row" data-row><span class="mp-play" data-url="' + esc(book.audioUrl) + '">▶</span><span style="flex:1">Narration audio attached — players appear on the reader page</span><button class="admin-btn ghost danger" data-removeaudio>Remove</button></div>'
+      : '<p>No narration yet.</p>';
+  }
+
+  /* ==================================================================
+     MEDIA
+  ================================================================== */
+  function renderMediaList() {
+    var byFolder = {};
+    currentAudio.forEach(function (t) { (byFolder[t.folder] = byFolder[t.folder] || []).push(t); });
+    var out = [];
+    Object.keys(byFolder).sort().forEach(function (folder) {
+      byFolder[folder].forEach(function (t) {
+        out.push('<div class="sortable-item"><span class="grip">♪</span><span style="flex:1;min-width:0;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + esc(folder) + ' / ' + esc(t.file) + '</span><button class="mp-play" data-url="' + esc(t.url) + '" style="position:static">▶</button><button class="admin-btn danger" data-del="' + esc('/media/' + t.folder + '/' + t.file) + '" style="padding:0.4rem 0.8rem">✕</button></div>');
+      });
+    });
+    $('#mediaList').innerHTML = out.join('') || '<p class="empty-note">Nothing uploaded yet.</p>';
+    $('#mediaList').onclick = function (e) {
+      var pb = e.target.closest('.mp-play[data-url]'); if (pb) { MediaPlayer.play({ dataset: { url: pb.dataset.url, name: '' } }); return; }
+      var dl = e.target.closest('[data-del]'); if (dl) { if (confirm('Delete ' + dl.dataset.del + '?')) fetch('api/media/' + dl.dataset.del.replace(/^\/media\//, ''), { method: 'DELETE', headers: { 'X-Admin-Token': token } }).then(function () { loadAudioCatalog(); }); }
+    };
+  }
+
+  /* ==================================================================
+     STORE LOADING
+  ================================================================== */
+  function loadStore() {
+    return api('api/content').then(function (s) {
+      STORE = s || { home: {}, audio: [], books: [] };
+      $('#heroEyebrow').value = (STORE.home && STORE.home.heroEyebrow) || 'Telugu Bhakti · తెలుగు భక్తి';
+      $('#heroTitle').value = (STORE.home && STORE.home.heroTitle) || 'A quiet place to listen and read.';
+      $('#heroDesc').value = (STORE.home && STORE.home.heroDesc) || 'Bhajans, chants and devotional books for every deity — gathered in one calm, easy-on-the-eyes place.';
+      $('#sankalpamText').value = (STORE.home && STORE.home.sankalpam) || '';
+      renderDeitySort();
+      renderBookList();
+      renderAdminAudio();
+      renderMediaList();
+      cmsInit();
+    });
+  }
+
+  function seedDeities() {
+    var known = ['Venkateswara','Shiva','Rama','Krishna','Ganesha','Hanuman','Durga / Devi','Lakshmi','Saibaba','Ayyappa','Subrahmanya','Navagraha'];
+    var sel = $('#bkDeity');
+    sel.innerHTML = '<option value="library">General library</option>' + known.map(function (d) { return '<option>' + d + '</option>'; }).join('');
+  }
+
+  /* ---------------- init ---------------- */
+  if (token) { showConsole(true); loadStore(); seedDeities(); loadAudioCatalog(); loadPageEditor(); }
+  else showConsole(false);
+
+  $('#loginForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    $('#loginMsg').textContent = '';
+    var u = ($('#user').value || '').trim();
+    var p = $('#pass').value || '';
+    login(u, p).then(function (ok) {
+      if (ok) { showConsole(true); loadStore(); seedDeities(); loadAudioCatalog(); loadPageEditor(); }
+      else $('#loginMsg').textContent = 'Wrong username or password';
+    });
+  });
+
+  $('#logoutBtn').addEventListener('click', logout);
+  $('#viewSiteBtn').addEventListener('click', function () { window.open('index.html', '_blank'); });
+
+  /* home */
+  $('#saveHomeBtn').addEventListener('click', function () {
+    STORE.home = STORE.home || {};
+    STORE.home.heroEyebrow = $('#heroEyebrow').value;
+    STORE.home.heroTitle = $('#heroTitle').value;
+    STORE.home.heroDesc = $('#heroDesc').value;
+    STORE.home.sankalpam = $('#sankalpamText').value;
+    persistHome();
+  });
+  // sankalpam language switch
+  var skAl = $('.admin-panel[data-panel="home"] .lang-switch-row');
+  skAl.addEventListener('click', function (e) {
+    var b = e.target.closest('.lang-btn'); if (!b) return;
+    $$('.lang-btn', skAl).forEach(function (x) { x.classList.toggle('active', x === b); });
+    $('#sankalpamText').classList.remove('font-sa', 'font-te', 'font-en');
+    $('#sankalpamText').classList.add(b.dataset.lang === 'sa' ? 'font-sa' : b.dataset.lang === 'te' ? 'font-te' : 'font-en');
+  });
+  $('#sankalpamToTe').addEventListener('click', function () { $('#sankalpamText').value = LangLib.toTelugu($('#sankalpamText').value); });
+
+  /* audio */
+  wireDropzone($('#audioDrop'), $('#audioFiles'), function (files) {
+    var audioFiles = files.filter(function (f) { return MediaPlayer.AUDIO_EXT.test(f.name) || f.type.indexOf('audio') === 0; });
+    if (audioFiles.length) uploadFiles(audioFiles, $('#uploadFolder').value.trim() || 'My uploads', 'audio');
+    else toast('No audio files found in that selection', true);
+  }, $('#audioFolder'));
+
+  /* books */
+  $('#addBookBtn').addEventListener('click', function () {
+    var t = $('#newBookTitle').value.trim();
+    if (!t) { toast('Enter a book title first', true); return; }
+    var slug = t.toLowerCase().replace(/[^\w]+/g, '-');
+    openBookEditor({ slug: slug, title: t, deity: 'library', lang: 'en' });
+  });
+  $('#bookList').addEventListener('click', function (e) {
+    var b = e.target.closest('.edit-book'); if (!b) return;
+    var slug = b.dataset.slug;
+    var book = (STORE.books || []).find(function (x) { return x.slug === slug; });
+    if (!book && window.DeepamData && DeepamData.books) book = DeepamData.books.find(function(x){ return x.slug === slug; });
+    if (!book) { book = { slug: slug, title: slug, deity: 'library', lang: 'en' }; }
+    openBookEditor(book);
+  });
+  $('#bkLangSwitch').addEventListener('click', function (e) {
+    var b = e.target.closest('.lang-btn'); if (!b) return;
+    syncBookLang(b.dataset.lang);
+  });
+  $('#bkToTe').addEventListener('click', function () { $('#bkText').value = LangLib.toTelugu($('#bkText').value); syncBookLang('te'); });
+  $('#bkSaveBtn').addEventListener('click', saveBook);
+  $('#bkDeleteBtn').addEventListener('click', function () {
+    if (!confirm('Delete this admin book?')) return;
+    var books = STORE.books || [];
+    var idx = books.findIndex(function (b) { return b.slug === editingSlug; });
+    if (idx >= 0) { books.splice(idx, 1); STORE.books = books; }
+    api('api/content', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ data: JSON.stringify({ books: STORE.books }) }) }).then(function () { editingSlug = null; $('#bookEditor').style.display = 'none'; renderBookList(); });
+  });
+
+  wireDropzone($('#bkAudioDrop'), $('#bkAudioFile'), function (files) {
+    var f = files[0]; if (!f) return;
+    uploadFiles([f], 'book-narration', 'books').then(function (d) {
+      if (d.ok && d.saved && d.saved[0]) {
+        var info = $('#bkAudioInfo');
+        info.style.display = '';
+        info.dataset.url = d.saved[0].url;
+        info.innerHTML = '<div class="mp-row"><span class="mp-play" data-url="' + esc(d.saved[0].url) + '">▶</span><span style="flex:1">' + esc(f.name) + ' — attached. Save the book to keep it.</span></div>';
+      }
+    });
+  });
+
+  wireDropzone($('#bkPdfDrop'), $('#bkPdfFile'), function (files) {
+    var f = files[0]; if (!f) return;
+    var info = $('#bkPdfInfo'); info.style.display = ''; info.innerHTML = 'Uploading and digitising <b>' + esc(f.name) + '</b>…';
+    uploadFiles([f], 'book-documents', 'books').then(function (d) {
+      if (d && d.ok && d.saved && d.saved[0]) {
+        editingPdfUrl = d.saved[0].url;
+        var text = d.saved[0].ocrText || '';
+        if (text) {
+          $('#bkText').value = text;
+          syncBookLang(detectLang(text));
+          info.innerHTML = '<b>' + esc(f.name) + '</b> uploaded. ' + text.split(/\s+/).filter(Boolean).length + ' words digitised and ready to edit.';
+          toast('Scanned document digitised ✓');
+        } else {
+          info.innerHTML = '<b>' + esc(f.name) + '</b> uploaded. No text was detected; use Media → OCR to retry with a clearer scan.';
+        }
+      }
+    });
+  });
+
+
+  $('#uploadSiteFilesBtn').addEventListener('click', function () {
+    var files = Array.from($('#siteFiles').files || []);
+    if (!files.length) { toast('Choose at least one file', true); return; }
+    var folder = $('#siteFileFolder').value.trim() || 'site-files';
+    var msg = $('#siteFileMsg'); msg.textContent = 'Uploading…';
+    uploadFiles(files, folder, 'files').then(function (d) {
+      if (d && d.ok) { msg.textContent = '✓ uploaded ' + d.count + ' file(s)'; $('#siteFiles').value = ''; setTimeout(function () { msg.textContent = ''; }, 2500); }
+      else msg.textContent = '✗ ' + ((d && d.error) || 'upload failed');
+    });
+  });
+
+
+  /* ==================================================================
+     CONTENT STUDIO
+     ================================================================== */
+  var cmsPage = null;
+  var cmsType = 'book';
+  function cmsKey() { return $('#pageSelect').value || '/'; }
+  function cmsPageData() {
+    STORE.pages = STORE.pages || {};
+    STORE.pages[cmsKey()] = STORE.pages[cmsKey()] || { languages: {}, sections: [] };
+    STORE.pages[cmsKey()].sections = Array.isArray(STORE.pages[cmsKey()].sections) ? STORE.pages[cmsKey()].sections : [];
+    return STORE.pages[cmsKey()];
+  }
+  function cmsEntityId(type, value) { return type + ':' + String(value || '').replace(/^.*\//, '').replace(/\.html$/i, '').replace(/[^a-zA-Z0-9_-]+/g, '-').toLowerCase(); }
+  function cmsItems(type) {
+    if (type === 'book') return (window.DeepamData && DeepamData.books ? DeepamData.books : []).concat(STORE.books || []).map(function(b){ return {id:cmsEntityId('book',b.slug), label:b.title || b.en || b.slug}; });
+    if (type === 'audio') return (window.DeepamData && DeepamData.audio ? DeepamData.audio : []).concat(STORE.audio || []).map(function(a){ return {id:cmsEntityId('audio',a.url || a.name), label:a.name || a.en || a.file || a.url}; });
+    return (STORE.assets || []).filter(function(a){ return a.ocrText || !/^audio\//.test(a.url || ''); }).map(function(a){ return {id:a.id || ('media:' + a.url), label:a.name || a.url}; });
+  }
+  function cmsRefreshItemSelect() {
+    cmsType = $('#cmsItemType').value;
+    var sel = $('#cmsItemSelect'); sel.innerHTML = '';
+    cmsItems(cmsType).forEach(function(x){ var o=document.createElement('option'); o.value=x.id; o.textContent=x.label; sel.appendChild(o); });
+  }
+  function cmsRefreshEntitySelect() {
+    var sel=$('#cmsEntitySelect'); sel.innerHTML='';
+    (STORE.audio||[]).forEach(function(a){ var o=document.createElement('option'); o.value=cmsEntityId('audio',a.url||a.name); o.textContent='Audio · '+(a.name||a.file||a.url); sel.appendChild(o); });
+    (STORE.assets||[]).forEach(function(a){ if(a.ocrText){ var o=document.createElement('option'); o.value=a.id||('media:'+a.url); o.textContent='OCR · '+(a.name||a.url); sel.appendChild(o); }});
+    cmsLoadEntity();
+  }
+  function cmsLoadEntity(){
+    var id=$('#cmsEntitySelect').value, e=null;
+    (STORE.audio||[]).some(function(a){if(cmsEntityId('audio',a.url||a.name)===id){e=a;return true;}});
+    if(!e && window.DeepamData && DeepamData.audio) DeepamData.audio.some(function(a){if(cmsEntityId('audio',a.url||a.name)===id){e=a;return true;}});
+    if(!e) (STORE.assets||[]).some(function(a){if((a.id||cmsEntityId('media',a.url||a.name))===id){e=a;return true;}});
+    if(!e) return;
+    $('#cmsEntityName').value=e.name||e.title||'';
+    $('#cmsEntityTe').value=e.te||'';
+    $('#cmsEntityDeity').value=e.deity||'';
+    $('#cmsEntityImage').value=e.imageUrl||'';
+  }
+  function cmsRenderSections(){
+    var list=$('#cmsSectionsList'); if(!list) return;
+    var sections=cmsPageData().sections;
+    list.innerHTML=sections.length ? sections.map(function(sec,si){
+      var type=sec.type||'books';
+      var title=(sec.title&&sec.title.en)||sec.title||'Untitled section';
+      var names=(sec.items||[]).map(function(id){
+        var x=cmsItems(type==='books'?'book':type==='audio'?'audio':'media').find(function(i){return i.id===id;});
+        return x ? x.label : id;
+      });
+      return '<div class="cms-section-row" data-si="'+si+'"><div class="cms-section-head"><b>'+esc(title)+'</b><span>'+type+' · '+(sec.published===false?'Draft':'Published')+'</span><div><button class="admin-btn ghost cms-up" type="button">↑</button><button class="admin-btn ghost cms-down" type="button">↓</button><button class="admin-btn ghost cms-toggle" type="button">'+(sec.published===false?'Publish':'Unpublish')+'</button><button class="admin-btn danger cms-remove" type="button">Remove</button></div></div><div class="cms-items">'+(names.length?names.map(function(n,i){return '<span class="cms-chip">'+esc(n)+' <button type="button" data-item-index="'+i+'" title="Remove">×</button></span>';}).join(''):'<em>No items yet</em>')+'</div></div>';
+    }).join('') : '<p class="empty-note">No managed sections on this page yet. Add one above.</p>';
+  }
+  function cmsAddSection(){
+    var p=cmsPageData(), title=$('#cmsSectionTitleEn').value.trim()||'Library';
+    var te=$('#cmsSectionTitleTe').value.trim();
+    p.sections.push({id:'section-'+Date.now(),type:$('#cmsSectionType').value,title:{en:title,te:te},items:[],published:true});
+    $('#cmsSectionTitleEn').value=''; $('#cmsSectionTitleTe').value='';
+    cmsRenderSections();
+  }
+  function cmsAddItem(){
+    var p=cmsPageData(), secs=p.sections; if(!secs.length){toast('Add a section first',true);return;}
+    var id=$('#cmsItemSelect').value; if(!id){toast('Choose a library item',true);return;}
+    var sec=secs[secs.length-1];
+    var desired=cmsType==='book'?'books':cmsType==='audio'?'audio':'media';
+    if(sec.type!==desired){ toast('The selected section is '+sec.type+'. Add a new '+desired+' section first.',true); return; }
+    sec.items=sec.items||[]; if(sec.items.indexOf(id)<0) sec.items.push(id);
+    cmsRenderSections();
+  }
+  function cmsSaveLayout(){
+    var p=cmsPageData(); p.updated=new Date().toISOString();
+    api('api/content',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({data:JSON.stringify({pages:STORE.pages})})}).then(function(d){
+      $('#cmsSaveMsg').textContent=d.ok?'✓ layout saved':'✗ '+(d.error||'failed');
+      if(d.ok) setTimeout(function(){$('#cmsSaveMsg').textContent='';},2200);
+    });
+  }
+  function cmsSaveEntity(){
+    var id=$('#cmsEntitySelect').value, found=null, type='';
+    (STORE.audio||[]).some(function(a){if(cmsEntityId('audio',a.url||a.name)===id){found=a;type='audio';return true;}});
+    if(!found && window.DeepamData && DeepamData.audio) DeepamData.audio.some(function(a){if(cmsEntityId('audio',a.url||a.name)===id){found=Object.assign({},a);type='audio';(STORE.audio=STORE.audio||[]).push(found);return true;}});
+    if(!found) (STORE.assets||[]).some(function(a){if((a.id||cmsEntityId('media',a.url||a.name))===id){found=a;type='media';return true;}});
+    if(!found)return;
+    found.name=$('#cmsEntityName').value.trim()||found.name; found.te=$('#cmsEntityTe').value.trim(); found.deity=$('#cmsEntityDeity').value.trim(); found.imageUrl=$('#cmsEntityImage').value.trim(); found.updated=new Date().toISOString();
+    var patch={}; patch[type==='audio'?'audio':'assets']=type==='audio'?STORE.audio:STORE.assets;
+    api('api/content',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({data:JSON.stringify(patch)})}).then(function(d){$('#cmsEntityMsg').textContent=d.ok?'✓ entity saved':'✗ '+(d.error||'failed');if(d.ok){cmsRefreshItemSelect();cmsRefreshEntitySelect();cmsRenderSections();}});
+  }
+  function cmsInit(){
+    if(!$('#cmsItemType'))return;
+    $('#cmsItemType').addEventListener('change',cmsRefreshItemSelect);
+    $('#cmsAddSectionBtn').addEventListener('click',cmsAddSection);
+    $('#cmsAddItemBtn').addEventListener('click',cmsAddItem);
+    $('#cmsSaveBtn').addEventListener('click',cmsSaveLayout);
+    $('#cmsEntitySelect').addEventListener('change',cmsLoadEntity);
+    $('#cmsSaveEntityBtn').addEventListener('click',cmsSaveEntity);
+    $('#cmsSectionsList').addEventListener('click',function(e){
+      var row=e.target.closest('.cms-section-row'); if(!row)return; var i=Number(row.dataset.si), secs=cmsPageData().sections;
+      if(e.target.closest('.cms-up')&&i>0){var x=secs.splice(i,1)[0];secs.splice(i-1,0,x);}
+      if(e.target.closest('.cms-down')&&i<secs.length-1){var x=secs.splice(i,1)[0];secs.splice(i+1,0,x);}
+      if(e.target.closest('.cms-toggle'))secs[i].published=secs[i].published===false;
+      if(e.target.closest('.cms-remove'))secs.splice(i,1);
+      var rm=e.target.closest('[data-item-index]'); if(rm){secs[i].items.splice(Number(rm.dataset.itemIndex),1);}
+      cmsRenderSections();
+    });
+    cmsRefreshItemSelect(); cmsRefreshEntitySelect(); cmsRenderSections();
+  }
+
+  /* OCR studio */
+  var lastOcr = null;
+  $('#ocrBtn').addEventListener('click', function(){
+    var f=($('#ocrFile').files||[])[0]; if(!f){toast('Choose a scanned PDF or image first',true);return;}
+    var fd=new FormData(); fd.append('files',f,f.name);
+    $('#ocrBtn').disabled=true; $('#ocrMsg').textContent='Reading…';
+    fetch('api/ocr',{method:'POST',headers:{'X-Admin-Token':token},body:fd}).then(function(r){return r.json();}).then(function(d){
+      $('#ocrBtn').disabled=false;
+      if(d.ok){lastOcr={name:f.name,text:d.text};$('#ocrResult').value=d.text;$('#ocrMsg').textContent='✓ text extracted';}
+      else $('#ocrMsg').textContent='✗ '+(d.error||'OCR failed');
+    }).catch(function(){ $('#ocrBtn').disabled=false; $('#ocrMsg').textContent='✗ OCR request failed';});
+  });
+  $('#ocrSaveAssetBtn').addEventListener('click', function(){
+    if(!lastOcr || !$('#ocrResult').value.trim()){toast('Extract some text first',true);return;}
+    STORE.assets=STORE.assets||[];
+    var id='media:ocr-'+Date.now();
+    STORE.assets.push({id:id,name:lastOcr.name,title:lastOcr.name,ocrText:$('#ocrResult').value.trim(),type:'ocr',updated:new Date().toISOString()});
+    api('api/content',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({data:JSON.stringify({assets:STORE.assets})})}).then(function(d){
+      $('#ocrMsg').textContent=d.ok?'✓ saved to media library':'✗ '+(d.error||'failed'); if(d.ok){cmsRefreshItemSelect();cmsRefreshEntitySelect();}
+    });
+  });
+  /* page manager */
+  var PAGE_DEFS = [
+    { key: '/', label: 'Home', url: 'index.html' },
+    { key: '/about.html', label: 'About', url: 'about.html' },
+    { key: '/audio.html', label: 'Audio', url: 'audio.html' },
+    { key: '/books.html', label: 'Books', url: 'books.html' },
+    { key: '/temples.html', label: 'Temples', url: 'temples.html' },
+    { key: '/panchangam.html', label: 'Panchangam', url: 'panchangam.html' }
+  ];
+  var pageLang = 'en';
+  function pageValues(page, lang) { return page && page.languages && page.languages[lang] ? page.languages[lang] : { title: '', description: '', body: '' }; }
+  function loadPageEditor() {
+    if (!STORE) return;
+    var key = $('#pageSelect').value;
+    var page = (STORE.pages || {})[key] || {};
+    var v = pageValues(page, pageLang);
+    $('#pageTitle').value = v.title || '';
+    $('#pageDescription').value = v.description || '';
+    $('#pageBody').value = v.body || '';
+  }
+  function renderPageOptions(list) {
+    $('#pageSelect').innerHTML = '';
+    (list || PAGE_DEFS).forEach(function (p) { var o = document.createElement('option'); o.value = p.key; o.textContent = p.label; o.dataset.url = p.url; $('#pageSelect').appendChild(o); });
+    loadPageEditor();
+  }
+  renderPageOptions(PAGE_DEFS);
+  api('api/pages').then(function (pages) { if (Array.isArray(pages) && pages.length) { PAGE_DEFS = pages; renderPageOptions(pages); } });
+  $('#pageSelect').addEventListener('change', function(){ loadPageEditor(); cmsRefreshItemSelect(); cmsRefreshEntitySelect(); cmsRenderSections(); });
+  $('#pageLangSwitch').addEventListener('click', function (e) { var b = e.target.closest('.lang-btn'); if (!b) return; pageLang = b.dataset.lang; $$('#pageLangSwitch .lang-btn').forEach(function (x) { x.classList.toggle('active', x === b); }); loadPageEditor(); });
+  $('#openPageBtn').addEventListener('click', function () { var o = $('#pageSelect').selectedOptions[0]; if (o && o.dataset.url) window.open(o.dataset.url, '_blank', 'noopener'); });
+  $('#savePageBtn').addEventListener('click', function () {
+    var key = $('#pageSelect').value;
+    STORE.pages = STORE.pages || {};
+    STORE.pages[key] = STORE.pages[key] || { languages: {} };
+    STORE.pages[key].languages = STORE.pages[key].languages || {};
+    STORE.pages[key].languages[pageLang] = { title: $('#pageTitle').value.trim(), description: $('#pageDescription').value.trim(), body: $('#pageBody').value };
+    STORE.pages[key].updated = new Date().toISOString();
+    api('api/content', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ data: JSON.stringify({ pages: STORE.pages }) }) }).then(function (d) {
+      var m = $('#pageSaveMsg'); m.textContent = d.ok ? '✓ saved' : '✗ ' + (d.error || 'failed'); m.className = d.ok ? 'save-ok' : 'save-err';
+      if (d.ok) setTimeout(function () { m.textContent = ''; m.className = 'save-ok'; }, 2200);
+    });
+  });
+
+  /* password change */
+  $('#passwordForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var current = $('#currentPassword').value;
+    var next = $('#newPassword').value;
+    var confirm = $('#confirmPassword').value;
+    var m = $('#passwordMsg');
+    if (next !== confirm) { m.textContent = '✗ New passwords do not match'; m.className = 'save-err'; return; }
+    if (next.length < 10) { m.textContent = '✗ Use at least 10 characters'; m.className = 'save-err'; return; }
+    api('api/auth/change-password', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ currentPassword: current, newPassword: next }) }).then(function (d) {
+      if (!d.ok) { m.textContent = '✗ ' + (d.error || 'Could not update password'); m.className = 'save-err'; return; }
+      m.textContent = '✓ Password updated. Please log in again.'; m.className = 'save-ok';
+      $('#passwordForm').reset(); token = ''; localStorage.removeItem('saptarushi-admin-token');
+      setTimeout(function () { location.reload(); }, 1200);
+    });
+  });
+
+  $('#topBtn').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  window.addEventListener('scroll', function () { $('#topBtn').style.display = window.scrollY > 800 ? '' : 'none'; });
+})();
+</script>
+</body>
+</html>

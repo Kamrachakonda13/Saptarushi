@@ -1,0 +1,531 @@
+{
+  "note": "Bilingual Sthala Puranam content. Each item: { en: { sthalapuram, explanation, reverence }, te: { ... } }. Rendered on the temple pages behind an English / తెలుగు toggle.",
+  "shankari": {
+    "en": {
+      "sthalapuram": "Shankari is traditionally counted as the first of the eighteen Shakti Peethas. The older traditions place this Peetha in Lanka, and recent identifications point to the Koneswaram region in Trincomalee on the eastern shore of Sri Lanka, a shrine on a promontory of the sea. Together with the nearby Koneswaram temple to Shiva, it formed one of the oldest sacred complexes of the island.",
+      "explanation": "Some traditions describe a portion of the groin (or, in other tellings, the heart) of Sati falling here. The Goddess is worshipped as Shankari, the consort of Shiva in his aspect Koneswarar. Adi Shankara is said to have visited the Shakti Peethas and established Sri Chakra worship at the principal ones; this shrine is remembered in the same lineage. The original temple is said to have been lost in the Portuguese attacks of the seventeenth century, and only a pillar is recalled to have remained standing.",
+      "reverence": "The Shankari Peetha is revered as the foremost seat of the Divine Mother in the Shakta tradition, holding a special place because the Ashtadasha Shakti Peetha stotram names it first. It also links the sacred geography of India with the ancient shrines of Sri Lanka. Devotees today visit the preserved shrines in Trincomalee as representatives of this ancient seat."
+    },
+    "te": {
+      "sthalapuram": "శంకరి పీఠం అష్టాదశ శక్తిపీఠాలలో మొదటిదిగా పరిగణించబడుతుంది. ప్రాచీన సంప్రదాయాల ప్రకారం ఈ పీఠం లంకలో ఉందని, ఇటీవలి గుర్తింపుల ప్రకారం శ్రీలంక తూర్పు తీరంలో ట్రిన్కోమలి వద్ద సముద్రంలోకి చొచ్చుకున్న ప్రాంతంలో ఉందని చెబుతారు. అక్కడి సమీపంలోని కోనేశ్వరం శివాలయంతో కలిసి ఇది శ్రీలంకలోని అత్యంత ప్రాచీన పవిత్ర సముదాయం.",
+      "explanation": "కొన్ని సంప్రదాయాల ప్రకారం సతీదేవి శరీరంలో ఏదో ఒక భాగం ఇక్కడ పడినట్లు చెబుతారు. తల్లిని శంకరి అని, అంటే శివుని (కోనేశ్వరుని) భార్యగా పూజిస్తారు. ఆదిశంకరాచార్యులు శక్తిపీఠాలను దర్శించి వాటిలో ప్రధానమైన వాటిలో శ్రీచక్రాన్ని ప్రతిష్ఠించారని ప్రతీతి; ఈ పీఠం కూడా ఆ వంశంలో జ్ఞాపకం చేయబడుతుంది. పదిహేడవ శతాబ్దంలో పోర్చుగీసు వారి దాడులలో ఈ ఆలయం నశించిందని, ఒక స్తంభం మాత్రమే మిగిలిందని చెబుతారు.",
+      "reverence": "అష్టాదశ శక్తిపీఠ స్తోత్రంలో మొదటి పేరు శంకరిది కావడంవల్ల ఈ పీఠం శక్తి సంప్రదాయంలో అత్యంత ప్రాధాన్యతను పొందింది. ఇది భారతదేశం యొక్క పవిత్ర భూగోళాన్ని శ్రీలంకలోని ప్రాచీన క్షేత్రాలతో ముడిపెడుతుంది. నేటి భక్తులు ఈ ప్రాచీన పీఠం యొక్క ప్రతినిధిగా ట్రిన్కోమలిలోని పవిత్ర స్థలాలను దర్శిస్తారు."
+    }
+  },
+  "kamakshi": {
+    "en": {
+      "sthalapuram": "Kamakshi Amman is worshipped at Kanchipuram as the supreme Mother of the universe, seated in the Kamakoti Peetha tradition. The temple is intimately connected with Shaktism and with the Sri Vidya upasana begun by Adi Shankara, who is believed to have established the Sri Chakra here.",
+      "explanation": "The tradition associates the seat of the Goddess with a portion of Sati's body (variously the abdomen or the eye). The Goddess is Kamakshi — she who confers desire that is born of divine love and command. Around this shrine grew the Kamakoti Matha tradition, a seat of Advaita, and the town of Kanchipuram became one of the most important temple cities of South India, with its own suite of zāra dhāma and Pancha Bhoota shrines. The inner sanctum houses the Goddess in a standing posture holding a sugarcané bow and flower arrows.",
+      "reverence": "Kanchipuram is sacred to both Shaiva and Shakta traditions, and Kamakshi here is revered as the compassionate Mother who grants moksha. The site is counted among the most important Shakti Peethas, and its Sri Vidya tradition has made it a living school of Devi worship that has continued for more than a millennium."
+    },
+    "te": {
+      "sthalapuram": "కంచిలో కామాక్షి అమ్మవారు కామకోటి పీఠం సంప్రదాయంలో విశ్వమాతగా కొలువై ఉన్నారు. ఈ ఆలయం శాక్తేయం మరియు శ్రీవిద్యా ఉపాసనతో ముడిపడి ఉంది. ఆదిశంకరాచార్యులు ఇక్కడ శ్రీచక్రాన్ని ప్రతిష్ఠించారని ప్రతీతి.",
+      "explanation": "సతీదేవి శరీరభాగం (కొన్ని కథనాల ప్రకారం నాభి లేదా కన్ను) ఇక్కడ పడినట్లు సంప్రదాయం చెబుతుంది. కామాక్షి అంటే ప్రేమమయమైన కోరికను దయచేసే తల్లి. ఈ క్షేత్రం చుట్టూ అద్వైత పీఠమైన కామకోటి మఠ సంప్రదాయం పెరిగింది. గర్భగుడిలో అమ్మవారు నిలబడిన పూజలో చేతులలో చెరుకు విల్లు, పూల బాణాలతో దర్శనమిస్తారు.",
+      "reverence": "కంచి శైవ, శాక్త సంప్రదాయాలకు సమానంగా పవిత్రమైనది. ఇక్కడి కామాక్షి మోక్షాన్ని ప్రసాదించే దయామయి అమ్మగా ఆరాధించబడుతుంది. శ్రీవిద్యా సంప్రదాయం వల్ల ఇది వెయ్యేళ్లకుపైగా కొనసాగుతున్న శక్తి ఆరాధనా కేంద్రం."
+    }
+  },
+  "chamundeshwari": {
+    "en": {
+      "sthalapuram": "The hill above Mysuru, called Chamundi Giri, is the seat of Chamundeshwari, the guardian Goddess of the city and the Wodeyar dynasty. Tradition holds that here the Goddess slew Mahishasura, the buffalo demon whose name is woven into the very name of Mysuru (Mahishuru).",
+      "explanation": "The Shakta tradition counts Chamundeshwari among the eighteen Maha Shakti Peethas, associating it with the portion of Sati that fell here (often given as the hair). The Goddess is identified with Chandi or Chamunda, the fierce form that destroys the forces of evil. The temple climbs the hill in broad stone steps, with a gopuram visible from the city below; at the foot stands a giant statue of Mahishasura. The Wodeyars of Mysuru held this Goddess as their family deity (Kuladevi) and patronised her temple as the centre of an entire sacred landscape including the Pancha Bhoota Shri Ksetras in the region.",
+      "reverence": "Chamundeshwari is revered as the victorious warrior Mother — the one who vanquishes inner and outer demons. Devotees climb her hill for courage, victory over adversaries and the protection of an entire city, and the Goddess remains the living heart of Mysuru's spiritual identity."
+    },
+    "te": {
+      "sthalapuram": "మైసూరుకు ఎదురుగా ఉండే చాముండి కొండ నగరాన్ని, ఒడయార్ రాజవంశాన్ని కాపాడే చాముండేశ్వరి దేవికి స్థానం. మహిషాసురుడను రాక్షసుడిని చంపిన తల్లి ఇక్కడే వెలసిందని సంప్రదాయం చెబుతుంది. 'మహిష' నుండే మైసూరు అనే పేరు వచ్చింది.",
+      "explanation": "శాక్త సంప్రదాయం చాముండేశ్వరిని అష్టాదశ మహాశక్తిపీఠాలలో ఒకటిగా భావిస్తుంది. ఇక్కడ చాముండి లేదా చంది రూపంలో దుష్టశక్తులను సంహరించే అమ్మ తల్లి. కొండపైకి వెళ్లే మెట్ల మార్గాలలో, పట్టణం నుండి కనిపించే గోపురంతో ఈ ఆలయం ఉంది. ఒడయార్ రాజులు ఈ అమ్మవారిని కులదేవతగా ఆరాధించి ఆలయాన్ని మరింత వృద్ధి చేశారు.",
+      "reverence": "చాముండేశ్వరి తమ అంతర్బాహ్య శత్రువులను జయించే విజయదాయక మాతగా ఆరాధించబడుతుంది. ధైర్యం, విజయం, నగరరక్షణ కోసం భక్తులు ఆమె కొండను అధిరోహిస్తారు. ఈ తల్లి మైసూరు ఆధ్యాత్మిక గుర్తింపుకు ప్రాణం."
+    }
+  },
+  "jogulamba": {
+    "en": {
+      "sthalapuram": "Alampur, on the banks where the Tungabhadra joins the Krishna, is the seat of Jogulamba, one of the great Shakti Peethas of the Deccan. The site is famous both for the Goddess and for the cluster of early Chalukyan temples called the Navabrahma temples that surround a pond called Bala Brahma Kunda.",
+      "explanation": "The Yogini tradition names this Peetha the Yogini Peetham; the portion of Sati associated with the seat is the teeth (or jaws). Jogulamba is a Yogini Goddess, fierce of aspect yet compassionate to her devotees. Adi Shankara is believed to have established a Sri Chakra here. The outer wall of the goddess's temple carries reliefs of the Nava Durgas and the Sapta Matrukas, marking Alampur as a stronghold of both Shaiva and Shakta sadhana at the confluence of the two rivers.",
+      "reverence": "Jogulamba is revered as the wrathful yet motherly Goddess of the Deccan, celebrated in the Shakti Peetha stotrams of the region. Pilgrims hold the Bala Brahma kund sacred and believe a dip in its waters, taken while venerating the Navabrahma temples, washes away accumulated suffering. During Navaratri the shrine draws thousands."
+    },
+    "te": {
+      "sthalapuram": "తుంగభద్ర నది కృష్ణలో కలిసే చోట, ఆలంపూర్ వద్ద దక్కన్ యొక్క ప్రముఖ శక్తిపీఠమైన జోగులాంబ అమ్మవారు వెలసి ఉన్నారు. ఈ ప్రదేశం ప్రారంభ చాళుక్య శైలిలో నిర్మితమైన నవబ్రహ్మ ఆలయాలకు కూడా ప్రసిద్ధి.",
+      "explanation": "యోగినీ సంప్రదాయం ఈ పీఠాన్ని యోగినీ పీఠం అని పిలుస్తుంది. సతీదేవి దంతాల భాగం ఇక్కడ పడినట్లు చెబుతారు. జోగులాంబ యోగినీ దేవి — ఉగ్రరూపిణి అయినా భక్తులపై కరుణామయి. ఆదిశంకరులు ఇక్కడ శ్రీచక్ర ప్రతిష్ఠ చేశారని విశ్వసిస్తారు. అమ్మవారి ఆలయ గోడపై నవదుర్గల, సప్తమాతృకల శిల్పాలు ఉన్నాయి.",
+      "reverence": "జోగులాంబ దక్కన్ యొక్క ఉగ్రమైనా కరుణామయ అమ్మగా ఆరాధించబడుతుంది. బాలబ్రహ్మ కుండాన్ని పవిత్రంగా భావించి, నవబ్రహ్మ ఆలయాలను దర్శించుకుని ఆ కుండలో స్నానం చేస్తే పాపాలు తొలగుతాయని నమ్ముతారు. నవరాత్రులలో ఇక్కడ వేలాది భక్తులు వస్తారు."
+    }
+  },
+  "bhramaramba": {
+    "en": {
+      "sthalapuram": "Srisailam, on the southern bank of the Krishna in the Nallamala hills, holds two great shrines in one sacred complex: Mallikarjuna Swamy to Shiva and Bhramarambika to the Goddess. The Shakti Peetha tradition counts Bhramaramba among the eighteen seats, associated with the neck of Sati.",
+      "explanation": "The Goddess here bears the name Bhramarambika — 'Queen of the bees'. One ancient story says that when Shiva and Parvati argued, Parvati assumed a form made of bees (bhramara) to prove that she could not be separated from Shiva; the name is honoured in the worship of the bee-headed form at Srisailam. The complex is unique in uniting a Jyotirlinga and a Shakti Peetha under one roof, and Adi Shankara composed long hymns here (the Srisaila stuti).",
+      "reverence": "Srisailam is revered as the union of Shiva and Shakti in a single field of grace. Devotees believe the Goddess here protects families and crops, and her presence redeems a visit to the neighbouring Shiva shrine. The Mahashivaratri and Navaratri festivals draw enormous crowds up the mountain road to this double seat."
+    },
+    "te": {
+      "sthalapuram": "నల్లమల కొండలలో, కృష్ణానది దక్షిణ తీరాన ఉన్న శ్రీశైలంలో రెండు గొప్ప దివ్యక్షేత్రాలు ఒకే పవిత్ర సముదాయంలో ఉన్నాయి — శివుని మల్లికార్జునస్వామి మరియు అమ్మవారి భ్రమరాంబిక. శక్తిపీఠ సంప్రదాయం భ్రమరాంబను పద్దెనిమిది పీఠాలలో ఒకటిగా భావిస్తుంది.",
+      "explanation": "ఈ క్షేత్రంలో తల్లి భ్రమరాంబిక — 'తేనెటీగల రాణి' — అని పిలువబడుతుంది. ఒక ప్రాచీన కథ ప్రకారం శివుడు, పార్వతి వాదించుకున్నప్పుడు తాను శివుని నుండి వేరుకాదని నిరూపించేందుకు పార్వతి తేనెటీగల రూపాన్ని ధరించింది. శ్రీశైలం ఒకే పైకప్పు క్రింద జ్యోతిర్లింగం, శక్తిపీఠం రెండూ ఉండటంలో ప్రత్యేకమైంది.",
+      "reverence": "శివశక్తుల సమ్మేళనంగా శ్రీశైలం భక్తి కేంద్రం. అమ్మవారు కుటుంబాలను, పంటలను రక్షిస్తుందని భక్తులు నమ్ముతారు. మహాశివరాత్రి, నవరాత్రుల సమయంలో ఈ ద్వంద్వ క్షేత్రానికి విపరీతమైన జనం వస్తారు."
+    }
+  },
+  "mahalakshmi-kolhapur": {
+    "en": {
+      "sthalapuram": "The Karaveera kshetra of Kolhapur is the seat of Mahalakshmi, installed at the heart of an ancient city ruled by the Chalukyas and later by the House of Kolhapur. The Shakti Peetha tradition calls this the Shri Pitham, the seat associated with the eye of Sati.",
+      "explanation": "Goddess Mahalakshmi here is worshipped as Aai Ambabai, in a black stone image known as the Rakta Shaligram, set in a golden cube. The temple, built in the Hemadpanthi style, is believed to be among the oldest standing temples of the region. The image holds a Kumbha, a Marud, a Chal and a Chataka in her four hands, and is venerated with elaborate Dhuparti. Devotees regard Kolhapur, Sringeri and Machilipatnam as the three seats of Lakshmi on earth.",
+      "reverence": "Mahalakshmi of Kolhapur is revered as giver of wealth, sovereignty and wellbeing, bestowing the grace of the Goddess Shri. The shrine draws lakhs during the Navaratri Kumbh mela and the Aai festivals, and the idol is regarded as a living, breathing source of compassion in Maharashtra Saiva-Shakta devotion."
+    },
+    "te": {
+      "sthalapuram": "కొల్హాపూర్ కరవీర క్షేత్రం పురాతన నగరానికి హృదయం వద్ద మహాలక్ష్మి పీఠం. శక్తిపీఠ సంప్రదాయం దీనిని శ్రీ పీఠం అని పిలుస్తుంది.",
+      "explanation": "ఇక్కడ మహాలక్ష్మి తల్లిని ఆయ్ అంబాబాయి అని, రక్తశాలిగ్రామ శిలలో బంగారు పీఠంపై కొలుస్తారు. నాలుగు చేతులలో కుంభం, మరుదు (తక్కిలి), చాలు, చాతకం ధరించి నిలిచిన తల్లి దర్శనమిస్తుంది. కొల్హాపూర్, శృంగేరి, మచిలీపట్నం భూమిపై లక్ష్మీదేవికి మూడు ఆసనాలని భక్తులు భావిస్తారు.",
+      "reverence": "కొల్హాపూర్ మహాలక్ష్మి సంపద, ఐశ్వర్యం, ఆరోగ్యాన్ని ప్రసాదించే శ్రీమాతగా పూజింపబడుతుంది. నవరాత్రులలో, తల్లి పండుగలలో ఇక్కడ లక్షలాది మంది వస్తారు."
+    }
+  },
+  "mahakali-ujjain": {
+    "en": {
+      "sthalapuram": "Ujjain, the ancient Avanti on the banks of the Shipra, holds the Shakti Peetha of Mahakali at the Harsiddhi temple. The seat is counted among the Ashtadasha Shakti Peethas, associated with the upper lip of Sati.",
+      "explanation": "The Harsiddhi temple stands close to the great Mahakaleshwar shrine, and Ujjain is one of the rare places where both a Jyotirlinga and a Shakti Peetha live within one city. The Goddess is worshipped here as Mahakali, the consort of Mahakala — Shiva as the Lord of Time. A Sri Yantra formed of burning lamps in the sanctum reminds the devotee that the Goddess is the power behind time itself. Adi Shankara is remembered to have celebrated this seat in his saundarya lahari tradition.",
+      "reverence": "The Mahakali of Ujjain is revered as the power of annihilation that dissolves every obstacle and fear. Pilgrims to the Jyotirlinga of Mahakaleshwar make certain to bow to this Devi first, since she is the Shakti through whom the Lord beyond time acts. The city thus offers both forms of the divine in a single darshan."
+    },
+    "te": {
+      "sthalapuram": "క్షిప్రా నది ఒడ్డున ఉన్న ప్రాచీన అవంతీ నగరం ఉజ్జయినిలోని హర్సిద్ధి ఆలయంలో మహాకాళి శక్తిపీఠం ఉంది. సతీదేవి పై పెదవి ఇక్కడ పడిందని చెబుతారు.",
+      "explanation": "హర్సిద్ధి ఆలయం మహాకాళేశ్వర జ్యోతిర్లింగానికి సమీపంలో ఉంది. ఒకే నగరంలో జ్యోతిర్లింగం, శక్తిపీఠం రెండూ ఉండటం ఉజ్జయిని ప్రత్యేకత. కాలానికి అధిపతి అయిన మహాకాలుని భార్యగా మహాకాళి ఇక్కడ పూజింపబడుతుంది. గుడిలో దీపాల సమూహం (శ్రీయంత్ర దీపం) కాలానికి ఆధారమైన శక్తి తల్లే అని గుర్తుచేస్తుంది.",
+      "reverence": "అడ్డంకులను, భయాలను తొలగించే వినాశక శక్తిగా ఉజ్జయిని మహాకాళి ఆరాధించబడుతుంది. మహాకాళేశ్వరుని దర్శించే భక్తులు ముందుగా ఈ దేవిని మొక్కుతారు. ఒకే దర్శనంలో శివ, శక్తి రెండు రూపాలు ఇక్కడ లభిస్తాయి."
+    }
+  },
+  "puruhutika": {
+    "en": {
+      "sthalapuram": "Pithapuram, in the fertile corridor of the Godavari basin, is the seat of Puruhutika Devi and is counted among the Ashtadasha Shakti Peethas of Andhra. The temple complex here is known as the Pushkarini Pitham; tradition places the fall of a part of Sati's back (or flank) at this spot.",
+      "explanation": "The Goddess is honoured as Puruhutika, and the kshetra receives its name from the nearby Kukkuteswara shrine — Shiva as the cock (kukkuta). According to the Sthala Purana, Brahma performed a yajna here, and the Goddess stood guard; the name Puruhutika is praised in later stotrams. The temple rises beside the Kunti Madhava tank, a sacred pushkarini, and the region also carries strong traditions of the Bhakti poets of Andhra.",
+      "reverence": "Puruhutika is revered as a compassionate and protective Devi who grants the fruit of pilgrimage to her devotees. The pairing of the Devi with the Kukkuteswara lingam makes Pithapuram a complete Shiva–Shakti kshetra. Local and distant pilgrims flock here at Karthika and Chaitra, especially at the Pushkarini's holy day."
+    },
+    "te": {
+      "sthalapuram": "గోదావరి మండలంలోని పిఠాపురం పురుహూతిక దేవికి ఆలయం. ఇది ఆంధ్రదేశంలోని అష్టాదశ శక్తిపీఠాలలో ఒకటి. ఈ పీఠాన్ని పుష్కరిణీ పీఠం అని పిలుస్తారు.",
+      "explanation": "అమ్మవారిని పురుహూతిక అని పిలుస్తారు. సమీపంలోని కుక్కుటేశ్వర ఆలయం (శివుడు కోడి రూపంలో) నుండి ఈ క్షేత్రానికి ప్రసిద్ధి. స్థలపురాణం ప్రకారం బ్రహ్మ ఇక్కడ యజ్ఞం చేశాడని, అమ్మవారు రక్షగా నిలిచారని చెప్పబడుతుంది. కుంతీ మాధవ తటాకం (పుష్కరిణి) పక్కన ఈ ఆలయం ఉంది.",
+      "reverence": "పురుహూతిక తల్లి భక్తుల కోర్కెలు తీర్చే దయామయి, రక్షక దేవతగా ఆరాధించబడుతుంది. కుక్కుటేశ్వర లింగంతో కలిసిన ఈ క్షేత్రం పూర్ణ శివశక్తి క్షేత్రం. కార్తీక, చైత్ర మాసాలలో పెద్ద ఎత్తున భక్తులు వస్తారు."
+    }
+  },
+  "biraja": {
+    "en": {
+      "sthalapuram": "Jajpur, in Odisha on the banks of the Vaitarani, is the seat of Biraja Devi, one of the Shakti Peethas and the tutelary Goddess of a vast religious region. The Oddyana Pitham is considered the spiritual womb of Odisha.",
+      "explanation": "The temple of Biraja is unique in that the Goddess is conceived as the Navakalebara — the body of the world — and the eastern wall of her sanctum is carved with the 108 forms of the Goddess. The portion of Sati associated with the seat is the navel. Around the Vaitarani, Jajpur became the capital of the early Bhauma kings and a great yajna centre, and the city is still ringed by hundreds of ancient temples. A dip or a ritual bath in the holy Vaitarani is regarded as the equal of the Ganga for ancestral rites.",
+      "reverence": "Biraja is revered as the Adishakti mother of Odisha, celebrated in the Oriya tradition as the Goddess who receives the first offerings of the land. The temple is the centre of the famous Yajna (mela) at Vaitarani-bath, and the Goddess's presence is believed to protect the state's boundaries. Navaratri here is one of eastern India's grandest festivals."
+    },
+    "te": {
+      "sthalapuram": "వైతరిణీ నది ఒడ్డున ఉన్న జాజ్పూర్ (ఒడిశా) బిరాజా దేవి పీఠం. ఒడ్డ్యాన పీఠం ఒడిశా యొక్క ఆధ్యాత్మిక మాతృభూమిగా భావించబడుతుంది.",
+      "explanation": "బిరాజా ఆలయ ప్రత్యేకత ఏమిటంటే దేవిని విశ్వరూపిణిగా భావిస్తారు; గర్భగుడి గోడపై దేవి 108 రూపాలు చెక్కబడి ఉన్నాయి. సతీదేవి నాభి ఇక్కడ పడినట్లు చెబుతారు. ప్రాచీన భౌమ రాజుల రాజధాని, ఒక గొప్ప యజ్ఞక్షేత్రం అయిన జాజ్పూర్ వందల ఆలయాలతో నిండి ఉంది.",
+      "reverence": "ఒడిశా యొక్క ఆదిశక్తి తల్లిగా బిరాజా భక్తుల హృదయాలలో నిలిచి ఉంది. వైతరిణీ స్నానం పిత్రు క్రతువులలో గంగాస్నానంతో సమానంగా భావించబడుతుంది. నవరాత్రులు ఇక్కడ తూర్పు భారతదేశపు గొప్ప పండుగలలో ఒకటి."
+    }
+  },
+  "manikyamba": {
+    "en": {
+      "sthalapuram": "Draksharamam, on a tongue of land between the Godavari and its delta, holds two shrines side by side: Bhimeswara Swamy to Shiva, the chief among the Pancharama kshetras, and Manikyamba to the Goddess, one of the Ashtadasha Shakti Peethas.",
+      "explanation": "The teaching of the Puranas connects this Shakti seat with the left cheek (or in some accounts a gem) of Sati; the Goddess is worshipped as Manikyamba. The sanctum of the Devi is placed beside the great Bhimeswara linga, and the whole complex is believed to be the place where Shiva resides together with his beloved. Adi Shankara's Ashtadasha stotram names the seat Mandya Daksharama in its closing verse.",
+      "reverence": "Manikyamba is revered as the queen of the Draksharama kshetra, giver of the very blessing of the Pancharama pilgrimage. Since the same sacred town carries a Jyotirlinga and a Shakti Peetha, devotees complete two circles of darshan in a single visit. The town's Karthika festival and the Shiva–Shakti union are central to Andhra devotion."
+    },
+    "te": {
+      "sthalapuram": "ద్రాక్షారామం, గోదావరి డెల్టా భూమిలో, రెండు పవిత్ర ఆలయాలు పక్కపక్కనే కలిగి ఉంది — పంచారామాల ప్రధానమైన భీమేశ్వరస్వామి ఆలయం మరియు అష్టాదశ శక్తిపీఠాలలో ఒకటైన మాణిక్యాంబ అమ్మవారి ఆలయం.",
+      "explanation": "సతీదేవి ఎడమ చెంప (కొన్ని కథనాల ప్రకారం మాణిక్యం) ఇక్కడ పడినట్లు చెబుతారు. అమ్మవారిని మాణిక్యాంబ అని పూజిస్తారు. భీమేశ్వర లింగానికి ప్రక్కనే అమ్మవారి గర్భగుడి ఉంది. శంకరుల అష్టాదశ స్తోత్రంలో దాక్షవాటిక పేరుతో ఈ పీఠం పేర్కొనబడింది.",
+      "reverence": "మాణిక్యాంబ ద్రాక్షారామ క్షేత్రానికి రాణి. ఒకే పట్టణంలో జ్యోతిర్లింగం, శక్తిపీఠం రెండూ ఉండటంవల్ల భక్తులు ఒకే దర్శనంతో రెండు యాత్రలు పూర్తిచేస్తారు. శివశక్తుల సమ్మేళనం ఆంధ్ర భక్తికి కేంద్రం."
+    }
+  },
+  "kamakhya": {
+    "en": {
+      "sthalapuram": "On the Nilachal hills above Guwahati, the Kamakhya temple is the greatest Shakti siddharupa of eastern India. The Kamarupa Pitham, seat of Kamakhya, is the place where the yoni (womb) of Sati is believed to have fallen — the wellspring of all creation.",
+      "explanation": "The sanctum holds no image: a fissure in the rock at the level of a lotus pond is worshipped as the Goddess herself, the source of life that menstruates the earth. Kamakhya is the Goddess of desire and union, praised by the Yogini tantras and the Devi Bhagavata as the highest manifestation. The Nilachal hills bear a remarkable chain of shrines to the Mahavidyas around the main temple. The most famous festival is the Ambubachi Mela in the month of Ashadha, when the temple closes for three days during the earth's purification and reopens amid great celebration.",
+      "reverence": "Kamakhya is revered as the Mother of the universe in her most intimate aspect — the creative power behind all forms. Tantra sadhana has made this one of the most powerful spiritual stations in India, and the Ambubachi Mela draws lakhs of devotees seeking the Goddess's Shakti as the principle of life itself. Beginning with the Shakti Peetha stotram and continuing through the Tantras, every tradition bows to Kamakhya as the primordial womb."
+    },
+    "te": {
+      "sthalapuram": "గౌహతి పైన ఉన్న నీలాచల కొండలపై కామాఖ్య ఆలయం తూర్పు భారతదేశపు గొప్ప శక్తి సిద్ధక్షేత్రం. కామరూప పీఠంలో సతీదేవి యోని (గర్భస్థానం) పడినట్లు నమ్ముతారు.",
+      "explanation": "గర్భగుడిలో విగ్రహం ఉండదు; తామర కొలనులా ఉన్న రాతి చీలికను తల్లిగా పూజిస్తారు. కామాఖ్య కామమయి, ఐక్యదాయిణి. ప్రధాన ఆలయం చుట్టూ నీలాచలంపై దశమహావిద్యల ఆలయాలు ఉన్నాయి. ఆషాఢ మాసంలో జరిగే అంబువాచి మేళా ప్రసిద్ధి — మూడు రోజులు ఆలయం మూసి ఉంచి భూమి శుద్ధి అయిన తర్వాత తిరిగి తెరుస్తారు.",
+      "reverence": "కామాఖ్య విశ్వమాత తన అత్యంత సన్నిహిత రూపంలో — సృష్టికి మూలమైన శక్తిగా పూజింపబడుతుంది. తంత్ర సాధనకు ఇది భారతదేశపు శక్తిమంత క్షేత్రం. అంబువాచి మేళాకు లక్షలాది భక్తులు వస్తారు."
+    }
+  },
+  "madhaveshwari": {
+    "en": {
+      "sthalapuram": "At Prayagraj, where the Ganga and Yamuna meet and the unseen Saraswati is held to join them, stands the Shakti Peetha of Alopi Bhawani — the Goddess who vanished. The Prayaga Pitham is associated with the fingers of Sati.",
+      "explanation": "The temple is famously imageless, for the Goddess vanished (Alopi) and a tilde-shaped shrine takes her place, her presence made visible nowhere. Tradition says that when Shiva wandered with the body of Sati, the fingers fell here at the confluence, and the Goddess came to be called Alopi because she disappeared before anyone could portray her. The museum of the site preserves this emptiness as the deepest teaching: the Mother who is known by becoming invisible. The city itself, the ancient Prayaga, is the king of tirthas, where a portion of the Kumbh Mela is held once every twelve years.",
+      "reverence": "The Madhaveshwari–Alopi Devi is revered as the Goddess of the great confluence, blessing the union of the three rivers in a single bend. Pilgrims of Prayagraj, whether at Triveni or on the Kumbh night, make sure to offer prayers here because she is the constant witness of the sangam. Her imagelessness is honoured as a living sign of the transcendent Mother."
+    },
+    "te": {
+      "sthalapuram": "గంగా, యమున, అదృశ్య సరస్వతి కలిసే ప్రయాగ్రాజ్ లో అలోపీ భవాని శక్తిపీఠం ఉంది. సతీదేవి వేళ్లు ఇక్కడ పడినట్లు చెబుతారు.",
+      "explanation": "ఈ ఆలయంలో విగ్రహం ఉండదు — అమ్మవారు మాయమైనందువల్ల (అలోపీ) వారి స్థానంలో ఒక మండలం పూజింపబడుతుంది. శివుడు సతీదేహాన్ని మోస్తున్నప్పుడు సంగమం వద్ద వేళ్లు పడ్డాయని చెబుతారు. ఎవరూ చూపించలేనంతగా అమ్మ మాయమైనందువల్ల ఆమెకు అలోపి అనే పేరు వచ్చింది. ప్రయాగ తీర్థరాజు; పన్నెండేళ్లకు ఒకసారి కుంభమేళా ఇక్కడే జరుగుతుంది.",
+      "reverence": "మహా సంగమం యొక్క అధిదేవతగా మాధవేశ్వరి (అలోపి) పూజింపబడుతుంది. త్రివేణి సంగమం వద్ద వచ్చే భక్తులు ఈ అమ్మవారిని తప్పక మొక్కుతారు. విగ్రహం లేని తల్లి సాక్షాత్ నిర్వికార శక్తికి సంకేతంగా భావించబడుతుంది."
+    }
+  },
+  "jwalamukhi": {
+    "en": {
+      "sthalapuram": "In the Kangra valley of Himachal, the Jwalamukhi temple holds the Goddess as a column of blue flame burning from the earth — the Jwalamukhi Pitham, where the tongue of Sati is believed to have fallen.",
+      "explanation": "There is no idol in the sanctum: seven (sometimes nine or eleven) eternal flames rise out of the rock, each given a name of the Goddess, and the flame itself is worshipped as Jwala, the fire-mouth. The flames are held to be natural, burning through ancient volcanic gas vents in the hill, a phenomenon visible to the naked eye for centuries. Pilgrims offer unholy articles to the flames and receive them back purified; butter, sugar and sacred ash are poured into the fire as abhishekam to the Goddess. Tradition associates the temple with the Pandavas and with the Rajputs of Kangra, who protected it across the centuries.",
+      "reverence": "Jwalamukhi is revered as the Goddess as the very element of fire — purifying, destroying and feeding. It is one of the most direct darshanas in the Shakta tradition: the devotee sees the Divine Mother as a visible, living flame. The Kangra valley honours it as the protector of the land, and the eternal flames make the site unforgettable to every pilgrim."
+    },
+    "te": {
+      "sthalapuram": "హిమాచల్ లోని కాంగ్రా లోయలో జ్వాలాముఖి ఆలయంలో నేల నుండి పైకి లేచే నీలి జ్వాలల రూపంలో తల్లి పూజింపబడుతుంది. సతీదేవి నాలుక ఇక్కడ పడినట్లు చెబుతారు.",
+      "explanation": "గర్భగుడిలో విగ్రహం ఉండదు; రాతిలోంచి ఏడు (కొన్ని కథనాల ప్రకారం తొమ్మిది లేదా పదకొండు) నిత్య జ్వాలలు ప్రజ్వలిస్తాయి. ఈ జ్వాలలే అమ్మవారి స్వరూపాలు. భక్తులు నెయ్యి, చక్కెర, విభూతి మొదలైనవి అగ్నిలో సమర్పించి అమ్మవారికి అభిషేకం చేస్తారు. కాంగ్రా రాజులు శతాబ్దాలపాటు ఈ ఆలయాన్ని కాపాడారు.",
+      "reverence": "అగ్ని స్వరూపిణిగా జ్వాలాముఖి పూజింపబడుతుంది — పరిశుద్ధపరిచే, దహించే, పోషించే తల్లి. సాక్షాత్ జీవ జ్వాలలో తల్లిని చూడటం శక్త సంప్రదాయంలో అత్యంత ప్రత్యక్ష దర్శనం. కాంగ్రా లోయకు ఇది రక్షకురాలు."
+    }
+  },
+  "mangala-gauri": {
+    "en": {
+      "sthalapuram": "On a hill that overlooks the town of Gaya in Bihar stands the Mangala Gauri temple, one of the Ashtadasha Shakti Peethas. The Gaya Pitham is associated with the breast of Sati, and the Goddess here is honoured as Sarvamangala.",
+      "explanation": "Gaya is India's great tirtha for ancestral rites: the Vishnupad temple below, with its footprint of Vishnu, and the sacred banks of the Phalgu river make the whole town a vast sraddha field. Mangala Gauri crowns the hill as the protective mother of the town's festival and pilgrimage calendar. Tradition connects the Goddess to the story of the demon Andhaka and to the cosmic dance of Shiva; her shrine on the summit receives the first ritual salutations of pilgrims before they perform pinda for their ancestors.",
+      "reverence": "Sarvamangala of Gaya is revered as the giver of all auspiciousness — 'mangala' for the family, the town and the tirtha itself. Because she protects the town where the ancestors are remembered, the Goddess is inseparable from the rite of shraddha. On Mangala Gauri (Tuesdays) in the month of Saavan and on Navaratri the hill fills with saffron-clad devotees."
+    },
+    "te": {
+      "sthalapuram": "బీహార్ లోని గయ పట్టణాన్ని చూసే కొండపై మంగళగౌరి ఆలయం ఉంది. గయ పీఠం సతీదేవి స్తనభాగంతో ముడిపడి ఉంది.",
+      "explanation": "గయ పిత్రు క్రతువులకు భారతదేశపు గొప్ప తీర్థం. విష్ణుపాద ఆలయం, ఫల్గూ నది తీరం పిండప్రదానానికి ప్రసిద్ధి. మంగళగౌరి ఈ కొండపై నగరానికి రక్షకురాలిగా ఉన్నారు. పితృకార్యాలకు ముందు భక్తులు ముందుగా చేసేది ఈ తల్లి దర్శనమే.",
+      "reverence": "గయ క్షేత్రపాలకురాలు సర్వమంగళ — మంగళకరమైన తల్లి. పితృ క్రతువులతో అనుబంధం ఉన్నందున ఈ అమ్మవారు ముఖ్యంగా ఆరాధించబడుతుంది. శ్రావణ మాసపు మంగళగౌరి నోము మరియు నవరాత్రులలో కొండ కాషాయ వస్త్రధారులతో నిండిపోతుంది."
+    }
+  },
+  "vishalakshi": {
+    "en": {
+      "sthalapuram": "In Varanasi, near the Manikarnika ghat and opposite the great Vishwanath temple, stands the Vishalakshi Devi temple, counted among the Ashtadasha Shakti Peethas. The Varanasi Pitham (also called the Manikarni Pitham) is associated with the earrings of Sati.",
+      "explanation": "The Goddess is Vishalakshi — she of the wide, gracious eyes — and her shrine is believed to stand at the very point where one of Sati's ornaments fell by the burning ghat of Kashi. Varanasi is the city where the whole universe is said to dissolve; Vishalakshi, as the Mother of Kashi, watches over the cremation ground and grants the departing soul liberation. Her temple reflects this older, merged Shakta vision of the Goddess as the ground of both life and Moksha.",
+      "reverence": "Vishalakshi is revered as the compassionate eye of Kashi, endlessly present at the sacred confluence of life and death. Devotees believe that one who dies in Kashi is released; the Goddess's presence at Manikarnika guarantees that grace. Along with the Pancha Bhoota path and the Vishwanath darshan, bowing to Vishalakshi completes the circle of Kashi pilgrimage."
+    },
+    "te": {
+      "sthalapuram": "వారాణసి (కాశీ) లో, మాణికర్ణికా ఘాట్ సమీపంలో, విశ్వనాథ ఆలయానికి ఎదురుగా విశాలాక్షి ఆలయం ఉంది. సతీదేవి చెవిపోగులు (కుండలాలు) ఇక్కడ పడినట్లు చెబుతారు.",
+      "explanation": "విశాలాక్షి అంటే విశాలమైన దయగల కళ్ల ఉన్న తల్లి. ముక్తిని ప్రసాదించే కాశీలో, మాణికర్ణిక అగ్ని ఘాట్ వద్ద అమ్మవారు మోక్షమీయవేడిని చూస్తుంది. ఆమె ఆలయం జీవితం-మరణం యొక్క పవిత్ర సంగమం వద్ద ఉన్న శక్తి స్వరూపం.",
+      "reverence": "మాణికర్ణిక వద్ద అమ్మవారి దర్శనం ముక్తిని ఖాయం చేస్తుందని భావిస్తారు. కాశీ తీర్థ యాత్రకు విశాలాక్షి దర్శనం ఒక ముఖ్యమైన భాగం. జీవన్మరణాలకు అధికారిణి అయిన ఈ ఉగ్ర-ఉదార తల్లి కాశీ వాసుల హృదయానికి నిలయం."
+    }
+  },
+  "tara-tarapith": {
+    "en": {
+      "sthalapuram": "Tarapith, on the banks of the Dwarka river in Birbhum, West Bengal, is the shrine of Tara, one of the greatest mother-Tara Peethas of eastern India, and the seat is counted among the Shakti Peethas through the tradition of the cosmic mother as Tara.",
+      "explanation": "The temple holds the goddess Tara, dark and luminous, in a form associated with the eye (or with the third eye of the Goddess). Tarapith became a living centre of Shakta sadhana through the saint Sadhak Bamakhepa, who made the cremation ground his chapel, meditating on Tara as the mother of all that burns. The tradition here is intensely direct: the Goddess as the wild, fierce, all-embracing mother of the burning ground who grants her devotees fearlessness. The nearby dwelling of the saint and his grave are objects of deep veneration.",
+      "reverence": "Tarapith is revered as one of the most powerful energy fields of the Mother in the Bengali shakta world. The Goddess is worshipped here as the refuge who asks nothing and forgives everything, and countless devotees meditate on her during the fierce meditations traditions at Tarapith. Pilgrims believe a single sincere visit dispels fear — of death, loss and the world."
+    },
+    "te": {
+      "sthalapuram": "పశ్చిమ బెంగాల్ లోని బీర్భూమ్ లో, ద్వారకా నది ఒడ్డున తారాపీఠ్ లో తారామాత ఆలయం ఉంది. తూర్పు భారతదేశపు గొప్ప శక్తిపీఠాలలో ఒకటి.",
+      "explanation": "ఈ ఆలయంలో తల్లి తారా రూపంలో పూజింపబడుతుంది. సాధక బామఖేపా అనే సన్యాసి శ్మశానాన్ని తన ఉపాసనా స్థలంగా చేసుకుని, ఇక్కడే తారామాతను సాధించాడు. తల్లి భయాన్ని పోగొట్టే ఉగ్ర-కరుణా స్వరూపిణిగా ఇక్కడ పూజింపబడుతుంది. బామఖేపా నివాసం, సమాధి పవిత్ర స్థలాలు.",
+      "reverence": "బెంగాలీ శాక్త భక్తిలో తారాపీఠ్ అత్యంత శక్తిమంతమైన క్షేత్రం. ఏమీ అడగని, ప్రతిదీ క్షమించే తల్లిగా తారాదేవి ఇక్కడ ఆరాధించబడుతుంది. ఒకే ఒక నిజమైన దర్శనం భయాన్ని — మరణభయాన్ని, నష్టభయాన్ని — పోగొడుతుందని భక్తులు నమ్ముతారు."
+    }
+  },
+  "vimala-puri": {
+    "en": {
+      "sthalapuram": "Within the enormous walled compound of Jagannath at Puri, the temple of Vimala Devi occupies a special seat beside the main shrine, and the Shakta tradition counts it among the Shakti Peethas, associated with the feet of Sati.",
+      "explanation": "Vimala — she who is pure — is honoured as the Shakti of Jagannath himself. So central is her place that the mahaprasada (the sacred food of the Lord) is first offered to Vimala Devi before it is sent to all the world. In the same compound the Goddess is worshipped in her purest, feminine completeness, holding the city and the great temple under her protection. Puri thus unites a Char Dham and a Shakti Peetha within a single courtyard.",
+      "reverence": "Vimala Devi is revered as the very essence of the temple's grace; no prasada leaves the Lord's kitchen until she has tasted it first. Because of this, pilgrims regard her darshan as inseparable from the darshan of Jagannath. In the Shakta lineage Puri holds the unique honour of a Peetha enshrined at the foot of a Char Dham."
+    },
+    "te": {
+      "sthalapuram": "పూరీలో విశాలమైన జగన్నాథ ప్రాకారం లోపల విమల దేవి ఆలయం ప్రధాన ఆలయం పక్కనే ఉంది. సతీదేవి పాదాలు ఇక్కడ పడినట్లు చెబుతారు.",
+      "explanation": "విమల అంటే పరిశుద్ధురాలు. జగన్నాథుని శక్తిగా విమలాదేవి గౌరవించబడుతుంది. జగన్నాథుని ప్రసాదం (మహాప్రసాదం) ముందుగా విమలాదేవికి సమర్పించిన తర్వాతే భక్తులకు పంపబడుతుంది. ఒకే ప్రాకారంలో చార్ ధామ్, శక్తిపీఠం రెండూ ఉన్న అరుదైన క్షేత్రం పూరీ.",
+      "reverence": "జగన్నాథుని ప్రసాదం ముందుగా రుచి చూచే తల్లి విమల. జగన్నాథ దర్శనంలో విమల దర్శనం విడదీయరానిది. శాక్త సంప్రదాయంలో చార్ ధామ్ పాదమూలంలో పీఠం ఉన్న ప్రత్యేక గౌరవం పూరీకే ఉంది."
+    }
+  },
+  "ambaji": {
+    "en": {
+      "sthalapuram": "On the western edge of the Aravalli range, on Gabbar hill above the village of Ambaji in Banaskantha, Gujarat, stands the Arasuri Ambaji temple, one of the chief Shakta shrines of western India and counted among the Shakti Peethas through the seat of the heart (of Sati).",
+      "explanation": "The sanctum enshrines no anthropomorphic idol. Instead, a yantra set in the floor — the Chhorasi yantra — is worshipped as the Goddess Ambaji, crowned with a golden kalash chhatra. The hill is home to the modern Ambika Bhawani darshan and the temple is closely tied to the broader cult of Ambaji–Arasuri across Gujarat, Rajasthan and forming a pilgrimage circuit with the nearby shrines of the region. The site is visited during the Bhadarvi Poonam fair, when pilgrims climb the hill in thousands, one of Gujarat's largest religious congregations.",
+      "reverence": "Ambaji is revered as the mother goddess of Gujarat, the heart of the western Shakta path, giver of protection and prosperity to a large belt of western India. The imageless yantra is honoured as the purest form of worship, and the Arasuri hill as one of the most ancient places of the Mother in the Aravallis. Her creed and festival bind the whole border region."
+    },
+    "te": {
+      "sthalapuram": "అరావళి పర్వత శ్రేణికి పశ్చిమం వైపు, గుజరాత్ లోని బనస్కంత జిల్లా అంబాజీ గ్రామం పైన గబ్బర్ కొండపై అరసూరి అంబాజీ ఆలయం ఉంది. సతీదేవి హృదయం (గుండె) ఇక్కడ పడినట్లు చెబుతారు.",
+      "explanation": "గర్భగుడిలో విగ్రహం ఉండదు; నేలపై బంగారు ఛత్రంతో ఉన్న 'చోరాసి' యంత్రాన్ని అంబాజీ తల్లిగా పూజిస్తారు. గుజరాత్, రాజస్థాన్లలో అంబాజీ-అరసూరి ఆరాధన విస్తారంగా ఉంది. భదర్వ పూర్ణిమ సమయంలో జరిగే జాతరలో లక్షలాది భక్తులు ఈ కొండను అధిరోహిస్తారు.",
+      "reverence": "గుజరాత్ యొక్క మాతృదేవత అంబాజీ. యంత్ర ఆరాధన పూర్ణమైన నిష్కల రూపంగా భావించబడుతుంది. పశ్చిమ శక్తి మార్గానికి, సరిహద్దు ప్రాంతాలకు ఈ తల్లి సంరక్షకురాలు."
+    }
+  },
+  "somnath": {
+    "en": {
+      "sthalapuram": "Prabhas Patan — named for 'prabhas', the splendour of Shiva — on the shore of Saurashtra where the Saraswati flowed into the sea, held the first of the twelve Jyotirlingas. The name Somnath recalls the Moon God Soma, who worshipped Shiva at this shore to be freed from a curse.",
+      "explanation": "According to the Puranas, Daksha, the father of the Moon's first beloved, cursed Chandra with waning. The Moon prayed at Prabhas, and there Shiva relieved him and taught the meaning of auspiciousness in the waning and waxing years. The temple has been destroyed and rebuilt many times over its long history, each reconstruction by a celebrated dynasty; the present structure was raised in 1951 on the site of older temples. The linga is installed facing the sea, which washes the outer walls of the shrine.",
+      "reverence": "Somnath stands first in the Dwadasha Jyotirlinga stotram ('Saurashtre Somnatham') and carries the memory of the Moon's redemption. It is revered both as a prana-linga of the nation's spiritual biography and as a still-living centre of Shaiva worship on the western sea. The ocean, the moonlight and the temple's long memory of rising again have made it an emblem of restoration."
+    },
+    "te": {
+      "sthalapuram": "ప్రభాస పట్టణం — సముద్రతీరంలో ప్రవహించే సరస్వతి పర్యవసాన భూమి — పన్నెండు జ్యోతిర్లింగాలలో మొదటిదానికి స్థానం. సోమనాథ్ పేరు చంద్రుడు (సోమ) ఇక్కడ శివుడిని పూజించి శాపవిముక్తుడైన కథను తలపిస్తుంది.",
+      "explanation": "దక్షుడు చంద్రుడిని క్షీణిస్తూ ఉండమని శపించాడు. చంద్రుడు ప్రభాసలో శివుడిని ఆరాధించాడు; అక్కడ శివుడు ఆయనను విడిపించి క్షీణాభివృద్ధులలోని మంగళాన్ని నేర్పించాడు. ప్రభాస సముద్రతీరంలో సోమనాథ్ ఇప్పుడు కనిపించే రూపంలో 1951లో పునర్నిర్మించబడింది. లింగం సముద్రం వైపు చూస్తూ నిలబడి ఉంది; అలలు ఆలయ గోడలను తాకుతాయి.",
+      "reverence": "'సౌరాష్ట్రే సోమనాథం' — ద్వాదశ జ్యోతిర్లింగ స్తోత్రంలో సోమనాథ్ మొదటిది. చంద్రుని విమోచన కథ చెప్పే ఈ క్షేత్రం పశ్చిమ సముద్రతీరంలో నిస్సందేహమైన శైవ ఆరాధనా కేంద్రం. పునర్నిర్మాణ చరిత్ర దీనిని పునరుత్థానానికి ప్రతీకగా చేసింది."
+    }
+  },
+  "mallikarjuna": {
+    "en": {
+      "sthalapuram": "On the southern face of the Nallamala hills of Andhra, the Srisailam kshetra is home to the Jyotirlinga of Mallikarjuna Swamy and the Shakti Peetha of Bhramarambika, joined in one mountain. The name joins 'Mallika' (Parvati) with 'Arjuna' — Shiva — the Lord of the mountain.",
+      "explanation": "One legend recounts how Shiva and Parvati, in order to be alone while Shiva revealed higher teachings, placed Kartikeya with his peacock at the hill of Krouncha; the boy, grieved at being left out, flung himself (or circled) — and Srisailam, the hill where Shiva himself resides, came to be called Krouncha by the Puranas for the moment when the peacock's son returned. The main temple faces south, home of the Nandikeshwara, and the complex preserves remarkable sculpture. Srisailam is both a Jyotirlinga and a Shakti Peetha, a rare double seat.",
+      "reverence": "'Sri Shailam' resounds in both the Jyotirlinga and the Shakti Peetha stotrams. Devotees believe the Lord here grants liberation and is especially affectionate to those who have renounced pride. Each year the Mahashivaratri jyotirlinga procession up the mountain is among Andhra's largest and most moving pilgrimages."
+    },
+    "te": {
+      "sthalapuram": "ఆంధ్రదేశపు నల్లమల కొండల దక్షిణ భాగంలో శ్రీశైల క్షేత్రం 'మల్లిక' (పార్వతి) మరియు 'అర్జున' (శివుడు) కలిసిన పేరు కలిగిన మల్లికార్జునుని జ్యోతిర్లింగం మరియు భ్రమరాంబిక శక్తిపీఠంకు స్థానం.",
+      "explanation": "స్కందుడు తన నెమలితో క్రౌంచ పర్వతం వద్ద ఉండగా, శివపార్వతులు ఏకాంతంలో ఉపదేశం కోసం అక్కడే ఉన్నారని ఒక కథ. శ్రీశైలం దక్షిణ దిశకు చూస్తుంది; నందిగణానికి నిలయం. జ్యోతిర్లింగం, శక్తిపీఠం రెండూ ఒకే శిఖరంలో ఉన్న అరుదైన క్షేత్రం ఇది.",
+      "reverence": "'శ్రీశైలం' పేరు జ్యోతిర్లింగ, శక్తిపీఠ స్తోత్రాలలో రెండింటిలోనూ వస్తుంది. అహంకారం ఉండని భక్తులపై ఈ స్వామి ప్రేమగా ఉంటాడని భావిస్తారు. మహాశివరాత్రి నాడు కొండ ఎక్కి చేసే జ్యోతిర్లింగ దర్శనం ఆంధ్రదేశపు మహా యాత్రలలో ఒకటి."
+    }
+  },
+  "mahakaleshwar": {
+    "en": {
+      "sthalapuram": "In Ujjain, on the banks of the Shipra, the Mahakaleshwar temple enshrines Shiva as Mahakala — the Lord of Time itself, older than the ages. The ancient city of Avanti always kept its sovereign shrine to the Kala-god.",
+      "explanation": "The Puranas teach that Shiva, as the greatest of the kalas (time-measures), was pleased by the residents of Avanti and chose to dwell at Ujjain as Mahakala. The temple stands south of other shrines, facing southward as Befuna, a rare orientation for a Shiva temple; the current structure dates to the eighteenth century upon ancient foundations. Its most celebrated rite is the early-morning Bhasma Aarti, in which the linga is bathed with the sacred ash of a cremation fire, proclaiming Shiva as the God who rules death. A Shakti Peetha, the Harsiddhi Mahakali temple, stands close by.",
+      "reverence": "'Ujjayinyam Mahakalam' — in the Dwadasha stotram, Mahakaleshwar is chanted with the voice of Ujjain's ancient grandeur. The Bhasma Aarti has made this one of the most compelling of all jyotirlinga darshanas; seeing the Lord in ash is seeing him as beyond all that the body carries. As the city of the Kumbh, Ujjain's spiritual year is centred on this clockwork of the eternal."
+    },
+    "te": {
+      "sthalapuram": "క్షిప్రా నది ఒడ్డున ఉన్న ఉజ్జయినిలో మహాకాళేశ్వర ఆలయంలో శివుడు మహాకాలుడుగా — కాలానికి అధిపతిగా — దర్శనమిస్తాడు. ప్రాచీన అవంతీ నగరానికి ప్రధాన దేవత ఇతడే.",
+      "explanation": "అవంతీ వాసులను ఆశీర్వదించిన శివుడు ఉజ్జయినిలోనే మహాకాలుడిగా నిలిచాడని పురాణాలు చెబుతాయి. దక్షిణాభిముఖమైన ఈ ఆలయం ప్రసిద్ధి చెందిన భస్మారతికి కేంద్రం — శ్మశానాగ్ని నుండి తీసుకువచ్చిన విభూతితో లింగాన్ని అభిషేకిస్తారు. ఇది మరణాన్ని ఏలే శివుని సాక్షి. సమీపంలో హర్సిద్ధి మహాకాళి శక్తిపీఠం ఉంది.",
+      "reverence": "'ఉజ్జయిన్యాం మహాకాలం' — స్తోత్రపంక్తిలో నిలిచిన ఈ జ్యోతిర్లింగం భస్మారతితో అత్యంత ఆకర్షణీయ దర్శనం. కుమ్భ్ నగరం ఉజ్జయిని యొక్క ఆధ్యాత్మిక సంవత్సరం ఈ నిత్యకాలచక్రం చుట్టే తిరుగుతుంది."
+    }
+  },
+  "omkareshwar": {
+    "en": {
+      "sthalapuram": "Mandhata, an island formed by the Narmada river in the shape of the sacred syllable Om, is the seat of Omkareshwar, the Om-linga among the twelve Jyotirlingas.",
+      "explanation": "The tradition teaches that the Goddess Parvati, following a long penance in the Himalayan region, asked Shiva to show her a place where the sacred syllable could be heard; the banks of the Narmada offered precisely such an island, and Shiva built his seat there as Omkareshwar, with the Mamleshwar shrine above it as the mother of rivers. The island, reached by road bridges today, preserves the braided form of the Om letter in its river-washed contour, whence its sanctity. Together the two shrines, Omkareshwar and Amareshwar, constitute the one Jyotirlinga honour of Mandhata.",
+      "reverence": "'Omkare Amaleshwaram' rings in the Jyotirlinga stotram. Worship of the Om-linga is worship of creation itself, and the island is venerated as the form of the holy syllable upon water. The Narmada, the island and the two towers draw a constant stream of devotees from all over India."
+    },
+    "te": {
+      "sthalapuram": "నర్మదా నది గర్భంలో 'ఓం' అనే పవిత్రాక్షరం ఆకారంలో ఏర్పడిన మంధాత అనే ద్వీపం పన్నెండు జ్యోతిర్లింగాలలో ఓంకారేశ్వర్ కు నిలయం.",
+      "explanation": "పార్వతి తపస్సుకు మెచ్చి శివుడు ఓంకారం ప్రతిధ్వనించే ద్వీపాన్ని ఎంచుకున్నాడని చెప్పబడుతుంది. నది చుట్టిన ఈ ద్వీపం ఓం అక్షర రూపంలో ఉండటం దాని పవిత్రతకు కారణం. ఓంకారేశ్వర్ మరియు పైన ఉన్న అమరేశ్వర్ క్షేత్రాలు కలిసి ఈ జ్యోతిర్లింగ క్షేత్రాన్ని పూర్తిచేస్తాయి.",
+      "reverence": "'ఓంకారే అమలేశ్వరం' — స్తోత్రపంక్తి. ఓంకార లింగం ఆరాధనంటే సృష్టి ఆరాధన. నర్మదపై ఓం రూప ద్వీపం సర్వదా భక్తులను ఆకర్షిస్తుంది."
+    }
+  },
+  "baidyanath": {
+    "en": {
+      "sthalapuram": "Deoghar in Jharkhand, called Baidyanath Dham, is one of the principal modern seats of the Baidyanath Jyotirlinga. The name means 'Lord of Physicians' (Vaidya = healer), and the shrine is revered in the healing aspect of Shiva.",
+      "explanation": "According to the tradition of the region, the demon-king Ravana, in his devotion, asked Shiva where to install a lingam; Shiva directed him to carry a special lingam, for which Ravana was to wait while his previous worship was concluded. The eager Ravana, pressing the lingam into the earth at Deoghar to rest, found it immovably planted and worshipped it there where it stood. The same story belongs to several healing shrines across India; in the modern Jyotirlinga list, Deoghar is most often named (while Parli-Vajjanath is named in some traditions). The temple, built of imposing stone, is surrounded by fifty-two or so subsidiary shrines, and its near holy water tank is essential to the ritual bath.",
+      "reverence": "'Paralya Vaidyanatham' — the stotram chants the physician Lord. Baidyanath is revered as the giver of health, the healer who relieves suffering of body and mind, and the Shravana Monday gatherings of the temple are among the great festival crowds of eastern India. Pilgrims come precisely to be cured."
+    },
+    "te": {
+      "sthalapuram": "ఝార్ఖండ్ లోని దేవ్ఘర్ (బైద్యనాథ్ ధామ్) బైద్యనాథ్ జ్యోతిర్లింగానికి ప్రధాన ప్రస్తుత క్షేత్రం. 'వైద్య', 'నాథ్' — వైద్యుని ప్రభువు, రోగులను నయం చేసే శివుని రూపం.",
+      "explanation": "రావణుడు ఒక ప్రత్యేకమైన లింగాన్ని తీసుకువెళుతూ దేవ్ఘర్ లో ఆపి భూమిలో నాటగా అది కదలకుండా నిలిచిపోయిందని, అక్కడే పూజించబడిందని కథ. ఆధునిక జ్యోతిర్లింగ జాబితాలలో దేవ్ఘర్ సాధారణంగా పేర్కొనబడుతుంది. పెద్ద రాతి ఆలయం చుట్టూ ఐంపై-రెండు సహాయక ఆలయాలు ఉన్నాయి.",
+      "reverence": "'పరల్యాం వైద్యనాథం' — రోగులను నయం చేసే ప్రభువు. ఆరోగ్యదాయకడవు గా, దేహమనస్సుల బాధలను తీర్చే వైద్యుడిగా బైద్యనాథ్ ఆరాధించబడుతుంది. శ్రావణ సోమవారాలు తూర్పు భారతదేశపు మహాసమావేశాలలో ఒకటి."
+    }
+  },
+  "bhimashankar": {
+    "en": {
+      "sthalapuram": "In the Sahyadri mountains of Maharashtra, at the village of Bhimashankar, stands the Jyotirlinga amid thick forests; the Bhima river is held to rise nearby from a sacred stone outcrop.",
+      "explanation": "According to one tradition a demon named Bhima, son of Kumbhakarna, terrorised the region until Shiva slew him in battle, giving the place its name — and from the ground where Shiva stood the Bhima river arose. In yet another telling, Shiva, in the form of a crow-like fire or a warrior, destroyed the demon to protect the sage and the Devas. The region's dense forests are rich in shakha (fifty-one) shrines, and the temple stands beside a natural waterfall, adding a living Shaiva ecology to the Jyotirlinga.",
+      "reverence": "Bhimashankar is revered as the Jyotirlinga of the Maratha hills, near whose head the river Bhima rises — one of the great rivers of the Deccan. Its climb, its forest, and its quiet stone constitute a pilgrimage of both mountain and river. Pilgrims couple a darshan here with the trek to the river source, completing the circle of the sacred landscape."
+    },
+    "te": {
+      "sthalapuram": "మహారాష్ట్రలోని సహ్యాద్రి పర్వతాలలో, దట్టమైన అడవుల మధ్య భీమాశంకర్ జ్యోతిర్లింగం ఉంది. భీమా నది సమీపంలోని పవిత్ర శిల నుండి పుట్టిందని భావిస్తారు.",
+      "explanation": "కుంభకర్ణుని కుమారుడైన భీముడను రాక్షసుడు ఈ ప్రాంతాన్ని బాధించగా శివుడు అతన్ని సంహరించాడని, శివుడు నిలిచిన చోటు నుండి భీమా నది ఉద్భవించిందని చెబుతారు. ఈ ప్రాంత అడవులు యాభై ఒక్క (51) శక్తిపీఠాలతో సంబంధం కలిగి ఉన్నాయి. సహజ జలపాతం పక్కన ఈ ఆలయం ఉండటం క్షేత్రానికి ప్రాణం పోస్తుంది.",
+      "reverence": "భీమాశంకర్ మరాఠా కొండల జ్యోతిర్లింగం. దక్కన్ మహానదులలో ఒకటైన భీమా యొక్క మూలస్థానం. కొండనూ, నదినీ ఒకేటిగా చూసే ఈ యాత్ర నదులు-కొండల పవిత్ర భూభాగాన్ని పూర్తి చేస్తుంది."
+    }
+  },
+  "rameshwaram": {
+    "en": {
+      "sthalapuram": "On the island of Rameswaram, between the eastern and western belts of the southern sea, the Ramanathaswamy temple holds a Jyotirlinga and the memory of Rama — Rameswaram means 'Rama's Lord'.",
+      "explanation": "The Ramayana teaches that Rama, returning from Lanka, wished to worship Shiva to expiate the sin of having crossed the ocean and fought the war. Hanuman was sent to Kailasa to fetch a lingam, and while he was away, Sita made a lingam of sand; the Lord was installed as Ramanatha (also called the Ramalinga). When Hanuman returned with the Kailasa lingam (Viswanath lingam), both lingams were installed together in one sanctum — a unique double installation. The temple is famed for its long pillared corridors, and the holy water tanks (theerthams) of the twenty-two sacred wells complete the ritual of the island.",
+      "reverence": "'Setubandhe Ramesam' — the stotram names it at the bridge of the sea (Setu). Rameswaram is one of the two ends of the great north-south yatra (the other being Varanasai), and its darshan is regarded as completing the Char Dham and the Jyotirlinga count at once. Both Shaivas and Vaishnavas bow here, a rare and profound union."
+    },
+    "te": {
+      "sthalapuram": "దక్షిణ సముద్ర తీరం నడుమ ఉండే ద్వీపక్షేత్రమైన రామేశ్వరంలో రామనాథస్వామి ఆలయం జ్యోతిర్లింగం మరియు రాముని జ్ఞాపకం కలిగి ఉంది.",
+      "explanation": "లంక నుండి తిరిగి వచ్చిన రాముడు సముద్రంగడవు, యుద్ధం మొదలైన పాపాలను తొలగించుకునేందుకు శివుడిని పూజించాలనుకున్నాడు. హనుమంతుడు కైలాసం నుండి లింగం తెస్తుండగా పరిస్థితి కోసం సీత ఇసుకలో లింగం చేసింది. ఇసుక రామలింగం, తెచ్చిన విశ్వనాథ లింగం (కైలాసం) రెండూ ఒకే గర్భగుడిలో ప్రతిష్ఠించబడ్డాయి. ఇరవై రెండు తీర్థాలు ఈ ద్వీప యాత్రను పూర్తిచేస్తాయి.",
+      "reverence": "'సేతుబంధే రామేశం' — సముద్ర సేతువు వద్ద జ్యోతిర్లింగం. ఉత్తరం నుండి దక్షిణం వరకు చేసే మహాయాత్రకు రామేశ్వరం ఒక చివర. చార్ ధామ్ మరియు జ్యోతిర్లింగాలు రెండింటిని పూర్తిచేసే క్షేత్రం. శైవ వైష్ణవులిద్దరూ ఇక్కడ మొక్కుతారు."
+    }
+  },
+  "nageshwar": {
+    "en": {
+      "sthalapuram": "Near Dwarka, in the Daruka-belt of the Saurashtra coast, the Nageshwar temple holds one of the twelve Jyotirlingas and the memory of Shiva as protector of all who call on him in distress.",
+      "explanation": "The tradition recounts that a devotee (or a bull-worshipper) was seized by the demon Daruka, who had a boon of being able to swallow his enemies. When the devotee cried out 'Naga' (serpent) and prayed, Shiva appeared from the sea in the form of a serpent (Nagesha) and destroyed the demon, freeing the captive. The linga is installed facing both sea and serpent; the name Nageshwar means 'Lord of serpents' or 'serpent-like Lord'. The adjacent Dwarkadhish shrine completes the coastal circuit. In some traditions the Nagnath at Aundha is named; here at Daruka-vana the Saurashtran claim is held.",
+      "reverence": "'Nagesham Darukaavane' — the stotram names the serpent-Lord in the forest of Daruka. Nageshwar is revered as the protector who hears the drowning call, giver of refuge to the terrified. Its position beside Dwarka makes it an integral part of the western Char Dham yatra, and its sea-facing darshan is especially beloved of sailors."
+    },
+    "te": {
+      "sthalapuram": "ద్వారక సమీపంలో, సౌరాష్ట్ర తీరంలోని దారుకవనంలో నగేశ్వర్ ఆలయం పన్నెండు జ్యోతిర్లింగాలలో ఒకటి.",
+      "explanation": "దారుక అనే రాక్షసుడు ఒక భక్తుడిని పట్టుకుని మింగబోతుంటే భక్తుడు 'నాగ' అని రక్షణ కోరగా శివుడు సముద్రం నుండి పాము రూపంలో వచ్చి రాక్షసుడిని సంహరించాడని కథ. 'నాగేశ్వర్' అంటే సర్పాల ప్రభువు. సాగరం అభిముఖమైన ఈ లింగం భక్తుల కష్టాలను వింటుంది. కొన్ని సంప్రదాయాలలో ఔంఢా నాగనాథ్ కూడా పేర్కొనబడతాడు.",
+      "reverence": "'నాగేశం దారుకావనే' — దారుకవనంలో సర్పప్రభువు. భయపడినవారికి ఆశ్రయమిచ్చే నగేశ్వర్ సముద్రానికి, నావికులకు ప్రీతిపాత్రుడు. ద్వారక ప్రక్కన ఉండటంవల్ల దాని దర్శనం చార్ ధామ్ యాత్రలో అంతర్భాగం."
+    }
+  },
+  "kashi-vishwanath": {
+    "en": {
+      "sthalapuram": "In the oldest continuously-lived city of India, Varanasi (Kashi, the city of light), the Kashi Vishwanath temple enshrines Shiva as Vishwanath — the Lord of the Universe.",
+      "explanation": "Kashi itself is held to rest upon the trident of Shiva, and Vishwanath is the undisputed sovereign of its river, ghats and lanes. The current temple, rebuilt by Rani Ahilyabai Holkar in 1780, stood in a dense lane the corridor of which was redeveloped in the twenty-first century to open a grand pathway (Kashi Vishwanath Dham) to the Ganga at Lalita Ghat. The Jyotirlinga worshipped deep within is surrounded by the constant murmur of the day's mantras and by an atmosphere of perpetual devotion, for the city never sleeps.",
+      "reverence": "'Varanasyam Vishweshwam' — the stotram places the universal Lord at the wheel of the Ganga's greatest bend. To die in Kashi is believed to grant liberation, and the Jyotirlinga here is the anchor of that promise. Morning's Svadhyaya and night's boat-lit aartis both set their course by Vishwanath."
+    },
+    "te": {
+      "sthalapuram": "భారతదేశపు అత్యంత ప్రాచీన నిరంతర నగరం వారాణసి (కాశీ — జ్ఞానజ్యోతి నగరం) లో శివుడు విశ్వనాథుడిగా — విశ్వానికి నాథుడిగా — కాశీ విశ్వనాథ ఆలయంలో దర్శనమిస్తాడు.",
+      "explanation": "కాశీ శివుని త్రిశూలంపై విశ్రాంతి చెందుతుందని నమ్ముతారు. 1780లో రాణి అహల్యాబాయి హోల్కర్ పునర్నిర్మించిన ఈ ఆలయం, ఇరవైయొక్కవ శతాబ్దిలో విశాలమైన నడకదారితో గంగానది వరకు తెరవబడింది. జ్యోతిర్లింగం చుట్టూ నిత్యం జరిగే మంత్రజపం, నిద్రపోని నగరపు భక్తిభావన ఈ క్షేత్రాన్ని నింపుతాయి.",
+      "reverence": "'వారాణస్యాం విశ్వేశ్వరం' — గంగా మహావంగ స్థానం. కాశీలో మరణిస్తే ముక్తి లభిస్తుందని నమ్ముతారు; ఈ జ్యోతిర్లింగం ఆ వాగ్దానానికి స్తంభం. ఉదయపు పూజ, రాత్రి గంగా ఆరతి — రెండూ విశ్వనాథుని చుట్టే తిరుగుతాయి."
+    }
+  },
+  "trimbakeshwar": {
+    "en": {
+      "sthalapuram": "At the foot of the Brahmagiri hill in Nashik, the Trimbakeshwar temple holds one of the twelve Jyotirlingas, and the Godavari river bursts from a spring on the hill of Trimbak, binding river, mountain and Lord in one sacred knot.",
+      "explanation": "A poignant Purana recounts that the sage Gautama, in order to feed a plagued region, invoked Ganga upon the banks; when Ganga, proud, was unwilling, she was persuaded to descend as the Godavari, falling upon Brahmagiri, and the Linga at Trimbakeshwar holds the three brahma-murtis of Brahma, Vishnu and Shiva — hence 'Tryambaka', the three-eyed Lord. The temple is built to enshrine those three on one pedestal. The nearby Kushavart is the great ritual tank, and the annual Kumbh Mela is held at its waters.",
+      "reverence": "'Tryambakam Gautamitatē' — the stotram ties the Lord to the Ganga-Godavari on the Gautama's bank. Trimbakeshwar is revered as the source of the Godavari, the 'Dakshina Ganga', and the place of the Kumbh. Its morning atmosphere of river, mountain and shrine make it one of the most complete tirthas of the Deccan."
+    },
+    "te": {
+      "sthalapuram": "నాసిక్ లోని బ్రహ్మగిరి పర్వతం పాదాల వద్ద త్రయంబకేశ్వర్ ఆలయం పన్నెండు జ్యోతిర్లింగాలలో ఒకటి. ఇక్కడి కొండ నుండే గోదావరి నది ఉద్భవిస్తుంది.",
+      "explanation": "గౌతమ మహర్షి తపస్సుతో గంగను కోరగా గంగ 'దక్షిణ గంగ' (గోదావరి) గా బ్రహ్మగిరిపై దిగింది. ఇక్కడి లింగం బ్రహ్మ, విష్ణు, శివ అనే ముగ్గురు మూర్తులను ఒకే పీఠంపై కలిగి ఉంది — అందుకే 'త్ర్యంబక'. కుశావర్తం ఘాట్ ప్రధాన స్నానపు స్థలం; కుంభమేళా ఇక్కడే జరుగుతుంది.",
+      "reverence": "'త్ర్యంబకం గౌతమీతటే' — గౌతమీ తీరం. 'దక్షిణ గంగ' గోదావరి మూలస్థానమైన ఈ క్షేత్రం నదీ-పర్వత-లింగ సంయోగం. కుంభ్ యొక్క క్షేత్రం."
+    }
+  },
+  "kedarnath": {
+    "en": {
+      "sthalapuram": "At 3,583 metres in the high Garhwal Himalaya, where the Mandakini river runs towards the valley, the Kedarnath temple stands as one of the twelve Jyotirlingas and the leading shrine of the Panch Kedar; it is also counted in the Chhota (small) Char Dham of Uttarakhand.",
+      "explanation": "The Mahabharata teaches that after the great war the Pandavas sought Shiva to atone for their kin-slaughter; Shiva avoided them, appearing at six places in the Himalaya as various shaktis and finally as a bull. At Kedarnath he dived into the earth, leaving his hump upon the stone which is now the linga; the parts are honoured across the Panch Kedar. The temple, built of stone slabs without timber, rises on the Mandakini's bank and is believed to be of great antiquity. A conical rock over the sanctum is its most distinctive feature.",
+      "reverence": "'Himalaye Kedaram' — the stotram names the Himalayan throne. Kedarnath is revered as the highest and coldest of the Jyotirlingas, the one reached only after a long pilgrimage and a footpath open only between May and the first snow. Its elevation, its winter migrations of the deities, and its isolation make the darshan the most intense in the whole circuit."
+    },
+    "te": {
+      "sthalapuram": "గఢ్వాల్ హిమాలయాలలో 3583 మీటర్ల ఎత్తున, మందాకినీ నది ఒడ్డున కేదార్నాథ్ ఆలయం పన్నెండు జ్యోతిర్లింగాలలో ఒకటి, పంచకేదార్లలో ముఖ్యమైనది.",
+      "explanation": "మహాభారత యుద్ధం తర్వాత పాండవులు తమ కృత్యాలకు ప్రాయశ్చిత్తం కోసం శివుడిని వెతుకగా శివుడు ఎద్దు రూపంలో కనిపించి భూమిలోకి దూకాడు. ఎద్దు ఉబ్బెత్తు (కుబ్జ) భాగం మిగిలింది — అదే ఇక్కడి లింగం. చెక్క లేకుండా రాతిపలకలతో నిర్మించిన ఈ ఆలయం చాలా ప్రాచీనమైనదిగా భావిస్తారు. శిఖరాగ్రం పైన ఉన్న శంఖు ఆకార శిల ఇక్కడి ప్రత్యేకత.",
+      "reverence": "'హిమాలయే కేదారం' — హిమాలయ పీఠం. ఎత్తయిన, చల్లని జ్యోతిర్లింగం. మే నుండి మొదటి మంచు వరకు మాత్రమే తెరిచి ఉండే ఈ క్షేత్రం దర్శనం యాత్రలలో అత్యంత తీవ్రమైనది."
+    }
+  },
+  "grishneshwar": {
+    "en": {
+      "sthalapuram": "At Verul in Aurangabad district, near the world-famous Ellora caves, the Grishneshwar temple holds one of the twelve Jyotirlingas. 'Ghushmesha' is the Lord who answered the prayer of the devotee Ghushma.",
+      "explanation": "The Sthala Purana recounts that Ghushma, a devoted wife who worshipped Shiva every day in the form of clay Shivalingas, was tested by a jealous rival (in some tellings her own sister-in-law) who slew Ghushma's son and cast his body into a well. The mother, not knowing, continued her worship; the Lord appeared and restored her son from the water alive, answering her silent prayer. The temple stands beside the Ellora caves, where the Kailasa (cave 16) is carved from a single rock, linking the Jyotirlinga with the greatest rock-cut shrine of India.",
+      "reverence": "'Ghusmeshaya' from 'Ghushma-Isha' — the Lord of Ghushma. Grishneshwar is revered as the protector of devoted householders, giver of restored joy in the midst of grief, and the eastern anchor of the five western Jyotirlingas. Its darshan combined with the Ellora caves makes a unique double pilgrimage of devotion and art."
+    },
+    "te": {
+      "sthalapuram": "ఔరంగాబాద్ జిల్లా వేరుల్ (ఎల్లోరా) వద్ద గ్రిష్ణేశ్వర్ ఆలయం పన్నెండు జ్యోతిర్లింగాలలో ఒకటి. ఘుష్మ అనే భక్తురాలి ప్రార్థనకు స్పందించిన శివుడు 'ఘుష్మేశ్వరుడు'.",
+      "explanation": "ఘుష్మ ప్రతిరోజూ మట్టి శివలింగాలతో శివుని పూజించే బాల్య భక్తురాలు. ప్రత్యర్థి (కొన్ని కథనాలలో చెల్లెలు) ఆమె కుమారుడిని చంపి బావిలో వేశారు. కొడుకును కోల్పోయినా తల్లి తన పూజకు అంతరాయం కలిగించలేదు; శివుడు ప్రత్యక్షమై బావిలోంచి బతికున్న కుమారుడిని తిరిగి ఇచ్చాడు. ఎల్లోరా గుహల పక్కన ఉన్న ఈ క్షేత్రం రాతి కైలాస శిల్పంతో కలిసి ప్రత్యేకమైనది.",
+      "reverence": "'ఘుష్మేశ్వరాయ నమః' — గృహస్థ భక్తుల రక్షకుడు. ఆపదలో ఆనందాన్ని తిరిగిచ్చే ఈ శివుడిని పశ్చిమ జ్యోతిర్లింగాల సమూహంలో భాగంగా భావిస్తారు. ఎల్లోరా శిల్పాలతో కలిసిన దర్శనం భక్తి-కళల కలయిక."
+    }
+  },
+  "amararama": {
+    "en": {
+      "sthalapuram": "Amaravathi, on the Krishna river in Guntur district, is the seat of Amararama (Amareswara), the first of the five Pancharama Kshetras, and a town famous for the stupa (monolithic dhatu relic) of Buddhism beside its Shiva shrines.",
+      "explanation": "According to the Pancharama legend, Lord Shiva, pleased with the demons' devotion, preferred to give each of them a linga to protect them; when the demons were later slain, the five lingas fell to the earth as the five holy riverside towns, Amararama being the first. Amaravathi holds the linga in a temple guarded by the powerful sculpture and gopura; the town is equally the home of one of the greatest ancient Buddhist stupas of India, making the riverside a meeting point of two of India's sacred streams.",
+      "reverence": "Amararama is revered as the first of the five Pancharamas; devotees believe darshan of the five undoes the accumulated burden of the five senses' sins. The joint presence of a great Shiva seat and a Buddhist heritage makes Amaravathi an unusually complete pilgrimage riverbank."
+    },
+    "te": {
+      "sthalapuram": "గుంటూరు జిల్లా కృష్ణా నదీతీరంలోని అమరావతి పంచారామాలలో మొదటిదైన అమరారామం (అమరేశ్వరుడు) కి స్థానం. బౌద్ధ స్తూపం కూడా ఇక్కడే ఉండటం విశేషం.",
+      "explanation": "పంచారామ కథ ప్రకారం శివుడు రాక్షసుల భక్తికి మెచ్చి ఐదు లింగాలను ప్రసాదించాడు; తర్వాత వారి మరణంలో ఐదు నదీతీర పట్టణాలలో లింగాలు ఏర్పడ్డాయి — వాటిలో అమరారామం మొదటిది. అమరావతి భారతదేశపు మహా బౌద్ధ స్తూపాలలో ఒకటి కూడా ఉన్న నగరం. ఈ నదీతీరం రెండు పవిత్ర ස్రవంతుల కలయిక.",
+      "reverence": "ఐదు పంచారామాలలో మొదటిది. ఐదు పంచేంద్రియ పాపాలను ఐదు రాముల దర్శనం తొలగిస్తుందని నమ్ముతారు. అమరావతి రెండు మత సంప్రదాయాలను ఒకే నదీతీరంలో కలిసిన పరిపూర్ణ క్షేత్రం."
+    }
+  },
+  "draksharama": {
+    "en": {
+      "sthalapuram": "Draksharamam, in the fertile delta of Konaseema, Andhra, is the seat of the Bhimeswara Swamy temple, chief of the Pancharama Kshetras, and also of the Shakti Peetha of Manikyamba; the whole complex is called the Daksharama.",
+      "explanation": "The Pancharama tradition counts Draksharamam as the foremost of the five: it is the place where the great linga is installed, and its shrine to the Svayambhu lingam is renowned for the size and beauty of its stones and fluting. The temple is also counted among the Ashtadasha Shakti Peethas through the Devi Manikyamba. According to the local Sthala Purana, Shiva himself appeared to the sage (and to the demons) at this vineyard, 'Draksha' (grape) country, giving the town its name.",
+      "reverence": "Draksharamam is revered as the heart of the Pancharama circuit, and its Bhimeswara linga as the principal one of the five. The same town offering both a Jyotirlinga-level Shiva and a Maha Shakti Peetha makes this the most intense double darshan in Andhra. Devotees who cannot complete all five Pancharamas believe that a sincere darshan at Daksharama can stand for the whole circuit."
+    },
+    "te": {
+      "sthalapuram": "కోనసీమ సారవంతమైన డెల్టా భూమిలో ఉన్న ద్రాక్షారామం పంచారామాలలో ప్రధానమైన భీమేశ్వరస్వామి ఆలయం మరియు శక్తిపీఠం మాణిక్యాంబ క్షేత్రం. మొత్తం సముదాయాన్ని దక్షారామం అని పిలుస్తారు.",
+      "explanation": "పంచారామాలలో ద్రాక్షారామం ముఖ్యమైనది — స్వయంభూ లింగం యొక్క అందానికి, శిలలకు ప్రసిద్ధి. మాణిక్యాంబ వల్ల ఇది అష్టాదశ శక్తిపీఠాలలో కూడా ఉంది. స్థలపురాణం ప్రకారం ద్రాక్ష (గ్రేపు) పండే ఈ ప్రాంతంలో సాక్షాత్ శివుడు ప్రత్యక్షమయ్యాడు.",
+      "reverence": "పంచారామ యాత్రకు ద్రాక్షారామం హృదయం. ఒకే పట్టణంలో గొప్ప శివక్షేత్రం, మహాశక్తిపీఠం — ఇది ఆంధ్రదేశంలో అతి తీవ్రమైన ద్వంద్వ దర్శనం. ఐదు రామాలను పూర్తి చేయలేని వారికి దక్షారామ దర్శనం మొత్తం సర్క్యూట్కు సరిపోతుందని నమ్ముతారు."
+    }
+  },
+  "somarama": {
+    "en": {
+      "sthalapuram": "At Gunupudi in Bhimavaram, the Someswara Swamy temple occupies the Somarama kvakshetra, one of the five Pancharama Shiva shrines of Andhra.",
+      "explanation": "The Pancharama legend recounts how Chandra (the Moon, Soma) worshipped the linga here; the shrine is thus connected with the lunar current and named Someswara ('Lord Soma'). The temple, one of the largest in the region, has a famous bhashyasagaram (huge sacred tank) called Soma Gundam, and is renowned for the grandeur of its mandapa. Its location at the crossing of the delta and the sea made it a rich centre of worship and trade in the medieval Andhra.",
+      "reverence": "Somarama is revered as the lunar Pancharama, purifying the mind's tides. Devotees who complete the five Pancharamas believe they have honoured both the solar and the lunar currents of the Dharma; a darshan at Somarama steadies the wavering heart, just as the Moon steadies the night."
+    },
+    "te": {
+      "sthalapuram": "భీమవరం లోని గునుపూడి లో సోమేశ్వరస్వామి ఆలయం పంచారామ సోమరామం. ఆంధ్రదేశంలోని ఐదు పంచారామ శివక్షేత్రాలలో ఒకటి.",
+      "explanation": "చంద్రుడు (సోమ) ఇక్కడ లింగాన్ని పూజించాడని పంచారామ కథ చెబుతుంది. అందుకే ఈ క్షేత్రానికి సోమేశ్వరుడు అనే పేరు వచ్చింది. ఈ ప్రాంతంలోని అతి పెద్ద ఆలయాలలో ఒకటైన దీనికి సోమగుండం అనే పెద్ద పుష్కరిణి ఉంది. డెల్టా, సముద్ర సంధి వద్ద ఉండటంవల్ల ఇది వాణిజ్య-పూజా కేంద్రంగా వర్ధిల్లింది.",
+      "reverence": "చంద్రుని తరంగాలను శుద్ధిచేసే పంచారామం సోమరామం. మనసు అస్థిరతను స్థిరపరిచే ఈ క్షేత్రాన్ని పూర్తి చేసిన పంచారామ యాత్రకు అర్థం వస్తుంది."
+    }
+  },
+  "ksheerarama": {
+    "en": {
+      "sthalapuram": "At Palakollu, in the western delta of the Godavari, the Ksheera Ramalingeswara Swamy temple is the Ksheerarama, one of the five Pancharama shrines, called 'Ksheera' (milk) because of its association with the milky ocean (Kshira Sagar) of the cosmic churning.",
+      "explanation": "The Puranas recall that the churning of the ocean (Kshira Samudra) yielded nectar, and the linga at Ksheerarama is regarded as arising from that milky essence, hence its name. The temple, built in a grand South-Indian style with a great gopuram, has a huge sacred tank (Vishnu Gundam) and is among the largest temples of Andhra. Its annual Kalyana Mahotsavam is widely celebrated.",
+      "reverence": "Ksheerarama is revered as the milky Pancharama — the shrine whose darshan is cooling, nourishing and auspicious as milk itself. The completion of the five Pancharamas, of which Ksheerarama forms the 'Ksheera' link, is counted among the oldest vows of Andhra Shaivism."
+    },
+    "te": {
+      "sthalapuram": "గోదావరి డెల్టా పశ్చిమ భాగంలో ఉన్న పాలకొల్లు వద్ద క్షీర రామలింగేశ్వరస్వామి ఆలయం క్షీరారామం — పంచారామాలలో ఒకటి.",
+      "explanation": "క్షీరసాగర మథనంలో పుట్టిన అమృతం నుండి ఈ లింగం పుట్టిందని, అందుకే దీనికి 'క్షీర' అనే పేరు వచ్చిందని నమ్ముతారు. గొప్ప గోపురంతో, విశ్వనాథ గుండం (పెద్ద పుష్కరిణి)తో నిర్మించిన ఈ ఆలయం ఆంధ్రదేశపు అతిపెద్ద ఆలయాలలో ఒకటి. కళ్యాణ మహోత్సవం ఇక్కడ ప్రసిద్ధి.",
+      "reverence": "పాలు వలె చల్లని, పోషకం, మంగళదాయకమైన క్షీరారామం. పంచారామ పూర్తిలో 'క్షీర' ధారతో అభిషేకింపబడే ఈ క్షేత్రం ఆంధ్ర శైవ వ్రతాలలో పురాతనమైనది."
+    }
+  },
+  "kumararama": {
+    "en": {
+      "sthalapuram": "At Samalkota, in the eastern belt of East Godavari, the Kumararama Bhimeswara Swamy temple is the fifth of the five Pancharama Shiva shrines; the name 'Kumara' connects it to the warrior-prince Skanda.",
+      "explanation": "The Pancharama tradition teaches that the fifth linga, often called the Kumara linga, was received by the demon Kumara (in some tellings a son; in others Skanda himself). The temple preserves a beautiful linga and a fine gopuram, and is counted among the largest temples of the region. The immediate pairing with the local histories of the coastal Andhra temples makes Samalkota a busy centre of the Pancharama pilgrimage.",
+      "reverence": "Kumararama is revered as the youthful Pancharama, blessed by the power of Skanda — the one who helps begin new things and overcome youthful obstacles. Completing the five Pancharamas culminates at Samalkota, whose darshan is believed to bestow strength and the grace of a fresh start."
+    },
+    "te": {
+      "sthalapuram": "తూర్పు గోదావరి జిల్లా సామర్లకోట వద్ద కుమారరామ భీమేశ్వరస్వామి ఆలయం పంచారామాలలో ఐదవది. స్కందునితో ముడిపడిన పేరు 'కుమార'.",
+      "explanation": "పంచారామ సంప్రదాయం ప్రకారం కుమార లింగం ఒక భక్తునకు (లేదా స్కందునితో) సంబంధించినది. అందమైన లింగం, చక్కని గోపురం కలిగిన ఈ ఆలయం ప్రాంతంలోని పెద్ద ఆలయాలలో ఒకటి. తీర ఆంధ్ర క్షేత్ర చరిత్రలతో కలిసిన ఇది పంచారామ యాత్రకు రద్దీ తిరిగే కేంద్రం.",
+      "reverence": "స్కందుని శక్తి కలిగిన యువత దేవుడు. కొత్త ఆరంభాలకు, యౌవన అడ్డంకులను అధిగమించడానికి కుమారరామ దర్శనం సహాయపడుతుంది. ఐదు రాముల పూర్తి ఇక్కడ సమాప్తమవుతుంది."
+    }
+  },
+  "badrinath-dham": {
+    "en": {
+      "sthalapuram": "At 3,133 metres, on the bank of the Alaknanda, the Badrinath temple rises in the Garhwal Himalaya as one of the four cardinal Char Dham and one of the holiest Vaishnava seats in the world. The name honours its grove of 'badri' (jujube) trees.",
+      "explanation": "According to the puranas, the sages Narada (from whom the name of the region) and, later, Nara-Narayana performed tapas here; Vishnu sits in meditation under the Badri tree in his Nara-Narayana form. Adi Shankara rediscovered the image in an age into which it had gone into the ground and re-consecrated it. The temple opens in April and closes for the winter in November, when the sacred image (Utsava murti) is brought down to Joshimath. The sanctum houses Vishnu seated on a cushion of serpent Shesha; near it is the hot spring of Tapt Kund.",
+      "reverence": "'Char Dham ki yatra' — Badrinath is the first dham in the Sanatana enumeration. It is revered as the seat where Vishnu in meditation gives liberation, reached after a hard mountain journey; its winter, its remoteness and its thermal springs make it a place of extremes that elicits the deepest devotion. Badri darshan is regarded as the fulfilment of the Char Dham circuit."
+    },
+    "te": {
+      "sthalapuram": "3133 మీటర్ల ఎత్తున, అలకనందా నదీ తీరాన కేదార్-గఢ్వాల్ హిమాలయాలలో నాలుగు చార్ ధామ్ లలో ఒకటైన బద్రీనాథ్ ఆలయం ఉంది. 'బద్రి' (రేగు) చెట్ల తోట నుండి ఈ పేరు వచ్చింది.",
+      "explanation": "నారద్ మరియు నార-నారాయణులు ఇక్కడ తపస్సు చేశారని పురాణాలు చెబుతాయి. ఆదిశంకరుడు భూమిలో దాగిన విగ్రహాన్ని తిరిగి వెలికితీసి ప్రతిష్ఠించాడు. ఏప్రిల్లో తెరచి నవంబర్లో మూసే ఈ ఆలయం; శీతాకాలంలో విగ్రహాన్ని జోషిమఠానికి తీసుకువెళతారు. శేష పాముగాడిపై కూర్చున్న విష్ణువు గర్భగుడిలో ఉంటాడు. సమీపంలో తప్త కుండ్ ఉష్ణ జలం ఉంది.",
+      "reverence": "సనాతన లెక్కలో చార్ ధామ్ మొదటిది బద్రీనాథ్. ధ్యానంలో ఉన్న విష్ణువు ముక్తినిచ్చే క్షేత్రం. కఠిన పర్వత యాత్ర, శీతాకాలం, ఉష్ణ జలాలు — తీవ్రతలతో నిండిన ఈ క్షేత్రం చార్ ధామ్ యాత్రకు పరిపూర్ణత."
+    }
+  },
+  "dwarka-dham": {
+    "en": {
+      "sthalapuram": "On the western horn of the Saurashtra peninsula, at the mouth where the Gomti falls into the Arabian sea, stands Dwarka, the capital that Krishna built, and the Dwarkadhish temple (Jagat Mandir) is one of the four Char Dham.",
+      "explanation": "According to the Mahabharata and the Bhagavata, Krishna founded Dwarka as a golden city set in the sea, his people safe across the ocean's arm. The temple, believed to be ancient, was rebuilt over the centuries; its grand spire (shikhar) of five stories is crowned by a large flag. The Shikhar and the image of Dwarkadhish (Krishna as the ruler of the city of Dwarka) are the objects of the famous Bhahyar-Kotha ritual festivals. The town also honours the goddess Rukmini at her own nearby temple; the island of Bet Dwarka and the Nageshwar Jyotirlinga lie close.",
+      "reverence": "Dwarka is the 'Dwarka of Krishna' sung in every Gita commentary, the western dham completing the four directions of the Char Dham circuit. Pilgrims regard darshan of Dwarkadhish as touching the very memory of Krishna's presence on earth. Its sea-fringed gates, its submerging myth of the ancient city, and its living festivals make the western horn of India an unending katha."
+    },
+    "te": {
+      "sthalapuram": "సౌరాష్ట్ర పశ్చిమ ప్రాంతంలో, గోమతి నది అరేబియా సముద్రంలో కలిసే చోట కృష్ణుడు నిర్మించిన ద్వారక ఉంది. ద్వారకాధీశుడు ఆలయం (జగత్ మందిర్) నాలుగు చార్ ధామ్ లలో ఒకటి.",
+      "explanation": "మహాభారత, భాగవతాల ప్రకారం కృష్ణుడు సముద్రం మధ్య సువర్ణ నగరంగా ద్వారకను నిర్మించాడు. ఐదు అంతస్తుల కలిగిన గొప్ప శిఖరంపై ఎగురుతున్న జెండా ప్రసిద్ధి. ద్వారకాధీశుడి (ద్వారక నగరాన్ని ఏలే కృష్ణుడు) దర్శనం సమయంలో జరిగే ఆచారాలు ముఖ్యమైనవి. రుక్మిణీదేవి ఆలయం, బేత్ ద్వారక, నాగేశ్వర్ జ్యోతిర్లింగం సమీపంలో ఉన్నాయి.",
+      "reverence": "గీతా వ్యాఖ్యానాలలో ప్రసిద్ధి చెందిన 'ద్వారక' — పశ్చిమధామ. ద్వారకాధీశుడి దర్శనం కృష్ణుని భౌతిక స్మృతిని తాకినట్లే. సముద్రం, మునిగిపోయిన ప్రాచీన నగరం గాథ, జీవన పండుగలు ఈ పశ్చిమ హృదయాన్ని అనంత కథగా చేస్తాయి."
+    }
+  },
+  "jagannath-dham": {
+    "en": {
+      "sthalapuram": "On the eastern coast of Odisha, the Jagannath temple of Puri towers over the sea; Jagannath (Krishna) is worshipped with his elder brother Balabhadra and sister Subhadra, and Puri is one of the four Char Dham.",
+      "explanation": "The deities are made of sacred wood (dainika murti), renewed every twelve or nineteen years in the secret Nabakalebara ceremony, each new image receiving the life (Brahman) of the old. The temple's main spire (Neela Chakra) crowns the enormous complex; the shadow of its corridor is said to hold a sacred well. The greatest event is the annual Ratha Yatra, when the three deities are drawn out onto the Grand Road in colossal wooden chariots, witnessed by more than a million people. Every day Prachana of the Mahaprasada (a combination seal of the Lord) is distributed to all comers, a famous act of equality in the sacred kitchen.",
+      "reverence": "Jagannath Dham is one of the four cardinal dhams; a visit to Puri is the eastern fulfilment of the Sanatana geography. The temple's annual Ratha Yatra is among the largest religious gatherings on earth, and its kitchen — the Mahaprasada — treats all humans as equal before the Lord. To see Jagannath with his brother and sister is to see the whole world-drama in wood and festival."
+    },
+    "te": {
+      "sthalapuram": "ఒడిశా తూర్పు తీరంలో, సముద్రం పక్కన ఉన్న పూరీ లోని జగన్నాథ ఆలయంలో జగన్నాథుడు (కృష్ణుడు) అన్న బలభద్ర, చెల్లి సుభద్రలతో కలిసి పూజింపబడతాడు. చార్ ధామ్ లలో ఒకటి.",
+      "explanation": "విగ్రహాలు పవిత్రమైన చెక్కతో తయారవుతాయి; పన్నెండు నుండి పంతొమ్మిది సంవత్సరాలకు ఒకసారి నబకళేబరం లో కొత్త విగ్రహాలు రూపొందుతాయి. నీలచక్రం పైన ఉన్న ఈ ఆలయం చుట్టూ అనేక ఆలయాలు ఉన్నాయి. సంవత్సరంలో గొప్ప ఘట్టం రథయాత్ర — మూడు రూపాలను పెద్ద చెక్క రథాలలో గ్రాండ్ రోడ్డుకు తీసుకువస్తారు. మహాప్రసాదం అందరికీ అందజేయడం ఇక్కడి సమానత్వ భావనకు గుర్తు.",
+      "reverence": "తూర్పుధామ్ పూరీ. రథయాత్ర ప్రపంచంలోనే అతిపెద్ద మత సమావేశాలలో ఒకటి. అన్న, బలభద్ర, సుభద్రలతో జగన్నాథ దర్శనం అనేది లోకనాటకాన్ని మొత్తం చూడటం."
+    }
+  },
+  "rameswaram-dham": {
+    "en": {
+      "sthalapuram": "On the island of Rameswaram, the Ramanathaswamy temple is the southern Char Dham and a Jyotirlinga; its name and cult are bound to Rama's worship at the end of his crossing to Lanka.",
+      "explanation": "This is the same shrine honoured under the Jyotirlinga above: Rama's sand linga and Hanuman's Kailasa linga installed together; 22 theerthams carve the island's ritual circle. As the Char Dham, it is the southern termination of the north-south axis (the other end being Kashi). Pilgrims traditionally begin the yatra from Rameswaram and proceed north; the island is also the staged gateway to the Ramayana landscape across the sea. Its long pillared corridors are among the grandest of Tamil temple architecture.",
+      "reverence": "'Rameswaram' means 'Rama's Lord' — the only Dham given its fame by the central figure of the Ramayana. As the southern dham and the Jyotirlinga in one, Rameswaram holds the unique status of completing both circles. Devotees say that remaining here after bathing in the 22 theerthams and bowing to Rama's own linga is to begin the entire pilgrimage of a Hindu life in the right order."
+    },
+    "te": {
+      "sthalapuram": "రామేశ్వర ద్వీపంలో రామనాథస్వామి ఆలయం దక్షిణ చార్ ధామ్ మరియు జ్యోతిర్లింగం. రాముడు లంక తీరం దాటి తిరిగి వచ్చాక ఇక్కడే శివుణ్ణి పూజించాడు.",
+      "explanation": "రాముని ఇసుక లింగం (రామలింగం) మరియు హనుమంతుడు తెచ్చిన కైలాస లింగం (విశ్వనాథం) రెండూ ఒకే గర్భగుడిలో ఉన్నాయి. ఇరవై రెండు తీర్థాలు ద్వీప యాత్రను నిర్మిస్తాయి. చార్ ధామ్ గా ఇది దక్షిణ చివర; కాశీ యొక్క ఎదురు. పొడవైన స్తంభాల వరండాలు తమిళ ఆలయ శిల్పకళలో గొప్పవి.",
+      "reverence": "రాముని ప్రభువు. ఒకే క్షేత్రంలో చార్ ధామ్ + జ్యోతిర్లింగం. 22 తీర్థ స్నానం, రాముని లింగ దర్శనంతో ఆరంభమయ్యే హిందూ యాత్రా జీవితం సరైన క్రమంలో సాగుతుందని భావిస్తారు."
+    }
+  },
+  "ekambareswarar": {
+    "en": {
+      "sthalapuram": "Kanchipuram, the 'Varanasi of the South', is home to the largest of the Pancha Bhoota sthalas: the Ekambareswarar temple is the earth (Prithvi) element shrine. An ancient mango tree of unusually old age and the shrine of Kamakshi mark its sacred geography.",
+      "explanation": "According to the Sthala Purana, Parvati — in the form of Kamakshi — fashioned a lingam of sand at the foot of a mango tree and worshipped it in secret. To test her devotion, Shiva sent the river Kampa to flood the grove; Kamakshi clasped the sand lingam to her breast and held the waters back, and there the Prithvi (earth) lingam stands to this day. The main sanctum honours that earth lingam; a mango tree at the temple is believed to be thousands of years old, marking the spot where Parvati made her shrine, and a perennial tank fed by springs flows beneath the tree, tying the whole sthal to the element of soil.",
+      "reverence": "Ekambareswarar is revered as the earth-sthal of the Pancha Bhoota, the Lord who declares himself in the soil of Kanchi. Devotees completing the five element shrines begin at this Prithvi seat (or end the circuit here), joining the element of earth to the body's first darshan. Its vast size and the mango tree make the shrine unforgettable."
+    },
+    "te": {
+      "sthalapuram": "కాంచీపురం — 'దక్షిణ కాశీ' — పంచభూత స్థలాలలో అతిపెద్దది: ఏకాంబరేశ్వరర్ ఆలయం భూమి (పృథ్వీ) తత్వ క్షేత్రం.",
+      "explanation": "పార్వతి ఇక్కడ ఇసుకతో శివలింగం చేసి రహస్యంగా పెట్టుకుని పూజించిందని స్థలపురాణం. భూమి తత్వ గర్భగుడి, చాలా వందల ఏళ్ల మామిడి చెట్టు ఈ క్షేత్రాన్ని పృథ్వీతత్వంతో ముడిపెడతాయి. మామిడి చెట్టు పక్కనే అమ్మవారు తన పూజ చేసిన స్థలం ఉందని చెబుతారు.",
+      "reverence": "పంచభూతాలలో భూమి స్థలం. ఐదు భూత క్షేత్రాలనూ చేసే భక్తులకు ఇది మొదటి దర్శనం — భూమి తత్వమే శరీరం. భారీ పరిమాణం, మామిడి వృక్షం ఈ క్షేత్రాన్ని మరింత ప్రత్యేకం చేస్తాయి."
+    }
+  },
+  "jambukeswarar": {
+    "en": {
+      "sthalapuram": "On the Kaveri river island between Srirangam and Tiruchirappalli, the Jambukeswarar temple at Thiruvanaikaval is the water (Appu) element of the Pancha Bhoota shrines, and the sanctum is believed to express water itself.",
+      "explanation": "The Sthala Purana tells of an elephant that daily gathered lotus and flowers, bathed in the river, and worshipped a hidden lingam; a spider, too, wove a web of protection over it, and the two devotees quarrelled and died, reborn as kings and again as devotees who completed (or, depending on telling, continued) the shrine. The linga stands below the ground in water, the perpetual Appu (water) element; the inner sanctum is always entered through an underground passage, the floor kept wet. The Goddess Akilandeswari here faces west (a Sundaram legend), a rare orientation.",
+      "reverence": "Jambukeswarar is the water-sthal, the Lord under standing water; a darshan here is a darshan of the element that composes most of the body. The union of the elephant (Anapithara) and spider stories teach that care, however simple, is worship. Devotees who complete the five element tour hold this shrine as the water gate of the body's pilgrimage."
+    },
+    "te": {
+      "sthalapuram": "కావేరి నది దీవి పైన, శ్రీరంగం-తిరుచి మధ్య ఉన్న తిరువానైకవల్ లో జంబుకేశ్వరర్ ఆలయం పంచభూతాలలో నీరు (అప్) తత్వ క్షేత్రం.",
+      "explanation": "ఏనుగు ప్రతిరోజూ పూలు తెచ్చి, నదిలో స్నానం చేసి, నీటిలో దాగిన లింగానికి పూజ చేసేది; సాలీడు దానిపై గూడు అల్లి రక్షిస్తుంది. రెండూ మరణించి తిరిగి జన్మిచి ఈ క్షేత్రాన్ని కాపాడాయి. లింగం భూమిలో నీటిలో ఉంటుంది — అందుకే ఇది అప్ (నీరు) తత్వం. అకిలాండేశ్వరి ఇక్కడ పశ్చిమ దిశకు చూస్తుంది.",
+      "reverence": "ఏనుగు, సాలీడు కథలు సరళమైన శ్రద్ధ కూడా పూజే అని చెబుతాయి. నీటి లింగ దర్శనం శరీరంలో ఎక్కువ భాగమైన తత్వం దర్శనం. పంచభూత యాత్రలో ఇది నీటి ద్వారం."
+    }
+  },
+  "arunachaleswarar": {
+    "en": {
+      "sthalapuram": "Tiruvannamalai, at the foot of the great Arunachala hill, is the fire (Agni) element of the Pancha Bhoota shrines. The temple crowns the place where Shiva flashed as an infinite column of fire in the famous contest between Brahma and Vishnu.",
+      "explanation": "The classic Purana recounts that Brahma and Vishnu fought over which was the higher; Shiva appeared between them as a pillar of flame whose base and tip were sought, and neither could find them. Thus Shiva came to be worshipped at Arunachala, the southern fire of the world. The temple's sanctum bears the Agni linga; its huge gopurams and the annual Karthigai Deepam, when a vast lamp is lit atop the hill, proclaim that fire manifests in the greatest collective darshan of the South.",
+      "reverence": "Arunachala is both a hill and a Jyotirlinga-level seat of the fire element. Devotees of the Shaiva path — including the modern teachings around Ramana Maharshi at the ashram at its foot — call the hill 'the fire mountain'. The Diwali-like Karthigai Deepam, seen across the plains, is the year's culminating darshan of the element of light."
+    },
+    "te": {
+      "sthalapuram": "గొప్ప అరుణాచల కొండ పాదాల వద్ద ఉన్న తిరువణ్ణామలై పంచభూత క్షేత్రాలలో అగ్ని తత్వం. బ్రహ్మ-విష్ణు వివాదంలో శివుడు అనంత అగ్నిస్తంభంగా ప్రకాశించిన స్థలం.",
+      "explanation": "బ్రహ్మ విష్ణు ఒకరినొకరు గొప్పవారని వాదించగా శివుడు అగ్నిస్తంభంగా వారి మధ్య ప్రత్యక్షమయ్యాడు; దాని అడుగు, కొన కనుగొనలేను మన్నారు. అందుకే ఇక్కడ శివుడు అగ్నిరూపంలో ఆరాధించబడ్డాడు. కార్తీక దీపం నాడు కొండపై పెద్ద దీపం వెలిగిస్తారు.",
+      "reverence": "అగ్ని క్షేత్రం. రమణ మహర్షి ఆశ్రమం పాదాల వద్ద ఉన్న ఈ కొండను భక్తులు 'అగ్నిపర్వతం' అంటారు. కార్తీక దీపం అంటే వెలుగు తత్వానికి పర్యవసాన దర్శనం."
+    }
+  },
+  "kalahasti": {
+    "en": {
+      "sthalapuram": "The town of Srikalahasti, east of Tirupati on the west bank of the Swarnamukhi river, is the air (Vayu) element of the Pancha Bhoota shrines; its Sthala Purana weaves a spider, a snake and an elephant into its very name.",
+      "explanation": "The name 'Kalahasti' springs from Ka (the spider), La (the snake-sarpam) and Hasti (the elephant) — three animals that, according to the legend, each worshipped a lingam with their own might in a great competition of devotion. The linga here is worshipped through the Vayu path, air reaching the pulpit of the sanctum and making a lamp flame flutter even in a closed shrine, testifying to the element. The temple's Vayu linga is kept cool, and the depiction of the wind-linga as one of the five sacred elements makes Srikalahasti a vital link in the Pancha Bhoota chain.",
+      "reverence": "Srikalahasti is revered as the air-sthal of the five, and its worship under the imperceptible element — air that none can grasp and all must breathe — makes its darshan a lesson in surrender. The spider-linga legend is among the most beloved animal-devotion stories of the South. It also guards the memory of the great mystic poet Vemana, whose simpler verses echo the same devotion."
+    },
+    "te": {
+      "sthalapuram": "తిరుపతికి తూర్పున, స్వర్ణముఖి నది పడమటి ఒడ్డున ఉన్న శ్రీకాళహస్తి పంచభూతాలలో వాయు తత్వ క్షేత్రం. సాలీడు, పాము, ఏనుగు కథతో 'కాళహస్తి' పేరు ఏర్పడింది.",
+      "explanation": "'కా' (సాలీడు), 'ల' (పాము), 'హస్తి' (ఏనుగు) — మూడు జీవాలు ఒకే లింగాన్ని ప్రేమతో పూజించాయి. ఇక్కడి లింగం వాయుమార్గంలో అభిషేకించబడుతుంది; మూసిన గుడిలో కూడా ఒక దీపపు నిప్పు ఊగుతూ ఉంటుంది — వాయు తత్వ సాక్షి. వేమన కవి స్మృతి ఈ ప్రాంతంలో నిలిచి ఉంది.",
+      "reverence": "అందరూ పీల్చే గాలి తత్వం దర్శనం — శరణాగతి పాఠం. సాలీడు-లింగ కథ దక్షిణ తెలుగు ప్రాంత భక్తి కథలలో అత్యంత ప్రేమకు పాత్రమైనది. ఐదు భూత క్షేత్రాలలో వాయు కింకర్థను పూర్తి చేసే ప్రదేశం."
+    }
+  },
+  "chidambaram": {
+    "en": {
+      "sthalapuram": "The Thillai Nataraja temple at Chidambaram, near the sea-belt of Tamil Nadu, is the space (Akasha) element of the Pancha Bhoota shrines, and its holiest sanctum is literally the empty hall of space.",
+      "explanation": "The innermost sanctum, called the Chit Sabha (hall of consciousness), holds no ordinary linga: an enclosure and a garland of bells over a vacant space stand for the Akasha (ether, space) element — the Chidambara Rahasya, the secret of the consciousness behind all form. Shiva here is Nataraja, the cosmic dancer, whose 108 karanas (dance postures) are carved in the walls of the hall, and whose dance is held to be the very heartbeat of creation. The temple is the great seat of Shaiva Siddhanta and of the classical dance tradition of Bharatanatyam, which has its roots in this sacred ground. The Patanjali sage and Vyagrapada (the tiger-footed saint) are remembered beside him.",
+      "reverence": "Chidambaram is the Akasha-sthal, the shrine of pure space; its rahasya teaches that the divine is formless and present everywhere. It is the supreme Shaiva seat of the South — the 'Kashi of the South' — and the cradle of dance, where art, mysticism and the five elements unite. The gilded roof and the sacred space of the Chit Sabha make it the most conceptual of the Pancha Bhoota darshanas."
+    },
+    "te": {
+      "sthalapuram": "తమిళనాడు సముద్రతీరానికి సమీపంలో ఉన్న చిదంబరం లోని తిల్లై నటరాజ ఆలయం పంచభూతాలలో ఆకాశ (శూన్య) తత్వ క్షేత్రం. అతి పవిత్రమైన గర్భగుడి సాక్షాత్తు ఖాళీ ఆకాశం.",
+      "explanation": "చిత్ సభ (చైతన్య హాలు) లో సాధారణ లింగం ఉండదు; ఖాళీ స్థలంపై గంటలతో ఒక వలయం — చిదంబర రహస్యం — ఆకాశ తత్వానికి ప్రతీక. శివుడు నటరాజుగా 108 భంగిమలతో నాట్యమాడుతాడు; ఈ నాట్యమే సృష్టికి హృదయస్పందన. శైవసిద్ధాంతానికి, భరతనాట్యానికి పుట్టిల్లు. పతంజలి, వ్యాఘ్రపాద ముని స్మృతులు ఇక్కడ ఉన్నాయి.",
+      "reverence": "దివ్యం నిరాకారమని, సర్వవ్యాపకమని చెప్పే చిదంబరం 'దక్షిణ కాశీ'. నాట్యం, మతం, ఐదు తత్వాలు కలిసిన శైవ పీఠం. పంచభూత దర్శనాలలో అతి శాస్త్రీయమైనది."
+    }
+  }
+}

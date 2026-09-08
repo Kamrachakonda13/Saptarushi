@@ -1,0 +1,50 @@
+{
+  "venkateswara": {
+    "file": "deities/venkateswara.jpg",
+    "src": "Malekallu_Tirupathi-balaji,_Arsikere.jpg"
+  },
+  "shiva": {
+    "file": "deities/shiva.jpg",
+    "src": "Bangalore_Shiva.jpg"
+  },
+  "rama": {
+    "file": "deities/rama.jpg",
+    "src": "Rama_in_Adhyatma_Ramayana.jpg"
+  },
+  "krishna": {
+    "file": "deities/krishna.png",
+    "src": "Krishna_Holds_Up_Mount_Govardhan_(MET_70694)_cropped.png"
+  },
+  "ganesha": {
+    "file": "deities/ganesha.jpg",
+    "src": "Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg"
+  },
+  "hanuman": {
+    "file": "deities/hanuman.jpg",
+    "src": "Hanuman_Statue_at_Sidhheshwar_Temple,_Chhindwara,_MP.jpg"
+  },
+  "durga": {
+    "file": "deities/durga.jpg",
+    "src": "Mahishasura-Mardini_Durga.jpg"
+  },
+  "lakshmi": {
+    "file": "deities/lakshmi.jpg",
+    "src": "Raja_Ravi_Varma,_Goddess_Lakshmi,_1896.jpg"
+  },
+  "saibaba": {
+    "file": "deities/saibaba.jpg",
+    "src": "Shirdi_Sai_Baba_3.jpg"
+  },
+  "ayyappa": {
+    "file": "deities/ayyappa.jpg",
+    "src": "Ayyappa_Swamy_bazaar_art,_c.1950's.jpg"
+  },
+  "subrahmanya": {
+    "file": "deities/subrahmanya.jpg",
+    "src": "Batu_Caves,_Lord_Murugan_Statue._2019-12-01_10-49-22.jpg"
+  },
+  "navagraha": {
+    "file": "deities/navagraha.jpg",
+    "src": "Navagraha_(anthropomorphic_forms_of_astronomical_bodies),_Bihar,_India,_10th_century_AD,_schist_-_San_Diego_Museum_of_Art_-_DSC06389.JPG"
+  }
+}

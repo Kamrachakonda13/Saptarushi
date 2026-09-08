@@ -1,0 +1,10 @@
+{
+  "_note": "Saptarushi · community festival list (data/festivals.json). Real festival computation already comes from the Swiss-Ephemeris panchanga engine; this file is an optional supplementary (regionally curated) list, keyed by YYYY-MM-DD. Entries are audited manually — nothing here is auto-generated.",
+  "2026-09-06": [
+    { "name": "Vinayaka Chaturthi (Ganapati Puja)", "type": "vratam", "note": "Shukla paksha Chaturthi" },
+    { "name": "Gowri Habba / Hindu Vratam", "type": "regional", "note": "Observed in Karnataka over Ganesh Chaturthi" }
+  ],
+  "2026-09-04": [
+    { "name": "Vinayaka Chaturthi (Ganapati Puja)", "type": "vratam", "note": "Shukla paksha Chaturthi" }
+  ]
+}

@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" data-text-size="base">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Panchangam — Telugu daily almanac | Saptarushi</title>
+<meta name="description" content="Vara, Tithi, Nakshatra, Yoga and Karana for any date and town, with muhurtas, choghadiya and festivals — computed for any date and town, never hard-coded."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;600;700&family=Noto+Serif+Telugu:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css?v=39"/>
+
+</head>
+<body>
+<div class="bg-parch text-ink min-h-screen">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><svg class="brand-logo" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false">
+  <circle cx="24" cy="24" r="23.5" fill="#2e1418"/>
+  <circle cx="24" cy="24" r="22.25" fill="rgba(242, 166, 58, 0.07)"/>
+  <circle cx="24" cy="24" r="23.5" fill="none" stroke="rgba(242,166,58,0.4)" stroke-width="1"/>
+  <g fill="#f2a63a">
+    <circle cx="12" cy="13" r="1.15"/><circle cx="16.9" cy="8.5" r="1.15"/>
+    <circle cx="21.6" cy="6.6" r="1.15"/><circle cx="24" cy="6.2" r="1.15"/>
+    <circle cx="26.4" cy="6.6" r="1.15"/><circle cx="31.1" cy="8.5" r="1.15"/>
+    <circle cx="36" cy="13" r="1.15"/>
+  </g>
+  <g fill="#f2a63a">
+    <circle cx="24" cy="14" r="3"/>
+    <path d="M21.7 16.3c.7 1.2 1.9 1.7 2.3 1.7s1.6-.5 2.3-1.7"/>
+    <path d="M20.3 18.5c-2.6 2.4-3.9 5.9-3.4 9.7.3 2.3.2 3.6.2 3.6h12.2h.2s-.1-1.3.2-3.6c.5-3.8-.8-7.3-3.4-9.7-2.1.9-5.1.9-7.2 0z"/>
+    <path d="M18.8 32.4c2.3 1.9 6 1.9 8.3 0"/>
+  </g>
+</svg></span>
+        <span class="leading-none">
+          <span class="brand-name">Saptarushi</span>
+          <span class="brand-tag">తెలుగు భక్తి</span>
+        </span>
+      </a>
+      <nav class="main-nav">
+        <a href="audio.html">Audio</a>
+        <a href="books.html">Books</a>
+        <a href="temples.html">Temples</a>
+        <a href="panchangam.html" class="active">Panchang</a>
+        <a href="about.html">About</a>
+        <a href="admin.html" class="nav-admin">Admin</a>
+      </nav>
+      <div class="header-right">
+        <span class="textsize-label">Text size</span>
+        <div class="textsize-group" role="group" aria-label="Text size">
+          <button class="textsize-btn" data-size="base" aria-label="Text size A">A</button>
+          <button class="textsize-btn" data-size="large" aria-label="Text size A+">A+</button>
+          <button class="textsize-btn" data-size="xlarge" aria-label="Text size A++">A++</button>
+        </div>
+        <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="audio.html">Audio</a>
+    <a href="books.html">Books</a>
+    <a href="temples.html">Temples</a>
+    <a href="panchangam.html" class="active">Panchang</a>
+    <a href="about.html">About</a>
+    <a href="admin.html" class="nav-admin">Admin</a>
+  </nav>
+<nav class="back-bar" aria-label="Back"><a class="back-btn" href="index.html">← Home</a></nav>
+<main>
+  <section class="temple-hero panch-hero">
+    <p class="hero-eyebrow" style="color:var(--marigold)">పంచాంగం · Daily Almanac</p>
+    <h1>Today's Panchangam</h1>
+    <p>The five limbs of the day — Vara, Tithi, Nakshatra, Yoga, Karana — with muhurtas, choghadiya and festivals. Computed for your place and date; nothing is hard-coded.</p>
+
+    <div class="panch-controls">
+      <label class="panch-field">
+        <span class="panch-field-k">Date</span>
+        <input type="date" id="panchDate"/>
+      </label>
+      <label class="panch-field">
+        <span class="panch-field-k">Place</span>
+              <select id="panchPlace" class="panch-field-select" title="Choose a city">
+        <option value="">Custom / manual coordinates…</option>
+      <optgroup label="India">
+        <option value="India|Bengaluru" selected>Bengaluru — Karnataka</option>
+        <option value="India|Mysuru">Mysuru — Karnataka</option>
+        <option value="India|Mangaluru">Mangaluru — Karnataka</option>
+        <option value="India|Hubballi">Hubballi — Karnataka</option>
+        <option value="India|Hyderabad">Hyderabad — Telangana</option>
+        <option value="India|Warangal">Warangal — Telangana</option>
+        <option value="India|Karimnagar">Karimnagar — Telangana</option>
+        <option value="India|Vijayawada">Vijayawada — Andhra Pradesh</option>
+        <option value="India|Visakhapatnam">Visakhapatnam — Andhra Pradesh</option>
+        <option value="India|Tirumala–Tirupati">Tirumala–Tirupati — Andhra Pradesh</option>
+        <option value="India|Guntur">Guntur — Andhra Pradesh</option>
+        <option value="India|Amaravati">Amaravati — Andhra Pradesh</option>
+        <option value="India|Srisailam">Srisailam — Andhra Pradesh</option>
+        <option value="India|Chennai">Chennai — Tamil Nadu</option>
+        <option value="India|Coimbatore">Coimbatore — Tamil Nadu</option>
+        <option value="India|Madurai">Madurai — Tamil Nadu</option>
+        <option value="India|Tiruchirappalli">Tiruchirappalli — Tamil Nadu</option>
+        <option value="India|Salem">Salem — Tamil Nadu</option>
+        <option value="India|Kanyakumari">Kanyakumari — Tamil Nadu</option>
+        <option value="India|Kochi">Kochi — Kerala</option>
+        <option value="India|Thiruvananthapuram">Thiruvananthapuram — Kerala</option>
+        <option value="India|Kozhikode">Kozhikode — Kerala</option>
+        <option value="India|Mumbai">Mumbai — Maharashtra</option>
+        <option value="India|Pune">Pune — Maharashtra</option>
+        <option value="India|Nagpur">Nagpur — Maharashtra</option>
+        <option value="India|Nashik">Nashik — Maharashtra</option>
+        <option value="India|Aurangabad">Aurangabad — Maharashtra</option>
+        <option value="India|Shirdi">Shirdi — Maharashtra</option>
+        <option value="India|Ahmedabad">Ahmedabad — Gujarat</option>
+        <option value="India|Surat">Surat — Gujarat</option>
+        <option value="India|Vadodara">Vadodara — Gujarat</option>
+        <option value="India|Rajkot">Rajkot — Gujarat</option>
+        <option value="India|Dwarka">Dwarka — Gujarat</option>
+        <option value="India|Delhi">Delhi — Delhi NCR</option>
+        <option value="India|Gurugram">Gurugram — Haryana</option>
+        <option value="India|Faridabad">Faridabad — Haryana</option>
+        <option value="India|Chandigarh">Chandigarh — Chandigarh</option>
+        <option value="India|Amritsar">Amritsar — Punjab</option>
+        <option value="India|Ludhiana">Ludhiana — Punjab</option>
+        <option value="India|Shimla">Shimla — Himachal Pradesh</option>
+        <option value="India|Dharamshala">Dharamshala — Himachal Pradesh</option>
+        <option value="India|Dehradun">Dehradun — Uttarakhand</option>
+        <option value="India|Haridwar">Haridwar — Uttarakhand</option>
+        <option value="India|Rishikesh">Rishikesh — Uttarakhand</option>
+        <option value="India|Kedarnath">Kedarnath — Uttarakhand</option>
+        <option value="India|Badrinath">Badrinath — Uttarakhand</option>
+        <option value="India|Srinagar">Srinagar — Jammu &amp; Kashmir</option>
+        <option value="India|Jammu">Jammu — Jammu &amp; Kashmir</option>
+        <option value="India|Leh">Leh — Ladakh</option>
+        <option value="India|Jaipur">Jaipur — Rajasthan</option>
+        <option value="India|Jodhpur">Jodhpur — Rajasthan</option>
+        <option value="India|Udaipur">Udaipur — Rajasthan</option>
+        <option value="India|Jaisalmer">Jaisalmer — Rajasthan</option>
+        <option value="India|Pushkar">Pushkar — Rajasthan</option>
+        <option value="India|Lucknow">Lucknow — Uttar Pradesh</option>
+        <option value="India|Varanasi">Varanasi — Uttar Pradesh</option>
+        <option value="India|Prayagraj">Prayagraj — Uttar Pradesh</option>
+        <option value="India|Kanpur">Kanpur — Uttar Pradesh</option>
+        <option value="India|Agra">Agra — Uttar Pradesh</option>
+        <option value="India|Ayodhya">Ayodhya — Uttar Pradesh</option>
+        <option value="India|Kolkata">Kolkata — West Bengal</option>
+        <option value="India|Siliguri">Siliguri — West Bengal</option>
+        <option value="India|Darjeeling">Darjeeling — West Bengal</option>
+        <option value="India|Patna">Patna — Bihar</option>
+        <option value="India|Gaya">Gaya — Bihar</option>
+        <option value="India|Ranchi">Ranchi — Jharkhand</option>
+        <option value="India|Jamshedpur">Jamshedpur — Jharkhand</option>
+        <option value="India|Bhubaneswar">Bhubaneswar — Odisha</option>
+        <option value="India|Puri">Puri — Odisha</option>
+        <option value="India|Cuttack">Cuttack — Odisha</option>
+        <option value="India|Guwahati">Guwahati — Assam</option>
+        <option value="India|Dibrugarh">Dibrugarh — Assam</option>
+        <option value="India|Shillong">Shillong — Meghalaya</option>
+        <option value="India|Aizawl">Aizawl — Mizoram</option>
+        <option value="India|Imphal">Imphal — Manipur</option>
+        <option value="India|Kohima">Kohima — Nagaland</option>
+        <option value="India|Agartala">Agartala — Tripura</option>
+        <option value="India|Itanagar">Itanagar — Arunachal Pradesh</option>
+        <option value="India|Gangtok">Gangtok — Sikkim</option>
+        <option value="India|Bhopal">Bhopal — Madhya Pradesh</option>
+        <option value="India|Indore">Indore — Madhya Pradesh</option>
+        <option value="India|Ujjain">Ujjain — Madhya Pradesh</option>
+        <option value="India|Khajuraho">Khajuraho — Madhya Pradesh</option>
+        <option value="India|Raipur">Raipur — Chhattisgarh</option>
+        <option value="India|Panaji">Panaji — Goa</option>
+        <option value="India|Rameswaram">Rameswaram — Tamil Nadu</option>
+      </optgroup>
+      <optgroup label="Afghanistan">
+        <option value="Afghanistan|Kabul">Kabul — Kabul</option>
+        <option value="Afghanistan|Herat">Herat — Herat</option>
+      </optgroup>
+      <optgroup label="Argentina">
+        <option value="Argentina|Buenos Aires">Buenos Aires — Buenos Aires</option>
+        <option value="Argentina|Córdoba">Córdoba — Córdoba</option>
+        <option value="Argentina|Mendoza">Mendoza — Mendoza</option>
+        <option value="Argentina|Bariloche">Bariloche — Río Negro</option>
+        <option value="Argentina|Ushuaia">Ushuaia — Tierra del Fuego</option>
+      </optgroup>
+      <optgroup label="Australia">
+        <option value="Australia|Sydney">Sydney — NSW</option>
+        <option value="Australia|Melbourne">Melbourne — VIC</option>
+        <option value="Australia|Brisbane">Brisbane — QLD</option>
+        <option value="Australia|Perth">Perth — WA</option>
+        <option value="Australia|Adelaide">Adelaide — SA</option>
+        <option value="Australia|Canberra">Canberra — ACT</option>
+        <option value="Australia|Hobart">Hobart — TAS</option>
+        <option value="Australia|Darwin">Darwin — NT</option>
+        <option value="Australia|Gold Coast">Gold Coast — QLD</option>
+      </optgroup>
+      <optgroup label="Austria">
+        <option value="Austria|Vienna">Vienna — Vienna</option>
+        <option value="Austria|Salzburg">Salzburg — Salzburg</option>
+        <option value="Austria|Innsbruck">Innsbruck — Tyrol</option>
+        <option value="Austria|Graz">Graz — Styria</option>
+      </optgroup>
+      <optgroup label="Bangladesh">
+        <option value="Bangladesh|Dhaka">Dhaka — Dhaka</option>
+        <option value="Bangladesh|Chittagong">Chittagong — Chittagong</option>
+      </optgroup>
+      <optgroup label="Belgium">
+        <option value="Belgium|Brussels">Brussels — Brussels</option>
+        <option value="Belgium|Antwerp">Antwerp — Flanders</option>
+        <option value="Belgium|Bruges">Bruges — Flanders</option>
+        <option value="Belgium|Ghent">Ghent — Flanders</option>
+      </optgroup>
+      <optgroup label="Bhutan">
+        <option value="Bhutan|Thimphu">Thimphu — Thimphu</option>
+        <option value="Bhutan|Paro">Paro — Paro</option>
+      </optgroup>
+      <optgroup label="Brazil">
+        <option value="Brazil|São Paulo">São Paulo — SP</option>
+        <option value="Brazil|Rio de Janeiro">Rio de Janeiro — RJ</option>
+        <option value="Brazil|Brasília">Brasília — DF</option>
+        <option value="Brazil|Salvador">Salvador — Bahia</option>
+        <option value="Brazil|Manaus">Manaus — Amazonas</option>
+        <option value="Brazil|Fortaleza">Fortaleza — Ceará</option>
+      </optgroup>
+      <optgroup label="Canada">
+        <option value="Canada|Toronto">Toronto — Ontario</option>
+        <option value="Canada|Vancouver">Vancouver — British Columbia</option>
+        <option value="Canada|Montreal">Montreal — Quebec</option>
+        <option value="Canada|Ottawa">Ottawa — Ontario</option>
+        <option value="Canada|Calgary">Calgary — Alberta</option>
+        <option value="Canada|Edmonton">Edmonton — Alberta</option>
+        <option value="Canada|Winnipeg">Winnipeg — Manitoba</option>
+        <option value="Canada|Halifax">Halifax — Nova Scotia</option>
+      </optgroup>
+      <optgroup label="Chile">
+        <option value="Chile|Santiago">Santiago — Santiago</option>
+        <option value="Chile|Valparaíso">Valparaíso — Valparaíso</option>
+      </optgroup>
+      <optgroup label="China">
+        <option value="China|Beijing">Beijing — Beijing</option>
+        <option value="China|Shanghai">Shanghai — Shanghai</option>
+        <option value="China|Guangzhou">Guangzhou — Guangdong</option>
+        <option value="China|Shenzhen">Shenzhen — Guangdong</option>
+        <option value="China|Chengdu">Chengdu — Sichuan</option>
+        <option value="China|Chongqing">Chongqing — Chongqing</option>
+        <option value="China|Xi&#39;an">Xi&#39;an — Shaanxi</option>
+        <option value="China|Wuhan">Wuhan — Hubei</option>
+      </optgroup>
+      <optgroup label="Colombia">
+        <option value="Colombia|Bogotá">Bogotá — Cundinamarca</option>
+        <option value="Colombia|Medellín">Medellín — Antioquia</option>
+        <option value="Colombia|Cartagena">Cartagena — Bolívar</option>
+      </optgroup>
+      <optgroup label="Croatia">
+        <option value="Croatia|Zagreb">Zagreb — Zagreb</option>
+        <option value="Croatia|Split">Split — Dalmatia</option>
+        <option value="Croatia|Dubrovnik">Dubrovnik — Dalmatia</option>
+      </optgroup>
+      <optgroup label="Czech Republic">
+        <option value="Czech Republic|Prague">Prague — Prague</option>
+        <option value="Czech Republic|Brno">Brno — South Moravia</option>
+      </optgroup>
+      <optgroup label="Denmark">
+        <option value="Denmark|Copenhagen">Copenhagen — Capital</option>
+        <option value="Denmark|Aarhus">Aarhus — Central Jutland</option>
+      </optgroup>
+      <optgroup label="Egypt">
+        <option value="Egypt|Cairo">Cairo — Cairo</option>
+        <option value="Egypt|Alexandria">Alexandria — Alexandria</option>
+        <option value="Egypt|Luxor">Luxor — Luxor</option>
+      </optgroup>
+      <optgroup label="Ethiopia">
+        <option value="Ethiopia|Addis Ababa">Addis Ababa — Addis Ababa</option>
+      </optgroup>
+      <optgroup label="Finland">
+        <option value="Finland|Helsinki">Helsinki — Uusimaa</option>
+        <option value="Finland|Tampere">Tampere — Pirkanmaa</option>
+      </optgroup>
+      <optgroup label="France">
+        <option value="France|Paris">Paris — Île-de-France</option>
+        <option value="France|Lyon">Lyon — Auvergne-Rhône-Alpes</option>
+        <option value="France|Marseille">Marseille — Provence</option>
+        <option value="France|Nice">Nice — Provence</option>
+        <option value="France|Bordeaux">Bordeaux — Nouvelle-Aquitaine</option>
+        <option value="France|Strasbourg">Strasbourg — Grand Est</option>
+      </optgroup>
+      <optgroup label="Germany">
+        <option value="Germany|Berlin">Berlin — Berlin</option>
+        <option value="Germany|Munich">Munich — Bavaria</option>
+        <option value="Germany|Frankfurt">Frankfurt — Hesse</option>
+        <option value="Germany|Hamburg">Hamburg — Hamburg</option>
+        <option value="Germany|Cologne">Cologne — North Rhine-Westphalia</option>
+        <option value="Germany|Stuttgart">Stuttgart — Baden-Württemberg</option>
+        <option value="Germany|Düsseldorf">Düsseldorf — North Rhine-Westphalia</option>
+      </optgroup>
+      <optgroup label="Ghana">
+        <option value="Ghana|Accra">Accra — Greater Accra</option>
+      </optgroup>
+      <optgroup label="Greece">
+        <option value="Greece|Athens">Athens — Attica</option>
+        <option value="Greece|Thessaloniki">Thessaloniki — Central Macedonia</option>
+      </optgroup>
+      <optgroup label="Hungary">
+        <option value="Hungary|Budapest">Budapest — Central Hungary</option>
+      </optgroup>
+      <optgroup label="Indonesia">
+        <option value="Indonesia|Jakarta">Jakarta — Jakarta</option>
+        <option value="Indonesia|Denpasar (Bali)">Denpasar (Bali) — Bali</option>
+        <option value="Indonesia|Surabaya">Surabaya — East Java</option>
+        <option value="Indonesia|Yogyakarta">Yogyakarta — Yogyakarta</option>
+      </optgroup>
+      <optgroup label="Iran">
+        <option value="Iran|Tehran">Tehran — Tehran</option>
+        <option value="Iran|Shiraz">Shiraz — Fars</option>
+        <option value="Iran|Isfahan">Isfahan — Isfahan</option>
+      </optgroup>
+      <optgroup label="Ireland">
+        <option value="Ireland|Dublin">Dublin — Leinster</option>
+        <option value="Ireland|Cork">Cork — Munster</option>
+      </optgroup>
+      <optgroup label="Israel">
+        <option value="Israel|Jerusalem">Jerusalem — Jerusalem</option>
+        <option value="Israel|Tel Aviv">Tel Aviv — Tel Aviv</option>
+      </optgroup>
+      <optgroup label="Italy">
+        <option value="Italy|Rome">Rome — Lazio</option>
+        <option value="Italy|Milan">Milan — Lombardy</option>
+        <option value="Italy|Venice">Venice — Veneto</option>
+        <option value="Italy|Florence">Florence — Tuscany</option>
+        <option value="Italy|Naples">Naples — Campania</option>
+        <option value="Italy|Turin">Turin — Piedmont</option>
+        <option value="Italy|Bologna">Bologna — Emilia-Romagna</option>
+      </optgroup>
+      <optgroup label="Japan">
+        <option value="Japan|Tokyo">Tokyo — Tokyo</option>
+        <option value="Japan|Osaka">Osaka — Osaka</option>
+        <option value="Japan|Kyoto">Kyoto — Kyoto</option>
+        <option value="Japan|Yokohama">Yokohama — Kanagawa</option>
+        <option value="Japan|Sapporo">Sapporo — Hokkaido</option>
+        <option value="Japan|Nagoya">Nagoya — Aichi</option>
+        <option value="Japan|Fukuoka">Fukuoka — Fukuoka</option>
+        <option value="Japan|Hiroshima">Hiroshima — Hiroshima</option>
+      </optgroup>
+      <optgroup label="Jordan">
+        <option value="Jordan|Amman">Amman — Amman</option>
+      </optgroup>
+      <optgroup label="Kazakhstan">
+        <option value="Kazakhstan|Almaty">Almaty — Almaty</option>
+        <option value="Kazakhstan|Astana">Astana — Akmola</option>
+      </optgroup>
+      <optgroup label="Kenya">
+        <option value="Kenya|Nairobi">Nairobi — Nairobi</option>
+        <option value="Kenya|Mombasa">Mombasa — Coast</option>
+      </optgroup>
+      <optgroup label="Malaysia">
+        <option value="Malaysia|Kuala Lumpur">Kuala Lumpur — Federal Territory</option>
+        <option value="Malaysia|George Town (Penang)">George Town (Penang) — Penang</option>
+        <option value="Malaysia|Kuching">Kuching — Sarawak</option>
+      </optgroup>
+      <optgroup label="Maldives">
+        <option value="Maldives|Malé">Malé — Malé</option>
+      </optgroup>
+      <optgroup label="Mexico">
+        <option value="Mexico|Mexico City">Mexico City — CDMX</option>
+        <option value="Mexico|Guadalajara">Guadalajara — Jalisco</option>
+        <option value="Mexico|Monterrey">Monterrey — Nuevo León</option>
+        <option value="Mexico|Cancún">Cancún — Quintana Roo</option>
+      </optgroup>
+      <optgroup label="Morocco">
+        <option value="Morocco|Casablanca">Casablanca — Casablanca-Settat</option>
+        <option value="Morocco|Marrakesh">Marrakesh — Marrakesh-Safi</option>
+        <option value="Morocco|Rabat">Rabat — Rabat-Salé</option>
+      </optgroup>
+      <optgroup label="Myanmar">
+        <option value="Myanmar|Yangon">Yangon — Yangon</option>
+        <option value="Myanmar|Mandalay">Mandalay — Mandalay</option>
+      </optgroup>
+      <optgroup label="Nepal">
+        <option value="Nepal|Kathmandu">Kathmandu — Bagmati</option>
+        <option value="Nepal|Pokhara">Pokhara — Gandaki</option>
+        <option value="Nepal|Lumbini">Lumbini — Lumbini</option>
+      </optgroup>
+      <optgroup label="Netherlands">
+        <option value="Netherlands|Amsterdam">Amsterdam — North Holland</option>
+        <option value="Netherlands|Rotterdam">Rotterdam — South Holland</option>
+        <option value="Netherlands|The Hague">The Hague — South Holland</option>
+      </optgroup>
+      <optgroup label="New Zealand">
+        <option value="New Zealand|Auckland">Auckland — North Island</option>
+        <option value="New Zealand|Wellington">Wellington — North Island</option>
+        <option value="New Zealand|Christchurch">Christchurch — South Island</option>
+        <option value="New Zealand|Queenstown">Queenstown — South Island</option>
+      </optgroup>
+      <optgroup label="Nigeria">
+        <option value="Nigeria|Lagos">Lagos — Lagos</option>
+        <option value="Nigeria|Abuja">Abuja — FCT</option>
+      </optgroup>
+      <optgroup label="Norway">
+        <option value="Norway|Oslo">Oslo — Oslo</option>
+        <option value="Norway|Bergen">Bergen — Vestland</option>
+        <option value="Norway|Tromsø">Tromsø — Troms</option>
+      </optgroup>
+      <optgroup label="Oman">
+        <option value="Oman|Muscat">Muscat — Muscat</option>
+      </optgroup>
+      <optgroup label="Pakistan">
+        <option value="Pakistan|Karachi">Karachi — Sindh</option>
+        <option value="Pakistan|Lahore">Lahore — Punjab</option>
+        <option value="Pakistan|Islamabad">Islamabad — Islamabad</option>
+      </optgroup>
+      <optgroup label="Peru">
+        <option value="Peru|Lima">Lima — Lima</option>
+        <option value="Peru|Cusco">Cusco — Cusco</option>
+      </optgroup>
+      <optgroup label="Philippines">
+        <option value="Philippines|Manila">Manila — Metro Manila</option>
+        <option value="Philippines|Cebu City">Cebu City — Cebu</option>
+        <option value="Philippines|Davao City">Davao City — Davao</option>
+      </optgroup>
+      <optgroup label="Poland">
+        <option value="Poland|Warsaw">Warsaw — Masovia</option>
+        <option value="Poland|Kraków">Kraków — Lesser Poland</option>
+        <option value="Poland|Gdańsk">Gdańsk — Pomerania</option>
+      </optgroup>
+      <optgroup label="Portugal">
+        <option value="Portugal|Lisbon">Lisbon — Lisbon</option>
+        <option value="Portugal|Porto">Porto — Norte</option>
+        <option value="Portugal|Faro">Faro — Algarve</option>
+      </optgroup>
+      <optgroup label="Qatar">
+        <option value="Qatar|Doha">Doha — Ad-Dawhah</option>
+      </optgroup>
+      <optgroup label="Romania">
+        <option value="Romania|Bucharest">Bucharest — Bucharest</option>
+        <option value="Romania|Cluj-Napoca">Cluj-Napoca — Transylvania</option>
+      </optgroup>
+      <optgroup label="Russia">
+        <option value="Russia|Moscow">Moscow — Moscow</option>
+        <option value="Russia|Saint Petersburg">Saint Petersburg — Leningrad</option>
+        <option value="Russia|Kazan">Kazan — Tatarstan</option>
+        <option value="Russia|Sochi">Sochi — Krasnodar</option>
+        <option value="Russia|Vladivostok">Vladivostok — Primorsky</option>
+      </optgroup>
+      <optgroup label="Saudi Arabia">
+        <option value="Saudi Arabia|Riyadh">Riyadh — Riyadh</option>
+        <option value="Saudi Arabia|Jeddah">Jeddah — Makkah</option>
+        <option value="Saudi Arabia|Mecca (Makkah)">Mecca (Makkah) — Makkah</option>
+        <option value="Saudi Arabia|Medina">Medina — Al Madinah</option>
+      </optgroup>
+      <optgroup label="Singapore">
+        <option value="Singapore|Singapore">Singapore</option>
+      </optgroup>
+      <optgroup label="South Africa">
+        <option value="South Africa|Johannesburg">Johannesburg — Gauteng</option>
+        <option value="South Africa|Cape Town">Cape Town — Western Cape</option>
+        <option value="South Africa|Durban">Durban — KwaZulu-Natal</option>
+        <option value="South Africa|Pretoria">Pretoria — Gauteng</option>
+      </optgroup>
+      <optgroup label="South Korea">
+        <option value="South Korea|Seoul">Seoul — Seoul</option>
+        <option value="South Korea|Busan">Busan — Busan</option>
+        <option value="South Korea|Incheon">Incheon — Incheon</option>
+      </optgroup>
+      <optgroup label="Spain">
+        <option value="Spain|Madrid">Madrid — Community of Madrid</option>
+        <option value="Spain|Barcelona">Barcelona — Catalonia</option>
+        <option value="Spain|Valencia">Valencia — Valencia</option>
+        <option value="Spain|Seville">Seville — Andalusia</option>
+        <option value="Spain|Granada">Granada — Andalusia</option>
+        <option value="Spain|Bilbao">Bilbao — Basque Country</option>
+      </optgroup>
+      <optgroup label="Sri Lanka">
+        <option value="Sri Lanka|Colombo">Colombo — Western</option>
+        <option value="Sri Lanka|Kandy">Kandy — Central</option>
+      </optgroup>
+      <optgroup label="Sweden">
+        <option value="Sweden|Stockholm">Stockholm — Stockholm</option>
+        <option value="Sweden|Gothenburg">Gothenburg — Västra Götaland</option>
+      </optgroup>
+      <optgroup label="Switzerland">
+        <option value="Switzerland|Zurich">Zurich — Zurich</option>
+        <option value="Switzerland|Geneva">Geneva — Geneva</option>
+        <option value="Switzerland|Bern">Bern — Bern</option>
+        <option value="Switzerland|Basel">Basel — Basel-Stadt</option>
+        <option value="Switzerland|Lausanne">Lausanne — Vaud</option>
+      </optgroup>
+      <optgroup label="Taiwan">
+        <option value="Taiwan|Taipei">Taipei — Taipei</option>
+        <option value="Taiwan|Kaohsiung">Kaohsiung — Kaohsiung</option>
+      </optgroup>
+      <optgroup label="Tanzania">
+        <option value="Tanzania|Dar es Salaam">Dar es Salaam — Dar es Salaam</option>
+        <option value="Tanzania|Zanzibar City">Zanzibar City — Zanzibar</option>
+      </optgroup>
+      <optgroup label="Thailand">
+        <option value="Thailand|Bangkok">Bangkok — Bangkok</option>
+        <option value="Thailand|Chiang Mai">Chiang Mai — Chiang Mai</option>
+        <option value="Thailand|Phuket">Phuket — Phuket</option>
+      </optgroup>
+      <optgroup label="Turkey">
+        <option value="Turkey|Istanbul">Istanbul — Istanbul</option>
+        <option value="Turkey|Ankara">Ankara — Ankara</option>
+        <option value="Turkey|Izmir">Izmir — İzmir</option>
+        <option value="Turkey|Antalya">Antalya — Antalya</option>
+      </optgroup>
+      <optgroup label="Uganda">
+        <option value="Uganda|Kampala">Kampala — Central</option>
+      </optgroup>
+      <optgroup label="Ukraine">
+        <option value="Ukraine|Kyiv">Kyiv — Kyiv</option>
+        <option value="Ukraine|Lviv">Lviv — Lviv</option>
+        <option value="Ukraine|Odesa">Odesa — Odesa</option>
+      </optgroup>
+      <optgroup label="United Arab Emirates">
+        <option value="United Arab Emirates|Dubai">Dubai — Dubai</option>
+        <option value="United Arab Emirates|Abu Dhabi">Abu Dhabi — Abu Dhabi</option>
+        <option value="United Arab Emirates|Sharjah">Sharjah — Sharjah</option>
+      </optgroup>
+      <optgroup label="United Kingdom">
+        <option value="United Kingdom|London">London — England</option>
+        <option value="United Kingdom|Birmingham">Birmingham — England</option>
+        <option value="United Kingdom|Manchester">Manchester — England</option>
+        <option value="United Kingdom|Edinburgh">Edinburgh — Scotland</option>
+        <option value="United Kingdom|Glasgow">Glasgow — Scotland</option>
+        <option value="United Kingdom|Cardiff">Cardiff — Wales</option>
+        <option value="United Kingdom|Belfast">Belfast — Northern Ireland</option>
+        <option value="United Kingdom|Leeds">Leeds — England</option>
+        <option value="United Kingdom|Oxford">Oxford — England</option>
+      </optgroup>
+      <optgroup label="United States">
+        <option value="United States|New York">New York — New York</option>
+        <option value="United States|Los Angeles">Los Angeles — California</option>
+        <option value="United States|Chicago">Chicago — Illinois</option>
+        <option value="United States|Houston">Houston — Texas</option>
+        <option value="United States|Dallas">Dallas — Texas</option>
+        <option value="United States|Austin">Austin — Texas</option>
+        <option value="United States|San Francisco">San Francisco — California</option>
+        <option value="United States|San Diego">San Diego — California</option>
+        <option value="United States|Seattle">Seattle — Washington</option>
+        <option value="United States|Portland">Portland — Oregon</option>
+        <option value="United States|Denver">Denver — Colorado</option>
+        <option value="United States|Phoenix">Phoenix — Arizona</option>
+        <option value="United States|Las Vegas">Las Vegas — Nevada</option>
+        <option value="United States|Boston">Boston — Massachusetts</option>
+        <option value="United States|Washington D.C.">Washington D.C. — District of Columbia</option>
+        <option value="United States|Philadelphia">Philadelphia — Pennsylvania</option>
+        <option value="United States|Atlanta">Atlanta — Georgia</option>
+        <option value="United States|Miami">Miami — Florida</option>
+        <option value="United States|New Orleans">New Orleans — Louisiana</option>
+        <option value="United States|Salt Lake City">Salt Lake City — Utah</option>
+        <option value="United States|Detroit">Detroit — Michigan</option>
+        <option value="United States|Minneapolis">Minneapolis — Minnesota</option>
+        <option value="United States|Honolulu">Honolulu — Hawaii</option>
+        <option value="United States|Anchorage">Anchorage — Alaska</option>
+      </optgroup>
+      <optgroup label="Uzbekistan">
+        <option value="Uzbekistan|Tashkent">Tashkent — Tashkent</option>
+        <option value="Uzbekistan|Samarkand">Samarkand — Samarkand</option>
+        <option value="Uzbekistan|Bukhara">Bukhara — Bukhara</option>
+      </optgroup>
+      <optgroup label="Vietnam">
+        <option value="Vietnam|Hanoi">Hanoi — Hanoi</option>
+        <option value="Vietnam|Ho Chi Minh City">Ho Chi Minh City — Southeast</option>
+        <option value="Vietnam|Da Nang">Da Nang — Central</option>
+      </optgroup>
+      </select>
+      </label>
+      <label class="panch-field panch-field-sm">
+        <span class="panch-field-k">Lat</span>
+        <input id="panchLat" inputmode="decimal" placeholder="12.9716"/>
+      </label>
+      <label class="panch-field panch-field-sm">
+        <span class="panch-field-k">Lng</span>
+        <input id="panchLng" inputmode="decimal" placeholder="77.5946"/>
+      </label>
+      <button type="button" class="btn btn-outline" id="panchToday">Today</button>
+      <button type="button" class="btn btn-primary" id="panchLocate">Use my location</button>
+    </div>
+    <p class="panch-status" id="panchStatus"></p>
+  </section>
+
+  <section class="section-page" id="results">
+    <article class="panch-card panch-day">
+      <div id="panchBig"></div>
+      <div class="panch-day-mini">
+        <span><b>Nakshatra</b> <em id="panchNak">—</em></span>
+        <span><b>Masa</b> <em id="panchMasa">—</em></span>
+        <span><b>Sun</b> <em id="panchSun">—</em></span>
+      </div>
+    </article>
+
+    <div class="section-title-row" style="margin-top:2.25rem">
+      <h2 class="section-title">Pancha Aṅga</h2>
+      <span class="section-count">the five limbs of the Tithi</span>
+    </div>
+    <div class="anga-grid" id="angaGrid"></div>
+
+    <div class="panch-cols">
+      <div class="panch-col">
+        <div class="section-title-row">
+          <h2 class="section-title">Calendar</h2>
+        </div>
+        <div class="cal-box" id="calRows"></div>
+      </div>
+      <div class="panch-col">
+        <div class="section-title-row">
+          <h2 class="section-title">Festivals</h2>
+        </div>
+        <ul class="fest-list" id="festList"></ul>
+      </div>
+    </div>
+
+    <div class="section-title-row" style="margin-top:2.25rem">
+      <h2 class="section-title">Timings & Muhurtas</h2>
+      <span class="section-count" id="panchSub"></span>
+    </div>
+    <div class="time-box" id="timeRows"></div>
+    <div class="eclipse-panel" id="eclipseBox" hidden></div>
+
+    <div class="section-title-row" style="margin-top:2.25rem">
+      <h2 class="section-title">Choghadiya</h2>
+      <span class="section-count">day & night auspicious hours</span>
+    </div>
+    <div class="chog-box">
+      <div class="chog-group"><span class="chog-label">Day</span><div class="chog-chips" id="chogDay"></div></div>
+      <div class="chog-group"><span class="chog-label">Night</span><div class="chog-chips" id="chogNight"></div></div>
+    </div>
+
+    <div class="section-title-row" style="margin-top:2.25rem">
+      <h2 class="section-title">Saṅkalpam</h2>
+      <span class="section-count">సంకల్పం · traditional Andhra chant</span>
+    </div>
+    <article class="panch-card sankalpam">
+      <p class="sankalpam-text" id="sankalpamText" lang="te"></p>
+      <button type="button" class="btn btn-outline" id="panchCopy" style="margin-top:1rem">Copy</button>
+    </article>
+
+  </section>
+  </main>
+  <!-- Ask Rushi chat -->
+  <div class="fab-zone">
+    <div class="chat-panel" id="chatPanel" aria-hidden="true">
+      <div class="chat-head">
+        <span class="chat-avatar"><svg class="brand-logo" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true" focusable="false">
+  <circle cx="24" cy="24" r="23.5" fill="#2e1418"/>
+  <circle cx="24" cy="24" r="22.25" fill="rgba(242, 166, 58, 0.07)"/>
+  <circle cx="24" cy="24" r="23.5" fill="none" stroke="rgba(242,166,58,0.4)" stroke-width="1"/>
+  <g fill="#f2a63a">
+    <circle cx="12" cy="13" r="1.15"/><circle cx="16.9" cy="8.5" r="1.15"/>
+    <circle cx="21.6" cy="6.6" r="1.15"/><circle cx="24" cy="6.2" r="1.15"/>
+    <circle cx="26.4" cy="6.6" r="1.15"/><circle cx="31.1" cy="8.5" r="1.15"/>
+    <circle cx="36" cy="13" r="1.15"/>
+  </g>
+  <g fill="#f2a63a">
+    <circle cx="24" cy="14" r="3"/>
+    <path d="M21.7 16.3c.7 1.2 1.9 1.7 2.3 1.7s1.6-.5 2.3-1.7"/>
+    <path d="M20.3 18.5c-2.6 2.4-3.9 5.9-3.4 9.7.3 2.3.2 3.6.2 3.6h12.2h.2s-.1-1.3.2-3.6c.5-3.8-.8-7.3-3.4-9.7-2.1.9-5.1.9-7.2 0z"/>
+    <path d="M18.8 32.4c2.3 1.9 6 1.9 8.3 0"/>
+  </g>
+</svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="chat-head-strong">Ask Rushi</div>
+          <span class="chat-head-sub"><i></i> online · plays from library</span>
+        </div>
+        <button class="chat-min" id="chatMin" aria-label="Close chat">–</button>
+      </div>
+      <div class="chat-msgs" id="chatMsgs"></div>
+      <div class="chat-sugg" id="chatSugg"></div>
+      <form class="chat-form" id="chatForm">
+        <input id="chatInput" placeholder="Ask: play Suprabhatam…" autocomplete="off"/>
+        <button class="chat-send" aria-label="Send">➤</button>
+      </form>
+    </div>
+    <button id="askBtn" class="askbtn" aria-expanded="false"><span class="ask-icon">✦</span>Ask Rushi</button>
+  </div>
+
+  <!-- in-page player -->
+  <div class="player-bar" id="player" aria-hidden="true">
+    <span class="mp-eq"><span></span><span></span><span></span><span></span><span></span></span>
+    <div class="mp-info">
+      <div class="mp-te" id="mpTe"></div>
+      <div class="mp-en" id="mpEn"></div>
+    </div>
+    <button class="mp-action" id="mpToggle" aria-label="Play or pause">⏸</button>
+    <button class="mp-action" id="mpStop" aria-label="Stop">⏹</button>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="stotras-runtime.js"></script>
+  <script src="app.js" data-base=""></script>
+  <script type="module" src="panchang-app.js"></script>
+</body>
+</html>

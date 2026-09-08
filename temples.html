@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-text-size="base">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Temples of India — Sacred shrines | Saptarushi</title>
+<meta name="description" content="Explore the Shakti Peethas, Jyotirlingas, Pancharamas, Char Dham and Pancha Bhoota temples of India, with search, filters and a map."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;600;700&family=Noto+Serif+Telugu:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css?v=39"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+<div class="bg-parch text-ink min-h-screen">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><svg class="brand-logo" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false">
+  <circle cx="24" cy="24" r="23.5" fill="#2e1418"/>
+  <circle cx="24" cy="24" r="22.25" fill="rgba(242, 166, 58, 0.07)"/>
+  <circle cx="24" cy="24" r="23.5" fill="none" stroke="rgba(242,166,58,0.4)" stroke-width="1"/>
+  <g fill="#f2a63a">
+    <circle cx="12" cy="13" r="1.15"/><circle cx="16.9" cy="8.5" r="1.15"/>
+    <circle cx="21.6" cy="6.6" r="1.15"/><circle cx="24" cy="6.2" r="1.15"/>
+    <circle cx="26.4" cy="6.6" r="1.15"/><circle cx="31.1" cy="8.5" r="1.15"/>
+    <circle cx="36" cy="13" r="1.15"/>
+  </g>
+  <g fill="#f2a63a">
+    <circle cx="24" cy="14" r="3"/>
+    <path d="M21.7 16.3c.7 1.2 1.9 1.7 2.3 1.7s1.6-.5 2.3-1.7"/>
+    <path d="M20.3 18.5c-2.6 2.4-3.9 5.9-3.4 9.7.3 2.3.2 3.6.2 3.6h12.2h.2s-.1-1.3.2-3.6c.5-3.8-.8-7.3-3.4-9.7-2.1.9-5.1.9-7.2 0z"/>
+    <path d="M18.8 32.4c2.3 1.9 6 1.9 8.3 0"/>
+  </g>
+</svg></span>
+        <span class="leading-none">
+          <span class="brand-name">Saptarushi</span>
+          <span class="brand-tag">తెలుగు భక్తి</span>
+        </span>
+      </a>
+      <nav class="main-nav">
+        <a href="audio.html">Audio</a>
+        <a href="books.html">Books</a>
+        <a href="temples.html" class="active">Temples</a>
+        <a href="panchangam.html">Panchang</a>
+        <a href="about.html">About</a>
+        <a href="admin.html" class="nav-admin">Admin</a>
+      </nav>
+      <div class="header-right">
+        <span class="textsize-label">Text size</span>
+        <div class="textsize-group" role="group" aria-label="Text size">
+          <button class="textsize-btn" data-size="base" aria-label="Text size A">A</button>
+          <button class="textsize-btn" data-size="large" aria-label="Text size A+">A+</button>
+          <button class="textsize-btn" data-size="xlarge" aria-label="Text size A++">A++</button>
+        </div>
+        <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="audio.html">Audio</a>
+    <a href="books.html">Books</a>
+    <a href="temples.html" class="active">Temples</a>
+    <a href="panchangam.html">Panchang</a>
+    <a href="about.html">About</a>
+    <a href="admin.html" class="nav-admin">Admin</a>
+  </nav>
+<nav class="back-bar" aria-label="Back"><a class="back-btn" href="index.html">← Home</a></nav>
+<main>
+  <section class="temple-hero">
+    <p class="hero-eyebrow" style="color:var(--marigold)">Sacred India · సనాతన భారతం</p>
+    <h1>Temples of India</h1>
+    <p>Seats of Devi, twelve Jyotirlingas, the Pancharamas, the four Char Dham and the Pancha Bhoota temples — search, filter, and explore with a map.</p>
+    <div class="temple-hero-stats">
+      <span class="temple-hero-stat">18 Shakti Peethas</span>
+      <span class="temple-hero-stat">12 Jyotirlingas</span>
+      <span class="temple-hero-stat">5 Pancharamas</span>
+      <span class="temple-hero-stat">4 Char Dham</span>
+      <span class="temple-hero-stat">5 Pancha Bhoota</span>
+    </div>
+  </section>
+  <section class="section-page">
+    <div class="filter-row temple-filter-row">
+      <button class="filter-chip active" data-cat="all">All</button>
+      <button class="filter-chip" data-cat="shakti">Shakti Peetha</button>
+<button class="filter-chip" data-cat="jyotirlinga">Jyotirlinga</button>
+<button class="filter-chip" data-cat="pancharama">Pancharama</button>
+<button class="filter-chip" data-cat="chardham">Char Dham</button>
+<button class="filter-chip" data-cat="panchabhoota">Pancha Bhoota</button>
+    </div>
+    <div class="temple-controls">
+      <input id="tsearch" type="search" placeholder="Search temple, deity, city, state…" autocomplete="off"/>
+      <select id="tstate"><option value="all">All States</option></select>
+    </div>
+    <div class="temple-map-wrap">
+      <div id="templeMap" class="temple-map"></div>
+    </div>
+    <div class="temple-grid" id="templeGrid" style="margin-top:2rem"></div>
+  </section>
+  </main>
+  <div class="temple-modal" id="templeModal" aria-hidden="true">
+    <div class="temple-modal-box">
+      <button class="temple-modal-close" aria-label="Close temple">×</button>
+      <div id="templeModalContent"></div>
+    </div>
+  </div>
+  <!-- Ask Rushi chat -->
+  <div class="fab-zone">
+    <div class="chat-panel" id="chatPanel" aria-hidden="true">
+      <div class="chat-head">
+        <span class="chat-avatar"><svg class="brand-logo" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true" focusable="false">
+  <circle cx="24" cy="24" r="23.5" fill="#2e1418"/>
+  <circle cx="24" cy="24" r="22.25" fill="rgba(242, 166, 58, 0.07)"/>
+  <circle cx="24" cy="24" r="23.5" fill="none" stroke="rgba(242,166,58,0.4)" stroke-width="1"/>
+  <g fill="#f2a63a">
+    <circle cx="12" cy="13" r="1.15"/><circle cx="16.9" cy="8.5" r="1.15"/>
+    <circle cx="21.6" cy="6.6" r="1.15"/><circle cx="24" cy="6.2" r="1.15"/>
+    <circle cx="26.4" cy="6.6" r="1.15"/><circle cx="31.1" cy="8.5" r="1.15"/>
+    <circle cx="36" cy="13" r="1.15"/>
+  </g>
+  <g fill="#f2a63a">
+    <circle cx="24" cy="14" r="3"/>
+    <path d="M21.7 16.3c.7 1.2 1.9 1.7 2.3 1.7s1.6-.5 2.3-1.7"/>
+    <path d="M20.3 18.5c-2.6 2.4-3.9 5.9-3.4 9.7.3 2.3.2 3.6.2 3.6h12.2h.2s-.1-1.3.2-3.6c.5-3.8-.8-7.3-3.4-9.7-2.1.9-5.1.9-7.2 0z"/>
+    <path d="M18.8 32.4c2.3 1.9 6 1.9 8.3 0"/>
+  </g>
+</svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="chat-head-strong">Ask Rushi</div>
+          <span class="chat-head-sub"><i></i> online · plays from library</span>
+        </div>
+        <button class="chat-min" id="chatMin" aria-label="Close chat">–</button>
+      </div>
+      <div class="chat-msgs" id="chatMsgs"></div>
+      <div class="chat-sugg" id="chatSugg"></div>
+      <form class="chat-form" id="chatForm">
+        <input id="chatInput" placeholder="Ask: play Suprabhatam…" autocomplete="off"/>
+        <button class="chat-send" aria-label="Send">➤</button>
+      </form>
+    </div>
+    <button id="askBtn" class="askbtn" aria-expanded="false"><span class="ask-icon">✦</span>Ask Rushi</button>
+  </div>
+
+  <!-- in-page player -->
+  <div class="player-bar" id="player" aria-hidden="true">
+    <span class="mp-eq"><span></span><span></span><span></span><span></span><span></span></span>
+    <div class="mp-info">
+      <div class="mp-te" id="mpTe"></div>
+      <div class="mp-en" id="mpEn"></div>
+    </div>
+    <button class="mp-action" id="mpToggle" aria-label="Play or pause">⏸</button>
+    <button class="mp-action" id="mpStop" aria-label="Stop">⏹</button>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="stotras-runtime.js"></script>
+  <script src="temples-data.js"></script>
+  <script src="app.js" data-base=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>  <script>
+  (function () {
+        const CATINFO = {"shakti":"Shakti Peetha","jyotirlinga":"Jyotirlinga","pancharama":"Pancharama","chardham":"Char Dham","panchabhoota":"Pancha Bhoota"};
+    const CAT_ORDER = ['shakti', 'jyotirlinga', 'pancharama', 'chardham', 'panchabhoota'];
+    const CATS = Object.keys(TEMPLES);
+    let currentCategory = 'all';
+
+    /* state dropdown */
+    const stateSelect = document.getElementById('tstate');
+    [...new Set(TEMPLES.map(t => t.state))].sort().forEach(s => {
+      const o = document.createElement('option');
+      o.value = s; o.textContent = s; stateSelect.appendChild(o);
+    });
+
+    function setCategory(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.filter-chip[data-cat]').forEach(b => b.classList.toggle('active', b === btn));
+      renderTemples();
+    }
+
+    function renderTemples() {
+      const grid = document.getElementById('templeGrid');
+      const q = (document.getElementById('tsearch').value || '').toLowerCase().trim();
+      const st = stateSelect.value;
+      const grouped = currentCategory === 'all' && !q && st === 'all';
+      if (grouped) {
+        grid.innerHTML = CAT_ORDER.map(cat => {
+          const list = TEMPLES.filter(t => t.category === cat);
+          if (!list.length) return '';
+          const emoji = { shakti: '🙏', jyotirlinga: '🕉', pancharama: '🛕', chardham: '🚩', panchabhoota: '🌍' }[cat] || '🛕';
+          return '<div class="temple-group">'
+            + '<div class="temple-group-head"><span class="temple-group-emoji">' + emoji + '</span>'
+            + '<h2 class="temple-group-title">' + CATINFO[cat] + '</h2>'
+            + '<span class="temple-group-count">' + list.length + ' shrines</span></div>'
+            + '<div class="temple-grid">' + list.map(cardHtml).join('') + '</div>'
+            + '</div>';
+        }).join('');
+        return;
+      }
+      const list = TEMPLES.filter(t => {
+        if (currentCategory !== 'all' && t.category !== currentCategory) return false;
+        if (st !== 'all' && t.state !== st) return false;
+        if (!q) return true;
+        return (t.name + ' ' + t.temple + ' ' + t.deity + ' ' + t.city + ' ' + t.state + ' ' + (t.element || '')).toLowerCase().includes(q);
+      });
+      grid.innerHTML = list.length
+        ? list.map(cardHtml).join('')
+        : `<div class="temple-empty"><h2>No temples found</h2><p>Try another temple, deity, city or state.</p></div>`;
+    }
+
+    function cardHtml(t) {
+      return `<article class="temple-card">
+        ${t.cardImg ? `<img class="temple-img" src="${t.cardImg}" alt="${t.name}" loading="lazy"/>` : ''}
+        <div class="temple-content">
+          <span class="temple-badge">${t.categoryLabel}</span>
+          <h2 class="temple-name">${t.name}</h2>
+          <div class="temple-deity">🙏 ${t.deity}</div>
+          <div class="temple-loc">📍 ${t.location}</div>
+          <div class="temple-read"><button type="button" onclick="openTemple('${t.id}')">Explore Temple</button></div>
+        </div>
+      </article>`;
+    }
+
+    /* modal */
+    const modal = document.getElementById('templeModal');
+    function openTemple(id) {
+      const t = TEMPLES.find(x => x.id === id);
+      if (!t) return;
+      const parts = [];
+      parts.push('<div class="temple-modal-body">');
+      parts.push('<span class="temple-badge">' + t.categoryLabel + '</span>');
+      if (t.category === 'panchabhoota') parts.push('<span class="temple-badge" style="margin-left:6px">' + t.element + '</span>');
+      parts.push('<h2>' + t.name + '</h2>');
+      parts.push('<div class="temple-modal-sub">' + t.temple + ' · ' + t.deity + '</div>');
+      if (t.bodyPart) parts.push('<div class="temple-modal-sub">' + 'Traditions associate this Peetha with: ' + t.bodyPart + '</div>');
+      parts.push('<h3>🕉 Story</h3><p>' + t.story + '</p>');
+      parts.push('<h3>✨ Significance</h3><p>' + t.significance + '</p>');
+      parts.push('<h3>📍 Location</h3><p>' + t.location + '</p>');
+      parts.push('<p style="margin-top:0.9rem"><a class="temple-link-btn" style="display:inline-block;width:auto" href="temples/' + t.id + '.html">Open full temple page ⇗</a></p>');
+      parts.push('</div>');
+      document.getElementById('templeModalContent').innerHTML = parts.join('');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    window.openTemple = openTemple;
+    function closeTemple() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    window.closeTemple = closeTemple;
+    modal.querySelector('.temple-modal-close').addEventListener('click', closeTemple);
+    modal.addEventListener('click', e => { if (e.target === modal) closeTemple(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTemple(); });
+
+    document.getElementById('tsearch').addEventListener('input', renderTemples);
+    stateSelect.addEventListener('change', renderTemples);
+    document.querySelectorAll('.filter-chip[data-cat]').forEach(b =>
+      b.addEventListener('click', () => setCategory(b.dataset.cat, b)));
+
+    /* leaflet map */
+    try {
+      if (window.L) {
+        const map = L.map('templeMap').setView([21.9, 78.5], 5);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          maxZoom: 18,
+        }).addTo(map);
+        TEMPLES.forEach(t => {
+          if (!t.coords) return;
+          L.marker([t.coords.lat, t.coords.lng]).addTo(map).bindPopup(
+            '<strong>' + t.name + '</strong><br>' + t.city + (t.state ? ', ' + t.state : '') +
+            '<br><a class="tp" href="temples/' + t.id + '.html">Temple page &rarr;</a>');
+        });
+      } else {
+        document.getElementById('templeMap').innerHTML = '<div class="map-note">Map loads when you are online (OpenStreetMap). The temple list below works fully offline.</div>';
+      }
+    } catch (err) {
+      document.getElementById('templeMap').innerHTML = '<div class="map-note">Map unavailable here (OpenStreetMap tiles need an internet connection).</div>';
+    }
+
+    renderTemples();
+  })();
+  </script>
+</body>
+</html>

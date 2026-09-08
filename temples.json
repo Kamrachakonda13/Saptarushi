@@ -1,0 +1,1325 @@
+{
+  "source": "Curated for Saptarushi. Story and significance follow the traditional accounts; coordinates are approximate for map markers.",
+  "categories": {
+    "shakti": "Shakti Peetha",
+    "jyotirlinga": "Jyotirlinga",
+    "pancharama": "Pancharama",
+    "chardham": "Char Dham",
+    "panchabhoota": "Pancha Bhoota"
+  },
+  "items": [
+    {
+      "id": "shankari",
+      "category": "shakti",
+      "name": "Shankari Devi Temple",
+      "temple": "Shankari Devi Temple",
+      "deity": "Goddess Shankari",
+      "city": "Trincomalee",
+      "state": "Sri Lanka",
+      "country": "Sri Lanka",
+      "location": "Trincomalee, Eastern Province, Sri Lanka",
+      "bodyPart": "Traditions differ on the associated body part.",
+      "story": "Shankari Devi is traditionally associated with the Shakti Peetha at Trincomalee. The Shakti Peetha tradition connects these sacred places with the story of Sati and the cosmic intervention of Shiva after her self-immolation.",
+      "significance": "The shrine represents one of the great sacred seats of the Divine Mother and connects Indian Shakta tradition with the sacred geography of Sri Lanka.",
+      "coordinates": {
+        "lat": 8.5763,
+        "lng": 81.2333
+      },
+      "q": {
+        "deity": "Koneswaram Temple Trincomalee",
+        "temple": "Koneswaram Temple Trincomalee",
+        "sanctum": "Koneswaram gopuram Trincomalee"
+      },
+      "deityImage": {
+        "url": "temples/shakti/shankari-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AKoneswaram_temple_of_Trincomalee_02.jpg",
+        "photographer": "Dr.S.Rajivraja",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "kamakshi",
+      "category": "shakti",
+      "name": "Kamakshi Amman Temple",
+      "temple": "Kamakshi Amman Temple",
+      "deity": "Goddess Kamakshi",
+      "city": "Kanchipuram",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "location": "Kanchipuram, Tamil Nadu, India",
+      "story": "Kamakshi is revered as the supreme Divine Mother at Kanchipuram. The temple is deeply connected with the Sri Vidya tradition and the sacred heritage of Kanchi.",
+      "significance": "Kamakshi is one of the most important forms of Devi worship in South India, and Kanchipuram is one of India's major temple cities.",
+      "coordinates": {
+        "lat": 12.8417,
+        "lng": 79.7024
+      },
+      "q": {
+        "deity": "Kamakshi Amman Kanchipuram idol",
+        "temple": "Kamakshi Amman Temple Kanchipuram",
+        "sanctum": "Kamakshi temple gopuram Kanchipuram"
+      },
+      "deityImage": {
+        "url": "temples/shakti/kamakshi-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ASri_Kanchi_Kamakshi_Ambal_Devasthanam%2C_Sri_Kanchi_Kamakshi_Amman_Temple_2K22TNKAN_(106).jpg",
+        "photographer": "Vinayaraj",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "chamundeshwari",
+      "category": "shakti",
+      "name": "Chamundeshwari Temple",
+      "temple": "Chamundeshwari Temple",
+      "deity": "Goddess Chamundeshwari",
+      "city": "Mysuru",
+      "state": "Karnataka",
+      "country": "India",
+      "location": "Chamundi Hills, Mysuru, Karnataka, India",
+      "story": "Chamundeshwari is traditionally identified with the Goddess who defeated the buffalo demon Mahishasura. The deity became deeply associated with the royal and religious heritage of Mysuru.",
+      "significance": "The hilltop temple is one of the most recognizable sacred landmarks of Mysuru.",
+      "coordinates": {
+        "lat": 12.2724,
+        "lng": 76.672
+      },
+      "q": {
+        "deity": "Chamundeshwari Temple Mysore statue",
+        "temple": "Chamundeshwari Temple Mysore",
+        "sanctum": "Chamundeshwari temple gopuram Mysore"
+      },
+      "deityImage": {
+        "url": "temples/shakti/chamundeshwari-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AChamundeshwari_Temple_(Gopuram).jpg",
+        "photographer": "Asheer150",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "jogulamba",
+      "category": "shakti",
+      "name": "Jogulamba Temple",
+      "temple": "Jogulamba Devi Temple",
+      "deity": "Goddess Jogulamba",
+      "city": "Alampur",
+      "state": "Telangana",
+      "country": "India",
+      "location": "Alampur, Jogulamba Gadwal district, Telangana",
+      "story": "Jogulamba is revered as a powerful form of Goddess Shakti. Alampur has long been an important Shaiva-Shakta sacred centre.",
+      "significance": "The temple forms an important part of the sacred geography around the Tungabhadra and Krishna river region.",
+      "coordinates": {
+        "lat": 15.8797,
+        "lng": 78.1337
+      },
+      "q": {
+        "deity": "Jogulamba Temple Alampur",
+        "temple": "Alampur Navabrahma Temples",
+        "sanctum": "Jogulamba temple Alampur gopuram"
+      },
+      "deityImage": {
+        "url": "temples/shakti/jogulamba-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AJogulamba_temple_alampur.JPG",
+        "photographer": "రహ్మానుద్దీన్",
+        "license": "CC BY-SA 3.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "bhramaramba",
+      "category": "shakti",
+      "name": "Bhramaramba Temple",
+      "temple": "Bhramaramba Devi Temple",
+      "deity": "Goddess Bhramaramba",
+      "city": "Srisailam",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "location": "Srisailam, Nandyal district, Andhra Pradesh",
+      "story": "Bhramaramba is traditionally associated with the Divine Mother at Srisailam and is worshipped together with Mallikarjuna Shiva.",
+      "significance": "Srisailam is especially significant because the same sacred complex is associated with both a Jyotirlinga and a Shakti Peetha tradition.",
+      "coordinates": {
+        "lat": 16.0868,
+        "lng": 78.8651
+      },
+      "q": {
+        "deity": "Srisailam Mallikarjuna temple",
+        "temple": "Bhramaramba Mallikarjuna Temple Srisailam",
+        "sanctum": "Srisailam temple gopuram"
+      },
+      "deityImage": {
+        "url": "temples/shakti/bhramaramba-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ASri_Mallikarjuna_Swami_and_Sri_Bhramaramba_Devi.jpg",
+        "photographer": "Karthikhar24",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "mahalakshmi-kolhapur",
+      "category": "shakti",
+      "name": "Mahalakshmi Temple",
+      "temple": "Shri Mahalakshmi Temple",
+      "deity": "Goddess Mahalakshmi",
+      "city": "Kolhapur",
+      "state": "Maharashtra",
+      "country": "India",
+      "location": "Kolhapur, Maharashtra, India",
+      "story": "The Mahalakshmi tradition at Kolhapur is one of the great centres of Goddess worship in Maharashtra.",
+      "significance": "The temple is one of the most important pilgrimage centres in western India.",
+      "coordinates": {
+        "lat": 16.706,
+        "lng": 74.229
+      },
+      "q": {
+        "deity": "Mahalakshmi Temple Kolhapur",
+        "temple": "Ambabai Temple Kolhapur",
+        "sanctum": "Mahalakshmi temple Kolhapur gopuram"
+      },
+      "deityImage": {
+        "url": "temples/shakti/mahalakshmi-kolhapur-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AAmbadevi's_Temple%2C_Kolhapur.jpg",
+        "photographer": "C. C. Dyson",
+        "license": "Public domain",
+        "attribution": "From a Punjaub pomegranate grove by Dyson, C. C Publication date 1913 https://archive.org/details/frompunjaubpome00dyso/page/n173/mode/1up"
+      }
+    },
+    {
+      "id": "mahakali-ujjain",
+      "category": "shakti",
+      "name": "Mahakali / Harsiddhi Temple",
+      "temple": "Harsiddhi / Mahakali Temple",
+      "deity": "Goddess Mahakali",
+      "city": "Ujjain",
+      "state": "Madhya Pradesh",
+      "country": "India",
+      "location": "Ujjain, Madhya Pradesh, India",
+      "story": "Ujjain is one of India's great sacred cities. The Mahakali tradition is associated with the city's ancient Shaiva and Shakta heritage.",
+      "significance": "The temple stands within one of India's most important pilgrimage landscapes.",
+      "coordinates": {
+        "lat": 23.1765,
+        "lng": 75.7885
+      },
+      "q": {
+        "deity": "Harsiddhi Temple Ujjain",
+        "temple": "Harsiddhi Temple Ujjain",
+        "sanctum": "Harsiddhi temple Ujjain shikhara"
+      },
+      "deityImage": {
+        "url": "temples/shakti/mahakali-ujjain-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AUjjain_Shree_Harsiddhi_Mata_Shaktipeeth_at_Night_%E2%80%93_Sep_2025.jpg",
+        "photographer": "Rajveer Bairagi",
+        "license": "CC BY 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "puruhutika",
+      "category": "shakti",
+      "name": "Puruhutika Devi Temple",
+      "temple": "Puruhutika Devi Temple",
+      "deity": "Goddess Puruhutika",
+      "city": "Pithapuram",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "location": "Pithapuram, Kakinada district, Andhra Pradesh",
+      "story": "Pithapuram is an important pilgrimage centre and is traditionally associated with Puruhutika Devi.",
+      "significance": "The shrine forms part of Andhra Pradesh's rich Shakta and Shaiva pilgrimage network.",
+      "coordinates": {
+        "lat": 17.1105,
+        "lng": 82.2556
+      },
+      "q": {
+        "deity": "Pithapuram temple",
+        "temple": "Puruhutika Temple Pithapuram",
+        "sanctum": "Pithapuram Temple Andhra"
+      },
+      "deityImage": {
+        "url": "temples/shakti/puruhutika-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3APuruhutika_Devi_Sakthi_Peetam_Temple_arch_01.jpg",
+        "photographer": "Adityamadhav83",
+        "license": "CC BY 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "biraja",
+      "category": "shakti",
+      "name": "Biraja Temple",
+      "temple": "Biraja Devi Temple",
+      "deity": "Goddess Biraja",
+      "city": "Jajpur",
+      "state": "Odisha",
+      "country": "India",
+      "location": "Jajpur, Odisha, India",
+      "story": "Biraja Devi is worshipped at the ancient sacred centre of Jajpur, traditionally associated with the Shakti Peetha tradition.",
+      "significance": "Jajpur's sacred landscape is closely connected with the Vaitarani river and ancient Odishan religious history.",
+      "coordinates": {
+        "lat": 20.8486,
+        "lng": 86.3374
+      },
+      "q": {
+        "deity": "Biraja Temple Jajpur",
+        "temple": "Biraja Temple Jajpur Odisha",
+        "sanctum": "Biraja temple Jajur gopuram"
+      },
+      "deityImage": {
+        "url": "temples/shakti/biraja-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AMaa_Biraja_Temple.jpg",
+        "photographer": "Krupasindhu Muduli",
+        "license": "CC BY-SA 3.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "manikyamba",
+      "category": "shakti",
+      "name": "Manikyamba Temple",
+      "temple": "Manikyamba Devi Temple",
+      "deity": "Goddess Manikyamba",
+      "city": "Draksharamam",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "location": "Draksharamam, Konaseema district, Andhra Pradesh",
+      "story": "Manikyamba is revered at Draksharamam, one of the great Shaiva centres of Andhra Pradesh.",
+      "significance": "The site is particularly important because Draksharamam is also one of the five Pancharama Kshetras.",
+      "coordinates": {
+        "lat": 16.7929,
+        "lng": 81.8209
+      },
+      "q": {
+        "deity": "Manikyamba Temple Draksharamam",
+        "temple": "Bhimeswara Temple Draksharamam",
+        "sanctum": "Draksharamam temple gopuram"
+      },
+      "deityImage": {
+        "url": "temples/shakti/manikyamba-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AManikyamba_Ammavari_Temple.jpg",
+        "photographer": "Kamalika Basu",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "kamakhya",
+      "category": "shakti",
+      "name": "Kamakhya Temple",
+      "temple": "Kamakhya Devi Temple",
+      "deity": "Goddess Kamakhya",
+      "city": "Guwahati",
+      "state": "Assam",
+      "country": "India",
+      "location": "Nilachal Hill, Guwahati, Assam, India",
+      "story": "Kamakhya is one of the most important Shakta pilgrimage centres in India and is strongly associated with Tantric traditions.",
+      "significance": "The temple is a major centre of Shakti worship and the annual Ambubachi Mela is particularly significant.",
+      "coordinates": {
+        "lat": 26.1664,
+        "lng": 91.6992
+      },
+      "q": {
+        "deity": "Kamakhya Devi Guwahati",
+        "temple": "Kamakhya Temple Guwahati",
+        "sanctum": "Kamakhya temple Nilachal Hill"
+      },
+      "deityImage": {
+        "url": "temples/shakti/kamakhya-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AHindu_goddess_sculptures_on_temple_walls_Assam.jpg",
+        "photographer": "Priyambada Nath",
+        "license": "CC BY 2.0",
+        "attribution": "The Carvings in the Wall"
+      }
+    },
+    {
+      "id": "madhaveshwari",
+      "category": "shakti",
+      "name": "Madhaveshwari / Alopi Devi",
+      "temple": "Alopi Devi Temple",
+      "deity": "Goddess Madhaveshwari",
+      "city": "Prayagraj",
+      "state": "Uttar Pradesh",
+      "country": "India",
+      "location": "Prayagraj, Uttar Pradesh, India",
+      "story": "Prayagraj's sacred geography centres around the confluence of the Ganga, Yamuna and traditionally revered Saraswati.",
+      "significance": "The city is one of India's most important pilgrimage destinations.",
+      "coordinates": {
+        "lat": 25.4449,
+        "lng": 81.8505
+      },
+      "q": {
+        "deity": "Alopi Devi Temple Prayagraj",
+        "temple": "Alopi Devi Mandir Prayagraj",
+        "sanctum": "Triveni Sangam Prayagraj"
+      }
+    },
+    {
+      "id": "jwalamukhi",
+      "category": "shakti",
+      "name": "Jwalamukhi Temple",
+      "temple": "Jwalamukhi Devi Temple",
+      "deity": "Goddess Jwalamukhi",
+      "city": "Jwalamukhi",
+      "state": "Himachal Pradesh",
+      "country": "India",
+      "location": "Jwalamukhi, Kangra district, Himachal Pradesh",
+      "story": "Jwalamukhi is famous for its sacred flames, which are traditionally revered as manifestations of the Goddess.",
+      "significance": "The shrine is particularly distinctive because worship centres around naturally occurring flames rather than a conventional anthropomorphic idol.",
+      "coordinates": {
+        "lat": 31.8762,
+        "lng": 76.3298
+      },
+      "q": {
+        "deity": "Jwalamukhi Temple Himachal",
+        "temple": "Jwalamukhi Temple Kangra",
+        "sanctum": "Jwalamukhi temple flames"
+      },
+      "deityImage": {
+        "url": "temples/shakti/jwalamukhi-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3A0051223_Jwalamukhi_temple%2C_Jvala_ji_Himachal_Pradesh_011.jpg",
+        "photographer": "Ms Sarah Welch",
+        "license": "CC0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "mangala-gauri",
+      "category": "shakti",
+      "name": "Mangala Gauri Temple",
+      "temple": "Mangala Gauri Temple",
+      "deity": "Goddess Mangala Gauri",
+      "city": "Gaya",
+      "state": "Bihar",
+      "country": "India",
+      "location": "Gaya, Bihar, India",
+      "story": "Gaya is one of India's ancient pilgrimage centres, particularly important for ancestral rites.",
+      "significance": "Mangala Gauri forms an important part of the sacred geography of Gaya.",
+      "coordinates": {
+        "lat": 24.7706,
+        "lng": 85.0105
+      },
+      "q": {
+        "deity": "Mangala Gauri Temple Gaya",
+        "temple": "Mangala Gauri Temple Gaya Bihar",
+        "sanctum": "Vishnupad Temple Gaya"
+      },
+      "deityImage": {
+        "url": "temples/shakti/mangala-gauri-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AMangala_Gauri_Temple_at_Gaya%2C_Bihar.jpg",
+        "photographer": "Mumbaipsytrance",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Trip Advisor"
+      }
+    },
+    {
+      "id": "vishalakshi",
+      "category": "shakti",
+      "name": "Vishalakshi Temple",
+      "temple": "Vishalakshi Gauri Temple",
+      "deity": "Goddess Vishalakshi",
+      "city": "Varanasi",
+      "state": "Uttar Pradesh",
+      "country": "India",
+      "location": "Varanasi, Uttar Pradesh, India",
+      "story": "Vishalakshi is one of the important Devi shrines within the sacred city of Varanasi.",
+      "significance": "The temple is closely associated with the wider Kashi pilgrimage circuit.",
+      "coordinates": {
+        "lat": 25.3176,
+        "lng": 83.0104
+      },
+      "q": {
+        "deity": "Vishalakshi Temple Varanasi",
+        "temple": "Vishalakshi Temple Varanasi",
+        "sanctum": "Kashi ghat Varanasi"
+      }
+    },
+    {
+      "id": "tara-tarapith",
+      "category": "shakti",
+      "name": "Tara Devi Temple",
+      "temple": "Tara Devi Temple (Tarapith)",
+      "deity": "Goddess Tara",
+      "city": "Tarapith",
+      "state": "West Bengal",
+      "country": "India",
+      "location": "Tarapith, Birbhum district, West Bengal, India",
+      "bodyPart": "Traditionally associated with Sati’s eye.",
+      "story": "Tarapith is a major centre of Shakta worship connected with the fierce form of the Divine Mother as Tara, deeply linked with the saint Sadhak Bamakhepa. The shrine stands near the river Dwarka in the Birbhum landscape.",
+      "significance": "Tarapith is one of the most important Tara-Peetha shrines of eastern India and a living centre of esoteric Shakta sadhana.",
+      "coordinates": {
+        "lat": 24.0714,
+        "lng": 87.78
+      },
+      "q": {
+        "deity": "Tara Temple Tarapith",
+        "temple": "Tara Devi Temple Tarapith",
+        "sanctum": "Tarapith temple Birbhum"
+      },
+      "deityImage": {
+        "url": "temples/shakti/tara-tarapith-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ATarapith_Kali_temple_at_Tarapith_02.jpg",
+        "photographer": "Pinakpani",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "vimala-puri",
+      "category": "shakti",
+      "name": "Vimala Temple",
+      "temple": "Vimala Devi Temple",
+      "deity": "Goddess Vimala",
+      "city": "Puri",
+      "state": "Odisha",
+      "country": "India",
+      "location": "Puri, Odisha, India",
+      "bodyPart": "Traditionally associated with the feet of Sati.",
+      "story": "Inside the Jagannath complex at Puri, Goddess Vimala is revered together with Lord Jagannath. The shakti of Jagannath is considered to rest here, so the Bhoga (offering) is first served to Vimala Devi.",
+      "significance": "Puri is thus a unique site where a Char Dham shrine and a Shakti Peetha tradition exist within a single temple complex.",
+      "coordinates": {
+        "lat": 19.8054,
+        "lng": 85.8175
+      },
+      "q": {
+        "deity": "Vimala Temple Puri",
+        "temple": "Jagannath Temple Puri",
+        "sanctum": "Jagannath temple Odisha"
+      },
+      "deityImage": {
+        "url": "temples/shakti/vimala-puri-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AVimala_Devi_Portrait.jpg",
+        "photographer": "Vimala Devi",
+        "license": "Attribution",
+        "attribution": "Own work ( Original text: self-made )"
+      }
+    },
+    {
+      "id": "ambaji",
+      "category": "shakti",
+      "name": "Ambaji Temple",
+      "temple": "Shri Arasuri Ambaji Temple",
+      "deity": "Goddess Ambaji",
+      "city": "Ambaji",
+      "state": "Gujarat",
+      "country": "India",
+      "location": "Ambaji, Banaskantha district, Gujarat, India",
+      "bodyPart": "Traditionally associated with the heart of Sati.",
+      "story": "The Ambaji shrine on Gabbar hill is one of the principal Shakti Peethas of western India. The idol is worshipped without a physical image, on a sacred Ċhorasi-chamakī symbol associated with the mother.",
+      "significance": "Ambaji is a major centre of the Gujarati Shakta tradition and a destination of the Arasuri fair.",
+      "coordinates": {
+        "lat": 24.3333,
+        "lng": 72.21
+      },
+      "q": {
+        "deity": "Ambaji Temple",
+        "temple": "Ambaji Temple Gujarat",
+        "sanctum": "Gabbar Hill Ambaji"
+      },
+      "deityImage": {
+        "url": "temples/shakti/ambaji-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AAmba-Maa-Pic-Main.JPG",
+        "photographer": "Jaiambe11",
+        "license": "CC BY-SA 3.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "somnath",
+      "category": "jyotirlinga",
+      "name": "Somnath Jyotirlinga",
+      "temple": "Somnath Temple",
+      "deity": "Lord Shiva",
+      "city": "Prabhas Patan",
+      "state": "Gujarat",
+      "country": "India",
+      "location": "Prabhas Patan, Gir Somnath district, Gujarat",
+      "story": "According to tradition, Chandra, the Moon God, worshipped Shiva at Prabhas to obtain relief from a curse associated with Daksha.",
+      "significance": "Somnath is traditionally regarded as the first of the twelve Jyotirlingas and occupies an important place in India's religious and historical memory.",
+      "coordinates": {
+        "lat": 20.888,
+        "lng": 70.4012
+      },
+      "q": {
+        "deity": "Somnath Temple Shiva",
+        "temple": "Somnath Temple Gujarat",
+        "sanctum": "Somnath Temple Gopuram"
+      },
+      "deityImage": {
+        "url": "temples/jyotirlinga/somnath-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AShree_Somnath_Jyotirlinga_Temple_during_Dwaraka_DWARASPDB_2015_(11).jpg",
+        "photographer": "Vinayaraj",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "mallikarjuna",
+      "category": "jyotirlinga",
+      "name": "Mallikarjuna Jyotirlinga",
+      "temple": "Mallikarjuna Swamy Temple",
+      "deity": "Lord Mallikarjuna",
+      "city": "Srisailam",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "location": "Srisailam, Nandyal district, Andhra Pradesh",
+      "story": "Mallikarjuna is traditionally associated with Shiva at Sri Shaila. The temple is connected with the story of Shiva and Parvati and the sacred Nallamala hills.",
+      "significance": "It is one of the twelve Jyotirlingas and the same sacred complex is associated with Bhramaramba.",
+      "coordinates": {
+        "lat": 16.074,
+        "lng": 78.8686
+      },
+      "q": {
+        "deity": "Mallikarjuna Swamy Srisailam",
+        "temple": "Mallikarjuna Temple Srisailam",
+        "sanctum": "Srisailam gopuram"
+      },
+      "deityImage": {
+        "url": "temples/jyotirlinga/mallikarjuna-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AA_Nataraja_relief_carved_on_Northern_wall_of_Srisailam_Temple.jpg",
+        "photographer": "Adityamadhav83",
+        "license": "CC BY 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "mahakaleshwar",
+      "category": "jyotirlinga",
+      "name": "Mahakaleshwar Jyotirlinga",
+      "temple": "Mahakaleshwar Temple",
+      "deity": "Lord Mahakaleshwar",
+      "city": "Ujjain",
+      "state": "Madhya Pradesh",
+      "country": "India",
+      "location": "Ujjain, Madhya Pradesh, India",
+      "story": "Mahakaleshwar represents Shiva as Mahakala, the Lord beyond time.",
+      "significance": "The temple is especially famous for the Bhasma Aarti and is one of India's most important Shaiva pilgrimage sites.",
+      "coordinates": {
+        "lat": 23.1828,
+        "lng": 75.7799
+      },
+      "q": {
+        "deity": "Mahakaleshwar Ujjain",
+        "temple": "Mahakaleshwar Temple Ujjain",
+        "sanctum": "Mahakaleshwar temple Ujjain"
+      },
+      "deityImage": {
+        "url": "temples/jyotirlinga/mahakaleshwar-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AMahakaleshwar_Temple_Ujjain_%E2%80%93_Sacred_Jyotirlinga_of_Lord_Shiva.png",
+        "photographer": "Ujjainmahakal",
+        "license": "CC BY 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "omkareshwar",
+      "category": "jyotirlinga",
+      "name": "Omkareshwar Jyotirlinga",
+      "temple": "Omkareshwar Temple",
+      "deity": "Lord Shiva",
+      "city": "Mandhata",
+      "state": "Madhya Pradesh",
+      "country": "India",
+      "location": "Mandhata Island, Narmada River, Madhya Pradesh",
+      "story": "Omkareshwar is traditionally associated with Shiva's manifestation on the sacred island in the Narmada.",
+      "significance": "The island is traditionally described as resembling the sacred syllable Om.",
+      "coordinates": {
+        "lat": 22.2484,
+        "lng": 76.1505
+      },
+      "q": {
+        "deity": "Omkareshwar Temple Shiva",
+        "temple": "Omkareshwar Temple Narmada",
+        "sanctum": "Omkareshwar temple island"
+      },
+      "deityImage": {
+        "url": "temples/jyotirlinga/omkareshwar-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AOmkareshwar_Jyotirlinga_Temple_in_Madhya_Pradesh.jpg",
+        "photographer": "SHUBHAM KR SONI",
+        "license": "CC0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "baidyanath",
+      "category": "jyotirlinga",
+      "name": "Baidyanath Jyotirlinga",
+      "temple": "Baba Baidyanath Dham",
+      "deity": "Lord Vaidyanath",
+      "city": "Deoghar",
+      "state": "Jharkhand",
+      "country": "India",
+      "location": "Deoghar, Jharkhand, India",
+      "story": "The Vaidyanath tradition connects Shiva with the healing aspect of the divine.",
+      "significance": "Deoghar is the most commonly represented modern location in many Jyotirlinga pilgrimage lists, although Parli in Maharashtra also has a traditional claim.",
+      "coordinates": {
+        "lat": 24.4449,
+        "lng": 86.7067
+      },
+      "q": {
+        "deity": "Baidyanath Temple Shiva",
+        "temple": "Baidyanath Temple Deoghar",
+        "sanctum": "Baidyanath Dham temple"
+      },
+      "deityImage": {
+        "url": "temples/jyotirlinga/baidyanath-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ABaba_Baidyanath_Jyotirlinga_Temple.jpg",
+        "photographer": "Flashthomsom",
+        "license": "CC0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "bhimashankar",
+      "category": "jyotirlinga",
+      "name": "Bhimashankar Jyotirlinga",
+      "temple": "Bhimashankar Temple",
+      "deity": "Lord Shiva",
+      "city": "Bhimashankar",
+      "state": "Maharashtra",
+      "country": "India",
+      "location": "Bhimashankar, Pune district, Maharashtra",
+      "story": "Bhimashankar is associated with traditions surrounding Shiva's battle with the demon Bhima.",
+      "significance": "The temple lies within the Sahyadri landscape and is also associated with the origin of the Bhima river.",
+      "coordinates": {
+        "lat": 19.0722,
+        "lng": 73.536
+      },
+      "q": {
+        "deity": "Bhimashankar Temple",
+        "temple": "Bhimashankar Temple Pune",
+        "sanctum": "Bhimashankar temple Shiva"
+      },
+      "deityImage": {
+        "url": "temples/jyotirlinga/bhimashankar-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ABhimashankar_temple%2C_Maharashtra.JPG",
+        "photographer": "ସୁରଥ କୁମାର ପାଢ଼ୀ",
+        "license": "CC BY-SA 3.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "rameshwaram",
+      "category": "jyotirlinga",
+      "name": "Ramanathaswamy Jyotirlinga",
+      "temple": "Ramanathaswamy Temple",
+      "deity": "Lord Ramanathaswamy",
+      "city": "Rameswaram",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "location": "Rameswaram Island, Tamil Nadu, India",
+      "story": "The temple is deeply associated with the Ramayana tradition and the worship of Shiva by Rama.",
+      "significance": "The temple is renowned for its immense corridors and occupies a major place in South Indian pilgrimage.",
+      "coordinates": {
+        "lat": 9.2882,
+        "lng": 79.3174
+      },
+      "q": {
+        "deity": "Ramanathaswamy Temple Rameswaram",
+        "temple": "Ramanathaswamy Temple Rameswaram",
+        "sanctum": "Rameswaram temple corridor"
+      },
+      "deityImage": {
+        "url": "temples/jyotirlinga/rameshwaram-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ARamanathaswamy_Temple%2C_Rameshwaram%2C_Tamil_Nadu.jpg",
+        "photographer": "Wanderlusts",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "nageshwar",
+      "category": "jyotirlinga",
+      "name": "Nageshwar Jyotirlinga",
+      "temple": "Nageshwar Temple",
+      "deity": "Lord Nageshwar",
+      "city": "Dwarka",
+      "state": "Gujarat",
+      "country": "India",
+      "location": "Near Dwarka, Devbhumi Dwarka district, Gujarat",
+      "story": "Nageshwar is associated with Shiva as the Lord connected with serpents and protection.",
+      "significance": "The temple forms part of the important Dwarka pilgrimage circuit.",
+      "coordinates": {
+        "lat": 22.2331,
+        "lng": 68.9589
+      },
+      "q": {
+        "deity": "Nageshwar Jyotirlinga",
+        "temple": "Nageshwar Temple Dwarka",
+        "sanctum": "Nageshwar temple Gujarat"
+      },
+      "deityImage": {
+        "url": "temples/jyotirlinga/nageshwar-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ANageshwar_shiva_temple_during_Dwaraka_DWARASPDB_2015_(17).jpg",
+        "photographer": "Vinayaraj",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "kashi-vishwanath",
+      "category": "jyotirlinga",
+      "name": "Kashi Vishwanath Jyotirlinga",
+      "temple": "Kashi Vishwanath Temple",
+      "deity": "Lord Vishwanath",
+      "city": "Varanasi",
+      "state": "Uttar Pradesh",
+      "country": "India",
+      "location": "Varanasi, Uttar Pradesh, India",
+      "story": "Kashi is one of the oldest continuously revered sacred cities in India, and Vishwanath is regarded as Shiva as Lord of the Universe.",
+      "significance": "The temple is one of the most important Shaiva pilgrimage destinations in India.",
+      "coordinates": {
+        "lat": 25.3109,
+        "lng": 83.0107
+      },
+      "q": {
+        "deity": "Kashi Vishwanath Temple",
+        "temple": "Kashi Vishwanath Temple Varanasi",
+        "sanctum": "Kashi Vishwanath temple gopuram"
+      },
+      "deityImage": {
+        "url": "temples/jyotirlinga/kashi-vishwanath-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ABenares-_The_Golden_Temple%2C_India%2C_ca._1915_(IMP-CSCNWW33-OS14-66).jpg",
+        "photographer": "Unknown author Unknown author",
+        "license": "Public domain",
+        "attribution": "http://digitallibrary.usc.edu/cdm/ref/collection/p15799coll123/id/78278"
+      }
+    },
+    {
+      "id": "trimbakeshwar",
+      "category": "jyotirlinga",
+      "name": "Trimbakeshwar Jyotirlinga",
+      "temple": "Trimbakeshwar Temple",
+      "deity": "Lord Trimbakeshwar",
+      "city": "Trimbak",
+      "state": "Maharashtra",
+      "country": "India",
+      "location": "Trimbak, Nashik district, Maharashtra",
+      "story": "Trimbakeshwar is closely associated with the origin of the Godavari and ancient Shaiva traditions.",
+      "significance": "The shrine is one of the twelve Jyotirlingas and an important pilgrimage destination near Nashik.",
+      "coordinates": {
+        "lat": 19.9322,
+        "lng": 73.5298
+      },
+      "q": {
+        "deity": "Trimbakeshwar Temple Shiva",
+        "temple": "Trimbakeshwar Temple Nashik",
+        "sanctum": "Trimbakeshwar temple Godavari"
+      },
+      "deityImage": {
+        "url": "temples/jyotirlinga/trimbakeshwar-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ATrimbakeshwar_Shiva_Temple%2C_Trimbak%2C_Nashik_district.jpg",
+        "photographer": "World8115",
+        "license": "CC BY-SA 3.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "kedarnath",
+      "category": "jyotirlinga",
+      "name": "Kedarnath Jyotirlinga",
+      "temple": "Kedarnath Temple",
+      "deity": "Lord Shiva",
+      "city": "Kedarnath",
+      "state": "Uttarakhand",
+      "country": "India",
+      "location": "Kedarnath, Rudraprayag district, Uttarakhand",
+      "story": "Kedarnath is traditionally associated with the Pandavas and Shiva's manifestation in the Himalayas.",
+      "significance": "Kedarnath is one of the twelve Jyotirlingas and one of the Char Dham pilgrimage sites of Uttarakhand.",
+      "coordinates": {
+        "lat": 30.7348,
+        "lng": 79.0668
+      },
+      "q": {
+        "deity": "Kedarnath Temple Shiva",
+        "temple": "Kedarnath Temple",
+        "sanctum": "Kedarnath temple Himalayas"
+      },
+      "deityImage": {
+        "url": "temples/jyotirlinga/kedarnath-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AShri_Kedarnath_Jyotirlinga_Temple_01.jpg",
+        "photographer": "Pratha Bopche",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "grishneshwar",
+      "category": "jyotirlinga",
+      "name": "Grishneshwar Jyotirlinga",
+      "temple": "Grishneshwar Temple",
+      "deity": "Lord Grishneshwar",
+      "city": "Verul",
+      "state": "Maharashtra",
+      "country": "India",
+      "location": "Verul, near Ellora, Maharashtra",
+      "story": "The Grishneshwar tradition celebrates Shiva through a story of devotion and divine grace.",
+      "significance": "Its proximity to the Ellora cave complex makes it especially important within the heritage landscape of Maharashtra.",
+      "coordinates": {
+        "lat": 20.0233,
+        "lng": 75.1778
+      },
+      "q": {
+        "deity": "Grishneshwar Temple",
+        "temple": "Grishneshwar Temple Ellora",
+        "sanctum": "Grishneshwar temple Maharashtra"
+      },
+      "deityImage": {
+        "url": "temples/jyotirlinga/grishneshwar-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AGrishneshwar_temple%2C_Jyotirlinga_shrine%2C_at_Aurangabad_Maharashtra.jpg",
+        "photographer": "Sharma.aditya1006",
+        "license": "CC BY-SA 3.0",
+        "attribution": "i visited this temple and took the photo from canon A2200 powershot"
+      }
+    },
+    {
+      "id": "amararama",
+      "category": "pancharama",
+      "name": "Amararama",
+      "temple": "Amaralingeswara Swamy Temple",
+      "deity": "Lord Amaralingeswara",
+      "city": "Amaravathi",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "location": "Amaravathi, Andhra Pradesh, India",
+      "story": "Amararama is one of the five Pancharama Kshetras associated with the sacred lingam of the Tarakasura tradition.",
+      "significance": "It is one of the principal Shaiva pilgrimage temples of Andhra Pradesh.",
+      "coordinates": {
+        "lat": 16.5803,
+        "lng": 80.358
+      },
+      "q": {
+        "deity": "Amaralingeswara Temple Amaravathi",
+        "temple": "Amaralingeswara Swamy Temple Amaravathi",
+        "sanctum": "Amararama temple Andhra"
+      },
+      "deityImage": {
+        "url": "temples/pancharama/amararama-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AAmareswara_temple%2C_Amaravati.jpg",
+        "photographer": "Vin09",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "draksharama",
+      "category": "pancharama",
+      "name": "Draksharama",
+      "temple": "Bhimeswara Swamy Temple",
+      "deity": "Lord Bhimeswara",
+      "city": "Draksharamam",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "location": "Draksharamam, Andhra Pradesh, India",
+      "story": "Draksharama is one of the five Pancharama Kshetras and is traditionally associated with Bhimeswara Shiva.",
+      "significance": "The site is especially important because Draksharama is also traditionally counted as a Shakti Peetha through Manikyamba.",
+      "coordinates": {
+        "lat": 16.7929,
+        "lng": 81.8209
+      },
+      "q": {
+        "deity": "Bhimeswara Temple Draksharamam",
+        "temple": "Bhimeswara Swamy Temple Draksharamam",
+        "sanctum": "Draksharama temple gopuram"
+      },
+      "deityImage": {
+        "url": "temples/pancharama/draksharama-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ADraksharama_temple_compound.JPG",
+        "photographer": "Kkkishore ( talk ) ( Uploads )",
+        "license": "CC0",
+        "attribution": "Kkkishore ( talk ) ( Uploads )"
+      }
+    },
+    {
+      "id": "somarama",
+      "category": "pancharama",
+      "name": "Somarama",
+      "temple": "Someswara Swamy Temple",
+      "deity": "Lord Someswara",
+      "city": "Bhimavaram",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "location": "Bhimavaram, Andhra Pradesh, India",
+      "story": "Somarama is traditionally included among the five Pancharama Shiva temples.",
+      "significance": "It forms an important part of the regional Shaiva pilgrimage circuit.",
+      "coordinates": {
+        "lat": 16.5444,
+        "lng": 81.5213
+      },
+      "q": {
+        "deity": "Someswara Temple Bhimavaram",
+        "temple": "Somarama Temple Bhimavaram",
+        "sanctum": "Somarama temple Andhra"
+      },
+      "deityImage": {
+        "url": "temples/pancharama/somarama-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ASomeswaraSwamy-3.JPG",
+        "photographer": "PV Bhaskar",
+        "license": "CC BY-SA 3.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "ksheerarama",
+      "category": "pancharama",
+      "name": "Ksheerarama",
+      "temple": "Ksheera Ramalingeswara Swamy Temple",
+      "deity": "Lord Ksheeraramalingeswara",
+      "city": "Palakollu",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "location": "Palakollu, Andhra Pradesh, India",
+      "story": "Ksheerarama is one of the five Pancharama Kshetras of Andhra Pradesh.",
+      "significance": "The temple is an important Shaiva centre in the Godavari region.",
+      "coordinates": {
+        "lat": 16.5148,
+        "lng": 81.7333
+      },
+      "q": {
+        "deity": "Ksheera Ramalingeswara Temple",
+        "temple": "Ksheerarama Temple Palakollu",
+        "sanctum": "Ksheerarama temple Andhra"
+      },
+      "deityImage": {
+        "url": "temples/pancharama/ksheerarama-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ASri_Ganga_Parvathi_Sametha_Ramalingeswara_Swamy_Temple_-_Ganga_Devi.jpg",
+        "photographer": "Ramireddy.y",
+        "license": "CC BY-SA 3.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "kumararama",
+      "category": "pancharama",
+      "name": "Kumararama (Bhimaramam)",
+      "temple": "Kumararama Bhimeswara Swamy Temple",
+      "deity": "Lord Kumara Bhimeswara",
+      "city": "Samalkota",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "location": "Samalkota, Andhra Pradesh, India",
+      "story": "Kumararama is traditionally included among the five Pancharama Kshetras.",
+      "significance": "It is an important Shaiva temple in the Kakinada region.",
+      "coordinates": {
+        "lat": 17.0596,
+        "lng": 82.1705
+      },
+      "q": {
+        "deity": "Kumararama Bhimeswara Temple",
+        "temple": "Kumararama Temple Samalkota",
+        "sanctum": "Kumararama temple Andhra"
+      },
+      "deityImage": {
+        "url": "temples/pancharama/kumararama-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ALinga-kumararama_Bhimesara_temple.samalkota.jpg",
+        "photographer": "Palagiri",
+        "license": "CC BY-SA 3.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "badrinath-dham",
+      "category": "chardham",
+      "name": "Badrinath Dham",
+      "temple": "Badrinath Temple",
+      "deity": "Lord Badrinath (Vishnu)",
+      "city": "Badrinath",
+      "state": "Uttarakhand",
+      "country": "India",
+      "location": "Badrinath, Chamoli district, Uttarakhand",
+      "story": "Badrinath is traditionally associated with Vishnu in the Himalayas, seated in meditation above the Alaknanda river. It is counted among the Char Dham and the Utharayan pilgrimage circuit.",
+      "significance": "One of the most revered Vaishnava shrines in the Indian Himalayas.",
+      "coordinates": {
+        "lat": 30.7434,
+        "lng": 79.4938
+      },
+      "q": {
+        "deity": "Badrinath Temple Vishnu",
+        "temple": "Badrinath Temple",
+        "sanctum": "Badrinath temple Himalayas"
+      },
+      "deityImage": {
+        "url": "temples/chardham/badrinath-dham-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ABadrinath%2CUttarakhand.jpg",
+        "photographer": "Shadyma007",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "dwarka-dham",
+      "category": "chardham",
+      "name": "Dwarkadhish Dham",
+      "temple": "Dwarkadhish Temple",
+      "deity": "Lord Krishna (Dwarkadhish)",
+      "city": "Dwarka",
+      "state": "Gujarat",
+      "country": "India",
+      "location": "Dwarka, Devbhumi Dwarka district, Gujarat",
+      "story": "Dwarka is traditionally identified as Krishna's capital in the Mahabharata, and the Dwarkadhish temple is one of the Char Dham, saluted as Jagat Mandir.",
+      "significance": "A principal Krishna pilgrimage site on the western coast of India.",
+      "coordinates": {
+        "lat": 22.2384,
+        "lng": 68.9678
+      },
+      "q": {
+        "deity": "Dwarkadhish Temple",
+        "temple": "Dwarkadhish Temple Dwarka",
+        "sanctum": "Dwarka temple Gujarat"
+      },
+      "deityImage": {
+        "url": "temples/chardham/dwarka-dham-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ARukmini_Dwarkadhish_2.jpg",
+        "photographer": "Kridha20",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "jagannath-dham",
+      "category": "chardham",
+      "name": "Jagannath Dham (Puri)",
+      "temple": "Jagannath Temple",
+      "deity": "Lord Jagannath (Krishna)",
+      "city": "Puri",
+      "state": "Odisha",
+      "country": "India",
+      "location": "Puri, Odisha, India",
+      "story": "Puri's Jagannath temple is a Char Dham site where Krishna is worshipped with his brother Balabhadra and sister Subhadra. The annual Ratha Yatra is famous worldwide.",
+      "significance": "One of the four cardinal pilgrimage destinations of Hindu India.",
+      "coordinates": {
+        "lat": 19.8054,
+        "lng": 85.818
+      },
+      "q": {
+        "deity": "Jagannath Puri deity",
+        "temple": "Jagannath Temple Puri",
+        "sanctum": "Jagannath temple Odisha gopuram"
+      },
+      "deityImage": {
+        "url": "temples/chardham/jagannath-dham-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AHoly_icons_of_Lord_Jagannath-Balaram-Subhadra_at_Kolkata_Strand_Road_Jagannath_Temple.jpg",
+        "photographer": "BodBeral",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "rameswaram-dham",
+      "category": "chardham",
+      "name": "Rameswaram Dham",
+      "temple": "Ramanathaswamy Temple",
+      "deity": "Lord Ramanathaswamy (Shiva)",
+      "city": "Rameswaram",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "location": "Rameswaram Island, Tamil Nadu, India",
+      "story": "Rameswaram, traditionally part of the Ramayana landscape, completes the southern Char Dham. Its Shiva temple is closely linked with Rama's worship at the close of his expedition.",
+      "significance": "Often counted as one of the Char Dham, making the four sites circle the whole of India.",
+      "coordinates": {
+        "lat": 9.2882,
+        "lng": 79.3174
+      },
+      "q": {
+        "deity": "Ramanathaswamy Temple Rameswaram",
+        "temple": "Ramanathaswamy Temple Rameswaram",
+        "sanctum": "Rameswaram temple corridor"
+      },
+      "deityImage": {
+        "url": "temples/chardham/rameswaram-dham-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AShree_Rameshwaram_Jyotirlinga_Shivam_Temple.jpg",
+        "photographer": "Kondephy",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "ekambareswarar",
+      "category": "panchabhoota",
+      "name": "Ekambareswarar Temple",
+      "temple": "Ekambareswarar Temple",
+      "deity": "Lord Ekambaranathar (Shiva)",
+      "city": "Kanchipuram",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "location": "Kanchipuram, Tamil Nadu, India",
+      "element": "Prithvi (Earth)",
+      "story": "Ekambareswarar is the earth (Prithvi) element sthal and the largest temple in Kanchipuram, dated by tradition to the Pallava era.",
+      "significance": "One of the five Pancha Bhoota temples and part of Kanchipuram's ancient temple landscape.",
+      "coordinates": {
+        "lat": 12.8476,
+        "lng": 79.6998
+      },
+      "q": {
+        "deity": "Ekambareswarar Temple",
+        "temple": "Ekambareswarar Temple Kanchipuram",
+        "sanctum": "Ekambareswarar temple gopuram"
+      },
+      "deityImage": {
+        "url": "temples/panchabhoota/ekambareswarar-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AEkambareswarar_Temple_at_night_in_Kanchipuram_03.jpg",
+        "photographer": "Pinakpani",
+        "license": "CC BY 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "jambukeswarar",
+      "category": "panchabhoota",
+      "name": "Thiruvanaikaval Jambukeswarar",
+      "temple": "Jambukeswarar Temple",
+      "deity": "Lord Appu Lingam (Shiva)",
+      "city": "Thiruvanaikaval",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "location": "Thiruvanaikaval, Trichy district, Tamil Nadu",
+      "element": "Appu (Water)",
+      "story": "The Jambukeswarar temple is the water element (Appu) sthal and is intertwined with the legend of the sage Valmiki and an elephant's daily worship of a lingam beneath a jambu tree.",
+      "significance": "One of the five Pancha Bhoota temples, set within the Srirangam island landscape.",
+      "coordinates": {
+        "lat": 10.8543,
+        "lng": 78.7045
+      },
+      "q": {
+        "deity": "Jambukeswarar Temple",
+        "temple": "Jambukeswarar Temple Thiruvanaikaval",
+        "sanctum": "Jambukeswarar temple Trichy"
+      },
+      "deityImage": {
+        "url": "temples/panchabhoota/jambukeswarar-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AJambukeswarar_Temple_surroundings%2C_Thiruvanaikaval_ttkcvrvb122k23pxl_(15).jpg",
+        "photographer": "Vinayaraj",
+        "license": "CC BY-SA 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "arunachaleswarar",
+      "category": "panchabhoota",
+      "name": "Arunachaleswarar Temple",
+      "temple": "Arunachaleswarar Temple",
+      "deity": "Lord Arunachala (Shiva)",
+      "city": "Tiruvannamalai",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "location": "Tiruvannamalai, Tamil Nadu, India",
+      "element": "Agni (Fire)",
+      "story": "Tiruvannamalai is the fire element (Agni) sthal. According to the tradition of the origin of the lingam, Shiva stood as a column of flame on the Arunachala hill, and the temple now crowns its foot.",
+      "significance": "One of the five Pancha Bhoota temples, famous for the Karthigai Deepam festival.",
+      "coordinates": {
+        "lat": 12.2316,
+        "lng": 79.0666
+      },
+      "q": {
+        "deity": "Arunachaleswarar Temple",
+        "temple": "Arunachaleswarar Temple Tiruvannamalai",
+        "sanctum": "Arunachala temple gopuram"
+      },
+      "deityImage": {
+        "url": "temples/panchabhoota/arunachaleswarar-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AThiruvannamalai%2C_Arunachalesvara_Temple%2C_Annamalaiyar_Temple%2C_Night_2%2C_India.jpg",
+        "photographer": "Vyacheslav Argenberg",
+        "license": "CC BY 4.0",
+        "attribution": "Own work"
+      }
+    },
+    {
+      "id": "kalahasti",
+      "category": "panchabhoota",
+      "name": "Srikalahasti Temple",
+      "temple": "Srikalahasti Temple",
+      "deity": "Lord Kalahasteeswara (Shiva)",
+      "city": "Srikalahasti",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "location": "Srikalahasti, Tirupati district, Andhra Pradesh",
+      "element": "Vaayu (Air)",
+      "story": "Srikalahasti is the Vayu sthal of the five Pancha Bhoota temples, where the deity is worshipped in the form of air. The ancient legend of the spider, snake and elephant is the source of the name Kalahasti.",
+      "significance": "One of the Pancha Bhoota Shiva temples; also a renowned centre of Vemana and Vastu tradition.",
+      "coordinates": {
+        "lat": 13.7481,
+        "lng": 79.6986
+      },
+      "q": {
+        "deity": "Srikalahasti Temple",
+        "temple": "Srikalahasti Temple Andhra",
+        "sanctum": "Srikalahasti gopuram"
+      },
+      "deityImage": {
+        "url": "temples/panchabhoota/kalahasti-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3ASri_Kala_Hasti.jpg",
+        "photographer": "Kalyan Kumar",
+        "license": "CC BY-SA 2.0",
+        "attribution": "Flickr"
+      }
+    },
+    {
+      "id": "chidambaram",
+      "category": "panchabhoota",
+      "name": "Thillai Nataraja Temple",
+      "temple": "Nataraja Temple",
+      "deity": "Lord Nataraja (Shiva)",
+      "city": "Chidambaram",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "location": "Chidambaram, Tamil Nadu, India",
+      "element": "Aakasha (Space)",
+      "story": "Chidambaram is the space (Aakasha) element sthal. The temple is renowned for its worship of Shiva as Nataraja, the Lord of Dance, symbolising the cosmos in motion.",
+      "significance": "One of the five Pancha Bhoota temples and a great centre of Shaiva Siddhanta and Bharatanatyam.",
+      "coordinates": {
+        "lat": 11.3996,
+        "lng": 79.6937
+      },
+      "q": {
+        "deity": "Nataraja Chidambaram",
+        "temple": "Nataraja Temple Chidambaram",
+        "sanctum": "Chidambaram temple gopuram"
+      },
+      "deityImage": {
+        "url": "temples/panchabhoota/chidambaram-deity.jpg",
+        "source": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File%3AShiva_as_the_Lord_of_Dance_LACMA_edit.jpg",
+        "photographer": "",
+        "license": "Public domain",
+        "attribution": "Shiva_as_the_Lord_of_Dance_LACMA.jpg , photographed by the LACMA. derivative work: Julia \\ talk"
+      }
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" data-text-size="base">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Saptarushi — Telugu Bhakti Books &amp; Audio</title>
+<meta name="description" content="A calm Telugu devotional library: deity-wise bhajans, chants and books that play and read right inside the site."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;600;700&family=Noto+Serif+Telugu:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css?v=39"/>
+
+</head>
+<body>
+<div class="bg-parch text-ink min-h-screen">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand home-brand" href="index.html">
+        <span class="brand-mark"><img class="brand-avatar" src="assets/deity-venkateswara-BnOIfnAn.jpg" alt="Venkateswara"/><svg class="brand-logo" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false">
+  <circle cx="24" cy="24" r="23.5" fill="#2e1418"/>
+  <circle cx="24" cy="24" r="22.25" fill="rgba(242, 166, 58, 0.07)"/>
+  <circle cx="24" cy="24" r="23.5" fill="none" stroke="rgba(242,166,58,0.4)" stroke-width="1"/>
+  <g fill="#f2a63a">
+    <circle cx="12" cy="13" r="1.15"/><circle cx="16.9" cy="8.5" r="1.15"/>
+    <circle cx="21.6" cy="6.6" r="1.15"/><circle cx="24" cy="6.2" r="1.15"/>
+    <circle cx="26.4" cy="6.6" r="1.15"/><circle cx="31.1" cy="8.5" r="1.15"/>
+    <circle cx="36" cy="13" r="1.15"/>
+  </g>
+  <g fill="#f2a63a">
+    <circle cx="24" cy="14" r="3"/>
+    <path d="M21.7 16.3c.7 1.2 1.9 1.7 2.3 1.7s1.6-.5 2.3-1.7"/>
+    <path d="M20.3 18.5c-2.6 2.4-3.9 5.9-3.4 9.7.3 2.3.2 3.6.2 3.6h12.2h.2s-.1-1.3.2-3.6c.5-3.8-.8-7.3-3.4-9.7-2.1.9-5.1.9-7.2 0z"/>
+    <path d="M18.8 32.4c2.3 1.9 6 1.9 8.3 0"/>
+  </g>
+</svg></span>
+        <span class="leading-none">
+          <span class="brand-name">Saptarushi</span>
+          <span class="brand-tag">తెలుగు భక్తి</span>
+        </span>
+      </a>
+      <nav class="main-nav">
+        <a href="audio.html">Audio</a>
+        <a href="books.html">Books</a>
+        <a href="temples.html">Temples</a>
+        <a href="panchangam.html">Panchang</a>
+        <a href="about.html">About</a>
+        <a href="admin.html" class="nav-admin">Admin</a>
+      </nav>
+      <div class="header-right">
+        <span class="textsize-label">Text size</span>
+        <div class="textsize-group" role="group" aria-label="Text size">
+          <button class="textsize-btn" data-size="base" aria-label="Text size A">A</button>
+          <button class="textsize-btn" data-size="large" aria-label="Text size A+">A+</button>
+          <button class="textsize-btn" data-size="xlarge" aria-label="Text size A++">A++</button>
+        </div>
+        <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="audio.html">Audio</a>
+    <a href="books.html">Books</a>
+    <a href="temples.html">Temples</a>
+    <a href="panchangam.html">Panchang</a>
+    <a href="about.html">About</a>
+    <a href="admin.html" class="nav-admin">Admin</a>
+  </nav>
+<main>
+<section class="hero-page">
+    <div class="hero-flex">
+      <div class="min-w-0 flex-1">
+        <p class="hero-eyebrow">Telugu Bhakti · తెలుగు భక్తి</p>
+        <h1 class="hero-title">A quiet place to listen and read.</h1>
+        <p class="hero-desc">Bhajans, chants and devotional books for every deity — gathered in one calm, easy-on-the-eyes place. Everything plays and reads right here; nothing to download.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="audio.html">Listen</a>
+          <a class="btn btn-outline" href="books.html">Read</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-banner-frame">
+      <img class="hero-img-banner" src="Saptarishi.jpg" alt="Saptarishi sages gathered by a sacred fire"/>
+    </div>
+  </section>
+<section class="section-page" style="padding-top:0">
+    <article class="sankalpam-quick" id="sankalpamQuick">
+      <div class="sankalpam-quick-grid">
+        <div class="sankalpam-quick-main">
+          <div class="sankalpam-quick-head">
+            <p class="hero-eyebrow" style="color:#f8d9a8">సంకల్పం · Daily</p>
+            <h2 class="section-title" style="color:var(--parch)">Today's Saṅkalpam</h2>
+            <div class="sankalpam-quick-meta" id="sankalpamQMeta">Computed for Bengaluru · computing…</div>
+          </div>
+          <div class="sankalpam-text-box" id="sankalpamQText" lang="te">బెంగుళూరుకి ఈరోజు సంకల్పం లెక్కిస్తున్నాం…</div>
+        </div>
+        <aside class="sankalpam-quick-aside" aria-label="Daily practice">
+          <div class="sankalpam-quick-symbol" aria-hidden="true">ॐ</div>
+          <p class="sankalpam-quick-aside-label">A quiet beginning</p>
+          <p class="sankalpam-quick-aside-note">Read today's words slowly, then carry the intention into the day.</p>
+          <a class="btn btn-outline" href="panchangam.html">Open full Panchangam page →</a>
+        </aside>
+      </div>
+    </article>
+  </section>
+<section class="section-page">
+    <div class="section-title-row">
+      <h2 class="section-title">Choose your deity</h2>
+      <span class="section-count">12 sections</span>
+    </div>
+    <div class="deity-rail">
+<a class="deity-pill" title="Venkateswara" href="deity/venkateswara.html">
+      <img class="pill-icon" src="assets/deities/venkateswara.jpg" alt="Venkateswara" loading="lazy"/>
+      <span class="pill-label">Venkateswara</span>
+    </a>
+<a class="deity-pill" title="Shiva" href="deity/shiva.html">
+      <img class="pill-icon" src="assets/deities/shiva.jpg" alt="Shiva" loading="lazy"/>
+      <span class="pill-label">Shiva</span>
+    </a>
+<a class="deity-pill" title="Rama" href="deity/rama.html">
+      <img class="pill-icon" src="assets/deities/rama.jpg" alt="Rama" loading="lazy"/>
+      <span class="pill-label">Rama</span>
+    </a>
+<a class="deity-pill" title="Krishna" href="deity/krishna.html">
+      <img class="pill-icon" src="assets/deities/krishna.png" alt="Krishna" loading="lazy"/>
+      <span class="pill-label">Krishna</span>
+    </a>
+<a class="deity-pill" title="Ganesha" href="deity/ganesha.html">
+      <img class="pill-icon" src="assets/deities/ganesha.jpg" alt="Ganesha" loading="lazy"/>
+      <span class="pill-label">Ganesha</span>
+    </a>
+<a class="deity-pill" title="Hanuman" href="deity/hanuman.html">
+      <img class="pill-icon" src="assets/deities/hanuman.jpg" alt="Hanuman" loading="lazy"/>
+      <span class="pill-label">Hanuman</span>
+    </a>
+<a class="deity-pill" title="Durga / Devi" href="deity/durga.html">
+      <img class="pill-icon" src="assets/deities/durga.jpg" alt="Durga / Devi" loading="lazy"/>
+      <span class="pill-label">Durga / Devi</span>
+    </a>
+<a class="deity-pill" title="Lakshmi" href="deity/lakshmi.html">
+      <img class="pill-icon" src="assets/deities/lakshmi.jpg" alt="Lakshmi" loading="lazy"/>
+      <span class="pill-label">Lakshmi</span>
+    </a>
+<a class="deity-pill" title="Saibaba" href="deity/saibaba.html">
+      <img class="pill-icon" src="assets/deities/saibaba.jpg" alt="Saibaba" loading="lazy"/>
+      <span class="pill-label">Saibaba</span>
+    </a>
+<a class="deity-pill" title="Ayyappa" href="deity/ayyappa.html">
+      <img class="pill-icon" src="assets/deities/ayyappa.jpg" alt="Ayyappa" loading="lazy"/>
+      <span class="pill-label">Ayyappa</span>
+    </a>
+<a class="deity-pill" title="Subrahmanya" href="deity/subrahmanya.html">
+      <img class="pill-icon" src="assets/deities/subrahmanya.jpg" alt="Subrahmanya" loading="lazy"/>
+      <span class="pill-label">Subrahmanya</span>
+    </a>
+<a class="deity-pill" title="Navagraha" href="deity/navagraha.html">
+      <img class="pill-icon" src="assets/deities/navagraha.jpg" alt="Navagraha" loading="lazy"/>
+      <span class="pill-label">Navagraha</span>
+    </a>
+</div>
+  </section>
+<section class="section-page">
+    <div class="section-title-row">
+      <h2 class="section-title">Temples of India</h2>
+      <a class="see-all" href="temples.html">All 44 temples</a>
+    </div>
+    <div class="home-temple-bar">
+      <label for="homeTempleCat">Show temples</label>
+      <select id="homeTempleCat" class="home-temple-select">
+        <option value="all">All shrines (44)</option>
+        <option value="shakti">Shakti Peetha (18)</option>
+        <option value="jyotirlinga">Jyotirlinga (12)</option>
+        <option value="pancharama">Pancharama (5)</option>
+        <option value="chardham">Char Dham (4)</option>
+        <option value="panchabhoota">Pancha Bhoota (5)</option>
+      </select>
+      <span class="pill-hint" id="homeTempleHint">Select a category to load only those temples.</span>
+    </div>
+    <div class="temple-grid" id="homeTempleGrid" style="margin-top:1.25rem"></div>
+    <div class="temple-expand-wrap" id="homeTempleExpandWrap" style="margin-top:1rem;text-align:center"></div>
+  </section>
+<section class="section-page">
+    <div class="section-title-row">
+      <h2 class="section-title">Audio</h2>
+      <a class="see-all" href="audio.html">All recordings</a>
+    </div>
+    <div class="grid-cards" id="homeAudioGrid"><button type="button" class="track-card" data-slug="suprabhatam">
+    <div class="track-art">
+      <img src="assets/deities/venkateswara.jpg" alt="" loading="lazy"/>
+      <span class="track-play-btn" aria-hidden="true">▶</span>
+    </div>
+    <div class="track-row">
+      <p class="track-te truncate" lang="te">శ్రీ వేంకటేశ సుప్రభాతం</p>
+      <span class="track-dur">12:40</span>
+    </div>
+    <p class="track-meta truncate">Morning Suprabhatam recital · Chant</p>
+  </button>
+<button type="button" class="track-card" data-slug="venkateswara-geetalu">
+    <div class="track-art">
+      <img src="assets/deities/venkateswara.jpg" alt="" loading="lazy"/>
+      <span class="track-play-btn" aria-hidden="true">▶</span>
+    </div>
+    <div class="track-row">
+      <p class="track-te truncate" lang="te">వేంకటేశ్వర గీతాలు</p>
+      <span class="track-dur">24:02</span>
+    </div>
+    <p class="track-meta truncate">Evening bhajan set · Bhajan</p>
+  </button>
+<button type="button" class="track-card disabled" data-slug="deepam-aaradhana" disabled>
+    <div class="track-art">
+      <img src="assets/deities/venkateswara.jpg" alt="" loading="lazy"/>
+      <span class="track-play-btn" aria-hidden="true">▶</span>
+    </div>
+    <div class="track-row">
+      <p class="track-te truncate" lang="te">దీపం ఆరాధన</p>
+      <span class="track-dur">15:48</span>
+    </div>
+    <p class="track-meta truncate">Deepam aaradhana · Coming soon</p>
+  </button>
+<button type="button" class="track-card" data-slug="shiva-abhishekam">
+    <div class="track-art">
+      <img src="assets/deities/shiva.jpg" alt="" loading="lazy"/>
+      <span class="track-play-btn" aria-hidden="true">▶</span>
+    </div>
+    <div class="track-row">
+      <p class="track-te truncate" lang="te">శివ అభిషేకం</p>
+      <span class="track-dur">18:10</span>
+    </div>
+    <p class="track-meta truncate">Abhishekam recital · Chant</p>
+  </button></div>
+  </section>
+<section class="section-page">
+    <div class="section-title-row">
+      <h2 class="section-title">Books</h2>
+      <a class="see-all" href="books.html">All books</a>
+    </div>
+    <div class="grid-books"><a class="book-card" href="books/venkateswara-mahatyam.html">
+    <img class="book-cover-img" src="assets/deities/venkateswara.jpg" alt="The Hill of Grace — a devotee&#39;s guide" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శ్రీ వేంకటేశ్వర మహాత్మ్యం</p>
+      <p class="book-en">The Hill of Grace — a devotee&#39;s guide</p>
+      <p class="book-meta">Compiled for daily reading</p>
+    </div>
+  </a>
+<a class="book-card" href="books/shiva-daily.html">
+    <img class="book-cover-img" src="assets/deities/shiva.jpg" alt="Mondays with Shiva" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">శివ ఆరాధన</p>
+      <p class="book-en">Mondays with Shiva</p>
+      <p class="book-meta">Compiled for daily reading</p>
+    </div>
+  </a>
+<a class="book-card" href="books/rama-katha.html">
+    <img class="book-cover-img" src="assets/deities/rama.jpg" alt="The story of Rama, retold simply" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">రామ కథ</p>
+      <p class="book-en">The story of Rama, retold simply</p>
+      <p class="book-meta">Compiled for daily reading</p>
+    </div>
+  </a>
+<a class="book-card" href="books/krishna-gita-notes.html">
+    <img class="book-cover-img" src="assets/deities/krishna.png" alt="Reading the Gita, chapter by chapter" loading="lazy"/>
+    <div class="min-w-0 flex-1">
+      <p class="book-te" lang="te">గీతా పఠన సూచనలు</p>
+      <p class="book-en">Reading the Gita, chapter by chapter</p>
+      <p class="book-meta">Reader&#39;s notes · Coming soon</p>
+    </div>
+  </a></div>
+  </section>
+<section class="section-page home-admin-section" aria-labelledby="adminPortalTitle">
+    <div class="home-admin-copy">
+      <p class="hero-eyebrow">Site management</p>
+      <h2 class="section-title" id="adminPortalTitle">Admin portal</h2>
+      <p>Manage books, audio, home content and the media library from the admin console.</p>
+    </div>
+    <div class="home-admin-login">
+      <div>
+        <span class="home-admin-label">Default login</span>
+        <p class="home-admin-credentials"><strong>Username:</strong> admin <span aria-hidden="true">·</span> <strong>Password:</strong> saptarushi</p>
+        <p class="home-admin-note">Server environment credentials override these defaults.</p>
+      </div>
+      <a class="btn btn-primary" href="admin.html">Open admin login <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
+  <!-- Ask Rushi chat -->
+  <div class="fab-zone">
+    <div class="chat-panel" id="chatPanel" aria-hidden="true">
+      <div class="chat-head">
+        <span class="chat-avatar"><svg class="brand-logo" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true" focusable="false">
+  <circle cx="24" cy="24" r="23.5" fill="#2e1418"/>
+  <circle cx="24" cy="24" r="22.25" fill="rgba(242, 166, 58, 0.07)"/>
+  <circle cx="24" cy="24" r="23.5" fill="none" stroke="rgba(242,166,58,0.4)" stroke-width="1"/>
+  <g fill="#f2a63a">
+    <circle cx="12" cy="13" r="1.15"/><circle cx="16.9" cy="8.5" r="1.15"/>
+    <circle cx="21.6" cy="6.6" r="1.15"/><circle cx="24" cy="6.2" r="1.15"/>
+    <circle cx="26.4" cy="6.6" r="1.15"/><circle cx="31.1" cy="8.5" r="1.15"/>
+    <circle cx="36" cy="13" r="1.15"/>
+  </g>
+  <g fill="#f2a63a">
+    <circle cx="24" cy="14" r="3"/>
+    <path d="M21.7 16.3c.7 1.2 1.9 1.7 2.3 1.7s1.6-.5 2.3-1.7"/>
+    <path d="M20.3 18.5c-2.6 2.4-3.9 5.9-3.4 9.7.3 2.3.2 3.6.2 3.6h12.2h.2s-.1-1.3.2-3.6c.5-3.8-.8-7.3-3.4-9.7-2.1.9-5.1.9-7.2 0z"/>
+    <path d="M18.8 32.4c2.3 1.9 6 1.9 8.3 0"/>
+  </g>
+</svg></span>
+        <div class="min-w-0 flex-1">
+          <div class="chat-head-strong">Ask Rushi</div>
+          <span class="chat-head-sub"><i></i> online · plays from library</span>
+        </div>
+        <button class="chat-min" id="chatMin" aria-label="Close chat">–</button>
+      </div>
+      <div class="chat-msgs" id="chatMsgs"></div>
+      <div class="chat-sugg" id="chatSugg"></div>
+      <form class="chat-form" id="chatForm">
+        <input id="chatInput" placeholder="Ask: play Suprabhatam…" autocomplete="off"/>
+        <button class="chat-send" aria-label="Send">➤</button>
+      </form>
+    </div>
+    <button id="askBtn" class="askbtn" aria-expanded="false"><span class="ask-icon">✦</span>Ask Rushi</button>
+  </div>
+
+  <!-- in-page player -->
+  <div class="player-bar" id="player" aria-hidden="true">
+    <span class="mp-eq"><span></span><span></span><span></span><span></span><span></span></span>
+    <div class="mp-info">
+      <div class="mp-te" id="mpTe"></div>
+      <div class="mp-en" id="mpEn"></div>
+    </div>
+    <button class="mp-action" id="mpToggle" aria-label="Play or pause">⏸</button>
+    <button class="mp-action" id="mpStop" aria-label="Stop">⏹</button>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="stotras-runtime.js"></script>
+  <script src="temples-data.js"></script>
+  <script src="lang-editor.js"></script>
+  <script src="media-player.js"></script>
+  <script src="text-editor.js"></script>
+  <script src="app.js" data-base=""></script>
+  <script type="module" src="sankalpam-quick.js"></script>
+  <script>
+    (function () {
+      fetch('api/content')
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (store) {
+          if (!store || !store.home) return;
+          var h = store.home;
+          var el = document.querySelector('.hero-eyebrow'); if (el && h.heroEyebrow) el.textContent = h.heroEyebrow;
+          var ht = document.querySelector('.hero-title'); if (ht && h.heroTitle) ht.textContent = h.heroTitle;
+          var hd = document.querySelector('.hero-desc'); if (hd && h.heroDesc) hd.textContent = h.heroDesc;
+          // append admin books to the front
+          if (store.books && store.books.length) {
+            var grid = document.querySelector('.grid-books');
+            if (!grid) return;
+            var known = {}; (DeepamData.books || []).forEach(function (b) { known[b.slug] = 1; });
+            store.books.filter(function (b) { return !known[b.slug]; }).forEach(function (b) {
+              var a = document.createElement('a');
+              a.className = 'book-card';
+              a.href = 'books/' + b.slug + '.html';
+              a.innerHTML = '<img class="book-cover-img" src="assets/deities/venkateswara.jpg" alt="" loading="lazy"/>' +
+                '<div class="min-w-0 flex-1"><p class="book-en">' + escAttr(b.title || b.en || b.slug) + '</p>' +
+                '<p class="book-meta">From the library</p></div>';
+              grid.appendChild(a);
+            });
+          }
+        }).catch(function () {});
+      function escAttr(s) { return String(s || '').replace(/[&<>"']/g, function (c) { return ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[c]; }); }
+    })();
+  </script>
+  <script>
+    (function () {
+      var sel = document.getElementById('homeTempleCat');
+      var grid = document.getElementById('homeTempleGrid');
+      var hint = document.getElementById('homeTempleHint');
+      var expandWrap = document.getElementById('homeTempleExpandWrap');
+      if (!sel || !grid) return;
+      var COLLAPSED_COUNT = 3;
+      var expanded = false; // collapsed by default — shows only COLLAPSED_COUNT tiles
+      function esc(s) { return String(s || '').replace(/[&<>"']/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]; }); }
+      function renderExpandButton(total) {
+        if (!expandWrap) return;
+        if (total <= COLLAPSED_COUNT) { expandWrap.innerHTML = ''; return; }
+        expandWrap.innerHTML = '<button type="button" class="btn btn-secondary temple-expand-btn" id="homeTempleExpandBtn">' +
+          (expanded ? 'Show fewer' : 'Show all ' + total + ' temples') + '</button>';
+        document.getElementById('homeTempleExpandBtn').addEventListener('click', function () {
+          expanded = !expanded;
+          render();
+          if (expanded) return;
+          // scroll the section back into view when collapsing, so the user
+          // isn't left staring at a footer below a now-shorter grid
+          grid.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+      }
+      function render() {
+        var cat = sel.value;
+        var list = (window.TEMPLES || []).filter(function (t) { return cat === 'all' || t.category === cat; });
+        hint.textContent = list.length + ' temple' + (list.length === 1 ? '' : 's') + ' loaded from ' + (cat === 'all' ? 'all categories' : cat.replace('chardham', 'Char Dham').replace(/^\w/, function (c) { return c.toUpperCase(); }));
+        if (!list.length) { grid.innerHTML = '<div class="temple-empty"><h2>No temples found</h2><p>Choose another category.</p></div>'; renderExpandButton(0); return; }
+        var visibleList = expanded ? list : list.slice(0, COLLAPSED_COUNT);
+        grid.innerHTML = visibleList.map(function (t) {
+          return '<article class="temple-card">' +
+            (t.cardImg ? '<img class="temple-img" src="' + esc(t.cardImg) + '" alt="' + esc(t.name) + '" loading="lazy"/>' : '') +
+            '<div class="temple-content">' +
+            '<span class="temple-badge">' + esc(t.categoryLabel) + '</span>' +
+            '<h2 class="temple-name">' + esc(t.name) + '</h2>' +
+            '<div class="temple-deity">🙏 ' + esc(t.deity) + '</div>' +
+            '<div class="temple-loc">📍 ' + esc(t.location) + '</div>' +
+            '<div class="temple-read"><a class="temple-link-btn" href="temples/' + esc(t.id) + '.html">Explore Temple</a></div>' +
+            '</div></article>';
+        }).join('');
+        renderExpandButton(list.length);
+      }
+      sel.addEventListener('change', function () { expanded = false; render(); });
+      render();
+    })();
+  </script>
+  <footer class="app-footer">
+    <span class="footer-note">Saptarushi · తెలుగు భక్తి — listen &amp; read in the browser</span>
+    <span class="footer-links">
+      <a href="about.html">About</a>
+      <a href="admin.html">Admin</a>
+    </span>
+  </footer>
+</body>
+</html>
