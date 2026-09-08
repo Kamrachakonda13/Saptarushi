@@ -43,6 +43,41 @@
 
   function fontClass(lang) { return lang === 'sa' ? 'font-sa' : lang === 'te' ? 'font-te' : 'font-en'; }
 
+  /* ---------- rich text: `![caption](url)` lines render as captioned photos ---------- */
+  function escUrl(u) { return esc(u).replace(/&#39;/g, '%27'); }
+  function figureHtml(url, caption) {
+    return '<figure class="book-content-figure"><img class="book-content-img" src="' + escUrl(url) + '" alt="' + esc(caption || 'Book image') + '" loading="lazy"/>' +
+      (caption ? '<figcaption>' + esc(caption) + '</figcaption>' : '') + '</figure>';
+  }
+  function richHtml(raw) {
+    var lines = String(raw == null ? '' : raw).split('\n');
+    var out = [], buf = [];
+    function flush() {
+      // drop trailing blank lines but keep intentional spacing via <br>
+      while (buf.length && !buf[buf.length - 1].trim()) buf.pop();
+      while (buf.length && !buf[0].trim()) buf.shift();
+      if (!buf.length) return;
+      out.push('<div class="book-rich-text">' + esc(buf.join('\n')).replace(/\n/g, '<br>') + '</div>');
+      buf = [];
+    }
+    lines.forEach(function (ln) {
+      var m = ln.match(/^\s*!\[([^\]]*)\]\(([^)\s]+)(?:\s+"[^"]*")?\)\s*$/);
+      if (m) { flush(); out.push(figureHtml(m[2], m[1])); return; }
+      var bare = ln.trim().match(/^((?:\/media\/|media\/|uploads\/|content\/|assets\/|https?:\/\/)\S+\.(?:jpe?g|png|webp|gif))(\?\S*)?$/i);
+      if (bare) { flush(); out.push(figureHtml(bare[1] + (bare[2] || ''), '')); return; }
+      buf.push(ln);
+    });
+    flush();
+    return out.join('');
+  }
+  function renderRich(el, raw) { el.innerHTML = richHtml(raw); }
+  function updateCoverImage(layout, book) {
+    var url = book && (book.imageUrl || book.coverUrl);
+    if (!url) return;
+    var img = $('.book-cover-fig img', layout) || $('.book-aside img', layout);
+    if (img && img.getAttribute('src') !== url) img.setAttribute('src', url);
+  }
+
   /* ---------- shared upload helpers (used by both the admin-JSON book
      reader and the static-HTML book reader) ---------- */
   function showToast(msg) {
@@ -146,6 +181,7 @@
     }
     titleEl.innerHTML = esc(book.title || book.en || '');
     var coverNote = addCoverNote(book, layout);
+    updateCoverImage(layout, book);
 
     // language tabs
     var tabs = document.createElement('div');
@@ -191,8 +227,16 @@
         var mainLang = detectLang(book.text || '');
         txt = (mainLang === l) ? (book.text || '') : (book.textEn || book.text || '');
       }
-      textEl.textContent = txt || (l === 'en' ? 'No English text yet. Add it from the admin Books page.' : (l === 'te' ? 'తెలుగు పాఠం ఇంకా చేర్చలేదు — అడ్మిన్ పేజీ నుండి జోడించండి.' : 'संस्कृत पाठ अभी तक नहीं जोड़ा गया।'));
-      textEl.className = 'sankalpam-text ' + fontClass(l === 'en' ? (detectLang(textEl.textContent)) : l);
+      if (!txt) txt = (l === 'en' ? 'No English text yet. Add it from the admin Books page.' : (l === 'te' ? 'తెలుగు పాఠం ఇంకా చేర్చలేదు — అడ్మిన్ పేజీ నుండి జోడించండి.' : 'संस्कृत पाठ अभी तक नहीं जोड़ा गया।'));
+      renderRich(textEl, txt);
+      // keep the raw markdown for editing (image markers survive edit cycles)
+      textEl.dataset.raw = txt;
+      textEl.className = 'sankalpam-text ' + fontClass(l === 'en' ? (detectLang(txt)) : l);
+    }
+    function rawOfTextEl() {
+      // While editing the element holds plain editable text; otherwise use the stored raw.
+      if (textEl.isContentEditable) return textEl.textContent;
+      return (typeof textEl.dataset.raw === 'string') ? textEl.dataset.raw : textEl.textContent;
     }
 
     reader.appendChild(tabs);
@@ -212,29 +256,47 @@
         forceShow: false,
         onLang: function (l) {
           // Save current text to originalTexts before switching
-          originalTexts[currentLang] = textEl.textContent;
+          originalTexts[currentLang] = rawOfTextEl();
           showLang(l);
         },
         onTransliterate: function (target) {
-          var txt = textEl.textContent;
+          var txt = rawOfTextEl();
           if (target === 'te' && window.LangLib) {
-            textEl.textContent = LangLib.toTelugu(txt);
-            originalTexts[currentLang] = textEl.textContent;
+            txt = LangLib.toTelugu(txt);
+            originalTexts[currentLang] = txt;
+            textEl.dataset.raw = txt;
+            textEl.textContent = txt;
             textEl.className = 'sankalpam-text font-te';
           } else if (target === 'sa' && window.LangLib) {
-            textEl.textContent = LangLib.toDevanagari(txt);
-            originalTexts[currentLang] = textEl.textContent;
+            txt = LangLib.toDevanagari(txt);
+            originalTexts[currentLang] = txt;
+            textEl.dataset.raw = txt;
+            textEl.textContent = txt;
             textEl.className = 'sankalpam-text font-sa';
           }
         },
+        onToggle: function (editing) {
+          // Swap between rendered photos and raw markdown so image markers
+          // (`![caption](url)`) survive edit cycles instead of being lost.
+          // Note: originalTexts is only updated on Save / language switch,
+          // so Cancel still restores the pre-edit text.
+          if (editing) {
+            textEl.textContent = rawOfTextEl();
+          } else if (!textEl.isContentEditable) {
+            textEl.dataset.raw = textEl.textContent;
+            renderRich(textEl, textEl.dataset.raw);
+          }
+        },
         onSave: function () {
-          originalTexts[currentLang] = textEl.textContent;
+          originalTexts[currentLang] = rawOfTextEl();
+          textEl.dataset.raw = originalTexts[currentLang];
           saveBookEdits();
         },
         onCancel: function () {
           // Restore original text/title/cover
-          textEl.textContent = originalTexts[currentLang] || '';
-          textEl.className = 'sankalpam-text ' + fontClass(currentLang === 'en' ? detectLang(textEl.textContent) : currentLang);
+          renderRich(textEl, originalTexts[currentLang] || '');
+          textEl.dataset.raw = originalTexts[currentLang] || '';
+          textEl.className = 'sankalpam-text ' + fontClass(currentLang === 'en' ? detectLang(originalTexts[currentLang] || '') : currentLang);
           titleEl.innerHTML = esc(book.title || book.en || '');
           if (coverNote) coverNote.textContent = book.coverText || '';
         },
@@ -250,6 +312,8 @@
               langBtn.classList.add('active');
             }
             showLang(lang);
+            // keep editing the raw text (not the rendered photos)
+            textEl.textContent = originalTexts[lang] || text;
             textEl.contentEditable = 'true';
             textEl.classList.add('editing');
           });
@@ -347,11 +411,13 @@
       freeform = document.createElement('div');
       freeform.className = 'sankalpam-text book-editable-box';
       freeform.style.cssText = 'white-space:pre-wrap;word-wrap:break-word';
-      freeform.textContent = (savedBook && savedBook.text) || '';
+      freeform.dataset.raw = (savedBook && savedBook.text) || '';
+      renderRich(freeform, freeform.dataset.raw);
       readingCol.innerHTML = '';
       readingCol.appendChild(freeform);
     }
 
+    updateCoverImage(layout, savedBook);
     applyStaticBookData(savedBook, chapters);
     var original = staticBookData(chapters);
     var titleEl = $('.book-aside .book-h1', layout);
@@ -359,9 +425,16 @@
     var originalTitle = titleEl ? titleEl.textContent : '';
     var coverNote = addCoverNote(savedBook || {}, layout);
     var originalCoverText = coverNote ? coverNote.textContent : '';
-    var originalFreeform = freeform ? freeform.textContent : '';
+    var originalFreeform = freeform ? (freeform.dataset.raw || freeform.textContent) : '';
     var slug = slugFromPage();
     var currentAudioUrl = (savedBook && savedBook.audioUrl) || '';
+    var currentImageUrl = (savedBook && (savedBook.imageUrl || savedBook.coverUrl)) || '';
+
+    function freeformRaw() {
+      if (!freeform) return '';
+      if (freeform.isContentEditable) return freeform.textContent;
+      return (typeof freeform.dataset.raw === 'string') ? freeform.dataset.raw : freeform.textContent;
+    }
 
     function save() {
       var token = localStorage.getItem('saptarushi-admin-token') || '';
@@ -374,8 +447,9 @@
         slug: slug,
         title: titleEl ? titleEl.textContent.trim() : slug,
         chapters: current.chapters,
-        text: freeform ? freeform.textContent.trim() : undefined,
+        text: freeform ? freeformRaw().trim() : undefined,
         audioUrl: currentAudioUrl || undefined,
+        imageUrl: currentImageUrl || undefined,
         coverText: coverNote ? coverNote.textContent.trim() : '',
         updated: new Date().toISOString()
       };
@@ -386,7 +460,8 @@
       }).then(function (r) { return r.json(); }).then(function (result) {
         if (!result.ok) throw new Error(result.error || 'Could not save book');
         original = current;
-        originalFreeform = freeform ? freeform.textContent : originalFreeform;
+        originalFreeform = freeform ? freeformRaw() : originalFreeform;
+        if (freeform) freeform.dataset.raw = originalFreeform;
         showToast('✓ Book saved');
       }).catch(function (error) { alert('Save error: ' + error.message); });
     }
@@ -395,7 +470,7 @@
       applyStaticBookData(original, chapters);
       if (titleEl) titleEl.textContent = originalTitle;
       if (coverNote) coverNote.textContent = originalCoverText;
-      if (freeform) freeform.textContent = originalFreeform;
+      if (freeform) { freeform.dataset.raw = originalFreeform; renderRich(freeform, originalFreeform); }
     }
 
     // ---------- ONE toolbar for title + cover + body (chapters or freeform) ----------
@@ -414,6 +489,11 @@
       editableEls: editableEls,
       lang: 'en',
       forceShow: false,
+      onToggle: function (editing) {
+        if (!freeform) return;
+        if (editing) freeform.textContent = freeformRaw();
+        else { freeform.dataset.raw = freeform.textContent; renderRich(freeform, freeform.dataset.raw); }
+      },
       onSave: save,
       onCancel: restore,
       onUploadPdf: function (file) {
@@ -447,6 +527,15 @@
   function init() {
     var slug = slugFromPage();
     if (!slug) return;
+    // Opening the reader counts as visiting the tile: clear its NEW flag.
+    try {
+      var seenKey = 'saptarushi-seen-books';
+      var seen = JSON.parse(localStorage.getItem(seenKey) || '[]');
+      if (seen.indexOf(slug) < 0) {
+        seen.push(slug);
+        localStorage.setItem(seenKey, JSON.stringify(seen.slice(-500)));
+      }
+    } catch (_) {}
     fetch(baseDir + 'api/book/' + slug)
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (book) {

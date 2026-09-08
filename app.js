@@ -15,13 +15,33 @@
     .then(r => r.ok ? r.json() : null)
     .then(store => {
       if (store && store.audio && store.audio.length) {
-        const slugs = new Set(D.audio.map(a => a.slug));
-        store.audio.forEach(a => { a.slug = a.slug || ((a.file || a.name || a.url || '').split('/').pop().replace(/\.[^.]+$/, '')); if (!slugs.has(a.slug)) { D.audio.push(a); if (a.deity && !D.deities.find(d => d.slug === a.deity)) D.deities.push({ slug: a.deity, label: a.deity, te: a.te, desc: '', symbol: '✦' }); } });
+        const bySlug = new Map(D.audio.map(a => [a.slug, a]));
+        store.audio.forEach(a => {
+          a.slug = a.slug || ((a.file || a.name || a.url || '').split('/').pop().replace(/\.[^.]+$/, ''));
+          const baseTrack = bySlug.get(a.slug);
+          if (baseTrack) {
+            // Admin override (rename / Telugu name / image / uploaded recording).
+            Object.assign(baseTrack, a);
+            if (a.url || a.localPath) {
+              baseTrack.localPath = baseTrack.localPath || a.url || a.localPath;
+              baseTrack.url = baseTrack.url || a.url || '';
+              baseTrack.comingSoon = false;
+              if (baseTrack.tag === 'Coming soon') baseTrack.tag = a.tag || 'Audio';
+            }
+          } else {
+            D.audio.push(a); bySlug.set(a.slug, a);
+            if (a.deity && !D.deities.find(d => d.slug === a.deity)) D.deities.push({ slug: a.deity, label: a.deity, te: a.te, desc: '', symbol: '✦' });
+          }
+        });
         attachTrackCards();
       }
       if (store && store.books && store.books.length) {
-        const slugs = new Set(D.books.map(b => b.slug));
-        store.books.forEach(b => { if (!slugs.has(b.slug)) D.books.push(b); });
+        const bySlug = new Map(D.books.map(b => [b.slug, b]));
+        store.books.forEach(b => {
+          const baseBook = bySlug.get(b.slug);
+          if (baseBook) Object.assign(baseBook, b);
+          else { D.books.push(b); bySlug.set(b.slug, b); }
+        });
       }
       if (store && store.assets) window.SaptarushiAssets = store.assets;
       applyManagedEntityOverrides(store);
@@ -34,6 +54,28 @@
   const esc = (s) => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const norm = (s) => String(s).replace(/[^\p{L}\p{N}]+/gu, ' ').toLowerCase().trim();
 
+  /* ---------- NEW-book badges: a freshly uploaded book carries `isNew`
+     until this browser has opened it (tracked per-browser in localStorage). */
+  const SEEN_BOOKS_KEY = 'saptarushi-seen-books';
+  function seenBooks() {
+    try { return new Set(JSON.parse(localStorage.getItem(SEEN_BOOKS_KEY) || '[]')); }
+    catch (_) { return new Set(); }
+  }
+  function isBookSeen(slug) { return seenBooks().has(String(slug || '')); }
+  function markBookSeen(slug) {
+    if (!slug) return;
+    try {
+      const seen = seenBooks();
+      seen.add(String(slug));
+      localStorage.setItem(SEEN_BOOKS_KEY, JSON.stringify(Array.from(seen).slice(-500)));
+    } catch (_) {}
+  }
+  function bookSlugFromHref(href) {
+    const m = String(href || '').match(/books\/([^/?#]+)\.html/i);
+    return m ? decodeURIComponent(m[1]) : '';
+  }
+  function newBadgeHtml() { return '<span class="book-new-badge">NEW</span>'; }
+
   /* ---------- CMS renderer: admin-created entities + page placements ---------- */
   function pageKeyForRuntime() {
     var p = location.pathname.replace(/\/+/g, '/').replace(/\/+$/, '');
@@ -42,14 +84,16 @@
     return p.startsWith('/') ? p : '/' + p;
   }
   function entityId(type, value) { return type + ':' + (value || '').replace(/^.*\//, '').replace(/\.html$/i, '').replace(/[^a-zA-Z0-9_-]+/g, '-').toLowerCase(); }
+  function audioEntityId(a) { return entityId('audio', (a && (a.slug || a.url || a.name)) || ''); }
   function deityImage(slug) {
     var d = (slug || '').toLowerCase().split(/[^a-z0-9]+/)[0];
     return base + 'assets/deities/' + (d || 'venkateswara') + '.jpg';
   }
   function bookCard(b) {
     var href = base + 'books/' + encodeURIComponent(b.slug) + '.html';
-    var img = b.imageUrl || deityImage(b.deity);
-    return '<a class="book-card cms-entity" data-entity-id="' + esc(entityId('book', b.slug)) + '" href="' + href + '">' +
+    var img = b.imageUrl || b.coverUrl || deityImage(b.deity);
+    var badge = (b.isNew && !isBookSeen(b.slug)) ? newBadgeHtml() : '';
+    return '<a class="book-card cms-entity" data-entity-id="' + esc(entityId('book', b.slug)) + '" href="' + href + '">' + badge +
       '<img class="book-cover-img" src="' + esc(img) + '" alt="' + esc(b.title || b.en || b.slug) + '" loading="lazy"/>' +
       '<div class="min-w-0 flex-1"><p class="book-en">' + esc(b.title || b.en || b.slug) + '</p>' +
       '<p class="book-te" lang="te">' + esc(b.titleTe || b.te || '') + '</p>' +
@@ -57,7 +101,7 @@
   }
   function audioCard(t) {
     var name = t.name || t.en || t.title || t.file || 'Audio';
-    return '<button type="button" class="track-card cms-entity" data-entity-id="' + esc(entityId('audio', t.url || name)) + '" data-slug="' + esc(t.slug || (t.file ? t.file.replace(/\.[^.]+$/, '') : '')) + '" data-url="' + esc(t.url || t.localPath || '') + '">' +
+    return '<button type="button" class="track-card cms-entity" data-entity-id="' + esc(audioEntityId(t)) + '" data-slug="' + esc(t.slug || (t.file ? t.file.replace(/\.[^.]+$/, '') : '')) + '" data-url="' + esc(t.url || t.localPath || '') + '">' +
       '<div class="track-art"><img src="' + esc(t.imageUrl || deityImage(t.deity)) + '" alt="' + esc(name) + '" loading="lazy"/><span class="track-play-btn">▶</span></div>' +
       '<div class="track-row"><div><div class="track-te" lang="te">' + esc(t.te || '') + '</div><div class="track-en">' + esc(name) + '</div></div></div></button>';
   }
@@ -80,12 +124,13 @@
         var en=a.querySelector('.book-en'); if(en && (b.title||b.en)) en.textContent=b.title||b.en;
         var te=a.querySelector('.book-te'); if(te && (b.titleTe||b.te)) te.textContent=b.titleTe||b.te;
         var meta=a.querySelector('.book-meta'); if(meta && (b.sub||b.meta)) meta.textContent=b.sub||b.meta;
+        if (b.isNew && !isBookSeen(b.slug) && !a.querySelector('.book-new-badge')) a.insertAdjacentHTML('afterbegin', newBadgeHtml());
       });
     });
     (store.audio || []).forEach(function(t){
       var slug=t.slug || ((t.file||t.name||t.url||'').split('/').pop().replace(/\.[^.]+$/,''));
       document.querySelectorAll('.track-card[data-slug="' + CSS.escape(slug) + '"]').forEach(function(card){
-        card.setAttribute('data-entity-id',entityId('audio',t.url||t.name));
+        card.setAttribute('data-entity-id',audioEntityId(t));
         var en=card.querySelector('.track-en'); if(en) en.textContent=t.name||t.en||slug;
         var te=card.querySelector('.track-te'); if(te && t.te) te.textContent=t.te;
         var img=card.querySelector('img'); if(img && t.imageUrl) img.src=t.imageUrl;
@@ -107,7 +152,14 @@
     if (!sections.length) return;
     var byId = {};
     books.forEach(function(b){ byId[entityId('book',b.slug)] = {type:'book',value:b}; });
-    audio.forEach(function(a){ byId[entityId('audio',a.url || a.name)] = {type:'audio',value:a}; });
+    // Built-in tracks (e.g. Deepam Aaradhana) resolve by slug so the admin
+    // can place them in page sections; uploaded tracks keep their legacy
+    // url-based ids too so existing layouts keep working.
+    D.audio.forEach(function(a){ byId[audioEntityId(a)] = {type:'audio',value:a}; });
+    audio.forEach(function(a){
+      byId[entityId('audio',a.url || a.name)] = {type:'audio',value:a};
+      byId[audioEntityId(a)] = {type:'audio',value:a};
+    });
     assets.forEach(function(a){ byId[a.id || entityId('media',a.url || a.name)] = {type:'media',value:a}; });
     var host = document.querySelector('.managed-sections');
     if (!host) { host=document.createElement('div'); host.className='managed-sections'; var main=document.querySelector('main'); if(main) main.appendChild(host); }
@@ -218,11 +270,31 @@
   /* ---------- Tiles: play or route to internet ---------- */
   function attachTrackCards() {
     $$('.track-card').forEach(card => {
+      // Stale builds marked coming-soon tiles `disabled`, which blocks all
+      // clicks. Coming-soon tiles must stay clickable (they explain how to
+      // listen / how an admin can add the recording), so upgrade them here.
+      if (card.hasAttribute('disabled')) {
+        card.removeAttribute('disabled');
+        card.classList.remove('disabled');
+        if (!card.hasAttribute('data-coming-soon')) card.setAttribute('data-coming-soon', 'true');
+        card.classList.add('is-coming-soon');
+      }
       if (card.__bound) return;
       card.__bound = true;
       const track = D.audio.find(a => a.slug === card.dataset.slug);
-      if (!track || track.comingSoon) return;
+      if (!track) return;
+      const isComingSoon = Boolean(track.comingSoon) || card.hasAttribute('data-coming-soon');
       card.addEventListener('click', () => {
+        if (isComingSoon) {
+          if (window.TextEditor && TextEditor.isAdmin && TextEditor.isAdmin()) {
+            toast('«' + esc(track.te || track.en || track.slug) + '» has no recording yet — <a href="' + base + 'admin.html">open Admin → Audio</a> to upload it.', 5600);
+            return;
+          }
+          toast('«' + esc(track.te || track.en || track.slug) + '» is coming soon. Tap Ask Rushi and I will point you to the internet version.', 5600);
+          openChat();
+          bot('«<b>' + esc(track.te || track.en || track.slug) + '</b>» is <b>coming soon</b> here. Listen meanwhile: <a class="msg-link" href="' + yt((track.te || '') + ' ' + (track.en || '')) + '" target="_blank" rel="noopener">Open on the internet \u2197</a>');
+          return;
+        }
         if (window.TextEditor && TextEditor.isAdmin()) {
           const detail = new URL((base || '') + 'audio/' + encodeURIComponent(track.slug) + '.html', location.href);
           detail.searchParams.set('name', track.name || track.en || track.slug);
@@ -606,7 +678,7 @@
         body: JSON.stringify({ data: JSON.stringify({ pages: pageStore }) })
       }).then(function (response) { return response.json(); }).then(function (result) {
         if (!result.ok) throw new Error(result.error || 'Could not save page');
-        savedValues = pageStore[pageKey].values.slice();
+        savedValues = (pageStore[pageKey].languages[currentLang].values || []).slice();
         status.textContent = 'Saved';
         finishEdit();
         setTimeout(function () { status.textContent = ''; }, 2200);
@@ -723,6 +795,21 @@
   initTempleLanguageExtras();
   initSiteLanguages();
   initSiteEditor();
+
+  /* ---------- NEW-book badges: opening a tile marks it seen ---------- */
+  document.addEventListener('click', function (e) {
+    const card = e.target && e.target.closest ? e.target.closest('a.book-card[href*="books/"]') : null;
+    if (!card) return;
+    const slug = bookSlugFromHref(card.getAttribute('href'));
+    if (!slug || isBookSeen(slug)) return;
+    markBookSeen(slug);
+    const badge = card.querySelector('.book-new-badge');
+    if (badge) badge.remove();
+  }, true);
+  Array.from(document.querySelectorAll('a.book-card .book-new-badge')).forEach(function (badge) {
+    const card = badge.closest('a.book-card');
+    if (card && isBookSeen(bookSlugFromHref(card.getAttribute('href')))) badge.remove();
+  });
 
   /* ---------- Book chapter switcher ---------- */
   const chapterNav = $('.chapter-nav');

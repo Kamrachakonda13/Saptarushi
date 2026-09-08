@@ -323,11 +323,13 @@
   </a></div>
   <div id="adminBooks" style="margin-top:1.5rem"></div>
 
-  <!-- Paste text panel -->
-  <div class="paste-panel" id="pastePanel">
+  <p style="margin-top:1.5rem;color:var(--ink-70);max-width:62ch;font-size:0.95rem">Every book opens with <b>English · తెలుగు</b> tabs on its reading page, so you can switch languages on the same page. Books added through the Admin portal appear automatically above with their narration audio and PDF text.</p>
+
+  <!-- Paste text panel: bottom of the page, visible to logged-in admins only -->
+  <div class="paste-panel" id="pastePanel" hidden>
     <div class="paste-head">
       <h3>✍️ Paste your devotional text</h3>
-      <span class="pill-hint">Add or read your own text in English or Telugu</span>
+      <span class="pill-hint">Admin only · add text in English or Telugu</span>
     </div>
     <p style="color:var(--ink-70);margin-top:0.4rem;font-size:0.9rem">Type or paste devotional stotras, slokas, or purana verses below. Switch between <b>English · తెలుగు</b> to add parallel text, or use the transliterate buttons.</p>
 
@@ -384,8 +386,16 @@
       </div>
     </div>
   </div>
-
-  <p style="margin-top:1.5rem;color:var(--ink-70);max-width:62ch;font-size:0.95rem">Every book opens with <b>English · తెలుగు</b> tabs on its reading page, so you can switch languages on the same page. Books added through the Admin portal appear automatically above with their narration audio and PDF text.</p>
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('saptarushi-admin-token')) {
+          var p = document.getElementById('pastePanel');
+          if (p) p.hidden = false;
+        }
+      } catch (_) {}
+    })();
+  </script>
   </section>
   </main>
   <!-- Ask Rushi chat -->

@@ -279,6 +279,7 @@
         });
         uploadGroup.style.display = on ? 'flex' : 'none';
         if (on && editableEls[0]) editableEls[0].focus();
+        if (opts.onToggle) opts.onToggle(on);
       },
       onLang: function (l) { if (opts.onLang) opts.onLang(l); },
       onTransliterate: function (target) { if (opts.onTransliterate) opts.onTransliterate(target); },

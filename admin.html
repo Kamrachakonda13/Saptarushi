@@ -152,6 +152,21 @@
           <textarea id="bkCoverText" placeholder="Add a short note, dedication, or description for the cover image…" style="min-height:90px"></textarea>
         </div>
 
+        <!-- cover + content images -->
+        <div class="admin-card" style="background:var(--parch);padding:1rem;margin:0 0 1rem">
+          <h3 style="font-size:1rem">🖼 Book images (optional)</h3>
+          <p style="color:var(--ink-70);font-size:0.9rem;margin-bottom:0.6rem">Upload small to medium photos (JPG / PNG / WebP, up to ~8&nbsp;MB each) — e.g. photos of the ekavimśati patrās for the Ganesh Vrata book. The first image becomes the book cover; any image can also be placed inside the text below.</p>
+          <div id="bkCoverDrop" class="dropzone">
+            <p>🖼 Drop images here or click to choose</p>
+            <input type="file" id="bkCoverFile" accept="image/jpeg,image/png,image/webp,image/gif" multiple/>
+          </div>
+          <div id="bkCoverPreview" class="bk-cover-preview" style="display:none;margin-top:0.6rem"></div>
+          <div class="admin-field" style="margin-top:0.6rem;margin-bottom:0">
+            <label for="bkCoverUrl">Cover image URL (optional)</label>
+            <input id="bkCoverUrl" placeholder="e.g. /media/books/ganesh-vrata/patra-01.jpg"/>
+          </div>
+        </div>
+
         <!-- narration audio -->
         <div class="admin-card" style="background:var(--parch);padding:1rem;margin:0 0 1rem">
           <h3 style="font-size:1rem">🎙 Narration audio (optional)</h3>
@@ -186,6 +201,7 @@
         <div class="admin-field">
           <label id="bkTextLabel">Content</label>
           <textarea id="bkText" placeholder="Paste the book text here…" style="min-height:320px;font-size:1.02rem;line-height:1.9"></textarea>
+          <p class="admin-help" style="color:var(--ink-70);font-size:0.85rem;margin-top:0.4rem">Tip: to show a photo inside the reading page, put each image on its own line as <code>![caption](/media/books/your-book/photo.jpg)</code> — it renders as a captioned photo for readers.</p>
         </div>
         <div class="admin-row">
           <button class="admin-btn" id="bkSaveBtn" type="button">💾 Save book</button>
@@ -209,19 +225,19 @@
         <div class="admin-kicker">PAGE CONTENT</div>
         <h3>Sections & library items</h3>
         <p class="admin-help">Create a section on the selected page, add books or audio to it, reorder items, and publish/unpublish the section. New items appear as the same polished tiles used by the existing site.</p>
-        <div class="admin-row">
+        <div class="admin-row cms-form-row">
           <div class="admin-field" style="flex:1;margin:0"><label>Section title (English)</label><input id="cmsSectionTitleEn" placeholder="e.g. Ganesha Books"/></div>
           <div class="admin-field" style="flex:1;margin:0"><label>Section title (తెలుగు)</label><input id="cmsSectionTitleTe" class="font-te" placeholder="ఉదా. గణేశ పుస్తకాలు"/></div>
           <div class="admin-field" style="flex:0 0 150px;margin:0"><label>Section type</label><select id="cmsSectionType"><option value="books">Books</option><option value="audio">Audio</option><option value="media">OCR / Media</option></select></div>
-          <button class="admin-btn" id="cmsAddSectionBtn" type="button">＋ Add section</button>
+          <button class="admin-btn cms-add-btn" id="cmsAddSectionBtn" type="button">＋ Add section</button>
         </div>
-        <div class="admin-row">
+        <div class="admin-row cms-form-row">
           <div class="admin-field" style="flex:1;margin:0"><label>Item type</label><select id="cmsItemType"><option value="book">Book</option><option value="audio">Audio</option><option value="media">OCR / media</option></select></div>
           <div class="admin-field" style="flex:2;margin:0"><label>Library item</label><select id="cmsItemSelect"></select></div>
-          <button class="admin-btn ghost" id="cmsAddItemBtn" type="button">＋ Add to section</button>
+          <button class="admin-btn ghost cms-add-btn" id="cmsAddItemBtn" type="button">＋ Add to section</button>
         </div>
         <div id="cmsSectionsList"></div>
-        <div class="admin-row"><button class="admin-btn" id="cmsSaveBtn" type="button">💾 Save page layout</button><span id="cmsSaveMsg" class="save-ok"></span></div>
+        <div class="admin-row cms-save-row"><button class="admin-btn" id="cmsSaveBtn" type="button">💾 Save page layout</button><span id="cmsSaveMsg" class="save-ok"></span></div>
       </div>
       <div class="admin-card cms-entity-editor">
         <div class="admin-kicker">ENTITY EDITOR</div>
@@ -486,6 +502,7 @@
   ================================================================== */
   var editingSlug = null;
   var editingPdfUrl = '';
+  var editingCoverUrl = '';
   function renderBookList() {
     var books = (window.DeepamData && DeepamData.books ? DeepamData.books : []).concat(STORE.books || []).concat(adminSeedBooks());
     var seen = {}; books = books.filter(function (b) { if (seen[b.slug]) return false; seen[b.slug] = 1; return true; });
@@ -509,12 +526,15 @@
   function openBookEditor(book) {
     editingSlug = book && book.slug;
     editingPdfUrl = (book && book.pdfUrl) || '';
+    editingCoverUrl = (book && (book.imageUrl || book.coverUrl)) || '';
     $('#bookEditor').style.display = '';
     $('#bookEditorTitle').textContent = book ? 'Edit book — ' + book.title : 'New book';
     $('#bkTitle').value = book.title || book.en || '';
     $('#bkTitleTe').value = book.titleTe || book.te || '';
     $('#bkSub').value = book.sub || book.meta || '';
     $('#bkCoverText').value = book.coverText || '';
+    $('#bkCoverUrl').value = editingCoverUrl || '';
+    renderBookCoverPreview();
     $('#bkDeity').value = book.deity || 'library';
     bkTextCache = {
       en: book.textEn || book.text || '',
@@ -564,13 +584,17 @@
       title: $('#bkTitle').value.trim() || 'Untitled',
       titleTe: $('#bkTitleTe').value.trim(),
             te: $('#bkTitleTe').value.trim(),
+      titleSa: ($('#bkTitleSa') ? $('#bkTitleSa').value.trim() : ''),
       en: $('#bkTitle').value.trim(),
       text: text,
       textEn: bkTextCache.en || '',
       textTe: bkTextCache.te || '',
+      textSa: bkTextCache.sa || '',
       sub: $('#bkSub').value.trim(),
       meta: $('#bkSub').value.trim(),
       coverText: $('#bkCoverText').value.trim(),
+      imageUrl: ($('#bkCoverUrl').value.trim() || editingCoverUrl || ''),
+      coverUrl: ($('#bkCoverUrl').value.trim() || editingCoverUrl || ''),
       deity: $('#bkDeity').value,
       lang: activeLang,
       audioUrl: $('#bkAudioInfo').dataset.url || '',
@@ -593,6 +617,31 @@
     info.innerHTML = book.audioUrl
       ? '<div class="mp-row" data-row><span class="mp-play" data-url="' + esc(book.audioUrl) + '">▶</span><span style="flex:1">Narration audio attached — players appear on the reader page</span><button class="admin-btn ghost danger" data-removeaudio>Remove</button></div>'
       : '<p>No narration yet.</p>';
+  }
+
+  /* ---------- book cover + content images ---------- */
+  var BOOK_IMG_EXT = /\.(jpe?g|png|webp|gif)$/i;
+  function renderBookCoverPreview() {
+    var box = $('#bkCoverPreview');
+    var url = ($('#bkCoverUrl') && $('#bkCoverUrl').value.trim()) || editingCoverUrl || '';
+    if (!box) return;
+    if (!url) { box.style.display = 'none'; box.innerHTML = ''; return; }
+    box.style.display = '';
+    box.innerHTML = '<img src="' + esc(url) + '" alt="Book cover preview"/>' +
+      '<div class="bk-cover-actions"><span class="bk-cover-url">' + esc(url) + '</span>' +
+      '<button class="admin-btn ghost" type="button" data-insert-cover>＋ Insert into text</button>' +
+      '<button class="admin-btn ghost danger" type="button" data-remove-cover>Remove</button></div>';
+  }
+  function insertImageIntoBookText(url, caption) {
+    var area = $('#bkText');
+    var marker = '\n\n![' + (caption || 'photo') + '](' + url + ')\n\n';
+    if (!area) return;
+    var start = (typeof area.selectionStart === 'number') ? area.selectionStart : area.value.length;
+    var end = (typeof area.selectionEnd === 'number') ? area.selectionEnd : area.value.length;
+    area.value = area.value.slice(0, start) + marker + area.value.slice(end);
+    area.focus();
+    try { area.selectionStart = area.selectionEnd = start + marker.length; } catch (_) {}
+    toast('Image placed in the text — Save the book to keep it');
   }
 
   /* ==================================================================
@@ -742,6 +791,53 @@
     });
   });
 
+  wireDropzone($('#bkCoverDrop'), $('#bkCoverFile'), function (files) {
+    var imgs = files.filter(function (f) { return BOOK_IMG_EXT.test(f.name || '') || (f.type || '').indexOf('image/') === 0; });
+    if (!imgs.length) { toast('Choose JPG, PNG, WebP or GIF images', true); return; }
+    var tooBig = imgs.filter(function (f) { return f.size > 8 * 1024 * 1024; });
+    if (tooBig.length) { toast(tooBig[0].name + ' is over 8 MB — resize it first', true); return; }
+    var folder = (editingSlug || $('#bkTitle').value.trim().toLowerCase().replace(/[^\w]+/g, '-') || 'book-images').slice(0, 60);
+    var info = $('#bkCoverPreview'); info.style.display = ''; info.innerHTML = 'Uploading ' + imgs.length + ' image(s)…';
+    uploadFiles(imgs, folder, 'books').then(function (d) {
+      if (d && d.ok && d.saved && d.saved.length) {
+        var first = d.saved[0];
+        if (!editingCoverUrl && !$('#bkCoverUrl').value.trim()) {
+          editingCoverUrl = first.url;
+          $('#bkCoverUrl').value = first.url;
+        }
+        renderBookCoverPreview();
+        // append thumbnails with one-click insert buttons for every upload
+        var box = $('#bkCoverPreview');
+        d.saved.forEach(function (s, i) {
+          if (i === 0 && box.querySelector('img')) return;
+          var row = document.createElement('div');
+          row.className = 'bk-cover-actions';
+          row.innerHTML = '<span class="bk-cover-url">' + esc(s.url) + '</span>';
+          var btn = document.createElement('button');
+          btn.className = 'admin-btn ghost'; btn.type = 'button'; btn.textContent = '＋ Insert into text';
+          btn.addEventListener('click', function () { insertImageIntoBookText(s.url, (s.file || 'photo').replace(/\.[^.]+$/, '')); });
+          row.appendChild(btn);
+          box.appendChild(row);
+        });
+        toast('Uploaded ' + d.saved.length + ' image(s) — Save the book to keep them');
+      } else {
+        info.innerHTML = '';
+        info.style.display = 'none';
+      }
+    });
+  });
+
+  $('#bkCoverUrl').addEventListener('input', function () { editingCoverUrl = $('#bkCoverUrl').value.trim(); renderBookCoverPreview(); });
+  $('#bkCoverPreview').addEventListener('click', function (e) {
+    if (e.target.closest('[data-remove-cover]')) {
+      editingCoverUrl = ''; $('#bkCoverUrl').value = ''; renderBookCoverPreview(); return;
+    }
+    if (e.target.closest('[data-insert-cover]')) {
+      var url = $('#bkCoverUrl').value.trim() || editingCoverUrl;
+      if (url) insertImageIntoBookText(url, $('#bkTitle').value.trim() || 'photo');
+    }
+  });
+
 
   $('#uploadSiteFilesBtn').addEventListener('click', function () {
     var files = Array.from($('#siteFiles').files || []);
@@ -768,9 +864,17 @@
     return STORE.pages[cmsKey()];
   }
   function cmsEntityId(type, value) { return type + ':' + String(value || '').replace(/^.*\//, '').replace(/\.html$/i, '').replace(/[^a-zA-Z0-9_-]+/g, '-').toLowerCase(); }
+  function cmsAudioId(a) { return cmsEntityId('audio', a.slug || a.url || a.name); }
   function cmsItems(type) {
     if (type === 'book') return (window.DeepamData && DeepamData.books ? DeepamData.books : []).concat(STORE.books || []).map(function(b){ return {id:cmsEntityId('book',b.slug), label:b.title || b.en || b.slug}; });
-    if (type === 'audio') return (window.DeepamData && DeepamData.audio ? DeepamData.audio : []).concat(STORE.audio || []).map(function(a){ return {id:cmsEntityId('audio',a.url || a.name), label:a.name || a.en || a.file || a.url}; });
+    if (type === 'audio') {
+      var out = [], seenAudio = {};
+      // Uploaded tracks keep their legacy url-based ids so existing page
+      // layouts keep resolving; built-ins are keyed by slug.
+      (STORE.audio || []).forEach(function(a){ var id=cmsEntityId('audio',a.url||a.name); if(seenAudio[id])return; seenAudio[id]=1; out.push({id:id, label:a.name||a.en||a.file||a.url}); });
+      if (window.DeepamData && DeepamData.audio) DeepamData.audio.forEach(function(a){ var id2=cmsAudioId(a); if(seenAudio[id2])return; seenAudio[id2]=1; out.push({id:id2, label:(a.te ? a.te + ' · ' : '') + (a.en || a.slug)}); });
+      return out;
+    }
     return (STORE.assets || []).filter(function(a){ return a.ocrText || !/^audio\//.test(a.url || ''); }).map(function(a){ return {id:a.id || ('media:' + a.url), label:a.name || a.url}; });
   }
   function cmsRefreshItemSelect() {
@@ -780,14 +884,19 @@
   }
   function cmsRefreshEntitySelect() {
     var sel=$('#cmsEntitySelect'); sel.innerHTML='';
-    (STORE.audio||[]).forEach(function(a){ var o=document.createElement('option'); o.value=cmsEntityId('audio',a.url||a.name); o.textContent='Audio · '+(a.name||a.file||a.url); sel.appendChild(o); });
+    var seen={}, key;
+    // Admin overrides first so a renamed/published track shows its latest name…
+    (STORE.audio||[]).forEach(function(a){ key=cmsEntityId('audio',a.url||a.name); if(seen[key])return; seen[key]=1; var o=document.createElement('option'); o.value=key; o.textContent='Audio · '+(a.name||a.file||a.url); sel.appendChild(o); });
+    // …then every built-in track (e.g. Deepam Aaradhana) so it can be renamed,
+    // re-imaged or published with an uploaded recording from this editor.
+    if(window.DeepamData && DeepamData.audio) DeepamData.audio.forEach(function(a){ key=cmsAudioId(a); if(seen[key])return; seen[key]=1; var o2=document.createElement('option'); o2.value=key; o2.textContent='Audio · '+((a.te||a.en||a.slug)+''); sel.appendChild(o2); });
     (STORE.assets||[]).forEach(function(a){ if(a.ocrText){ var o=document.createElement('option'); o.value=a.id||('media:'+a.url); o.textContent='OCR · '+(a.name||a.url); sel.appendChild(o); }});
     cmsLoadEntity();
   }
   function cmsLoadEntity(){
     var id=$('#cmsEntitySelect').value, e=null;
-    (STORE.audio||[]).some(function(a){if(cmsEntityId('audio',a.url||a.name)===id){e=a;return true;}});
-    if(!e && window.DeepamData && DeepamData.audio) DeepamData.audio.some(function(a){if(cmsEntityId('audio',a.url||a.name)===id){e=a;return true;}});
+    (STORE.audio||[]).some(function(a){if(cmsEntityId('audio',a.url||a.name)===id||cmsAudioId(a)===id){e=a;return true;}});
+    if(!e && window.DeepamData && DeepamData.audio) DeepamData.audio.some(function(a){if(cmsAudioId(a)===id){e=a;return true;}});
     if(!e) (STORE.assets||[]).some(function(a){if((a.id||cmsEntityId('media',a.url||a.name))===id){e=a;return true;}});
     if(!e) return;
     $('#cmsEntityName').value=e.name||e.title||'';
@@ -833,8 +942,8 @@
   }
   function cmsSaveEntity(){
     var id=$('#cmsEntitySelect').value, found=null, type='';
-    (STORE.audio||[]).some(function(a){if(cmsEntityId('audio',a.url||a.name)===id){found=a;type='audio';return true;}});
-    if(!found && window.DeepamData && DeepamData.audio) DeepamData.audio.some(function(a){if(cmsEntityId('audio',a.url||a.name)===id){found=Object.assign({},a);type='audio';(STORE.audio=STORE.audio||[]).push(found);return true;}});
+    (STORE.audio||[]).some(function(a){if(cmsEntityId('audio',a.url||a.name)===id||cmsAudioId(a)===id){found=a;type='audio';return true;}});
+    if(!found && window.DeepamData && DeepamData.audio) DeepamData.audio.some(function(a){if(cmsAudioId(a)===id){found=Object.assign({},a);type='audio';(STORE.audio=STORE.audio||[]).push(found);return true;}});
     if(!found) (STORE.assets||[]).some(function(a){if((a.id||cmsEntityId('media',a.url||a.name))===id){found=a;type='media';return true;}});
     if(!found)return;
     found.name=$('#cmsEntityName').value.trim()||found.name; found.te=$('#cmsEntityTe').value.trim(); found.deity=$('#cmsEntityDeity').value.trim(); found.imageUrl=$('#cmsEntityImage').value.trim(); found.updated=new Date().toISOString();
@@ -843,6 +952,8 @@
   }
   function cmsInit(){
     if(!$('#cmsItemType'))return;
+    if(cmsInit.bound){ cmsRefreshItemSelect(); cmsRefreshEntitySelect(); cmsRenderSections(); return; }
+    cmsInit.bound=true;
     $('#cmsItemType').addEventListener('change',cmsRefreshItemSelect);
     $('#cmsAddSectionBtn').addEventListener('click',cmsAddSection);
     $('#cmsAddItemBtn').addEventListener('click',cmsAddItem);

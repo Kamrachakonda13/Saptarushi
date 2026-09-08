@@ -305,7 +305,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 }
 .track-card:hover { box-shadow: 0 0 0 1px var(--line-25), var(--shadow-soft); transform: translateY(-2px); }
 .track-card.disabled { opacity: 0.7; cursor: not-allowed; }
+.track-card.is-coming-soon { opacity: 0.85; cursor: pointer; }
 .track-card.disabled:hover { box-shadow: 0 0 0 1px var(--line-10); transform: none; }
+.track-card.is-coming-soon:hover { box-shadow: 0 0 0 1px var(--line-25), var(--shadow-soft); transform: translateY(-2px); }
 .track-art { position: relative; width: 100%; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 0.875rem; }
 .track-art img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
 .track-play-btn {
@@ -342,9 +344,17 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .grid-books { display: grid; grid-template-columns: 1fr; gap: 1rem; }
 @media (min-width: 768px) { .grid-books { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .book-card {
+  position: relative;
   display: flex; gap: 1rem; border-radius: 1.25rem; padding: 0.75rem;
   background: var(--card); box-shadow: 0 0 0 1px var(--line-10);
   transition: box-shadow .15s ease, transform .15s ease;
+}
+.book-new-badge {
+  position: absolute; top: 0.6rem; right: 0.6rem; z-index: 1;
+  background: var(--marigold); color: var(--night);
+  font-size: 0.68rem; font-weight: 800; letter-spacing: 0.09em;
+  padding: 0.22rem 0.6rem; border-radius: 999px;
+  box-shadow: 0 0 0 1px var(--brass-40), var(--shadow-soft);
 }
 .book-card:hover { box-shadow: 0 0 0 1px var(--line-25), var(--shadow-soft); transform: translateY(-2px); }
 .book-card img { width: 96px; height: 96px; flex-shrink: 0; border-radius: 0.875rem; object-fit: cover; object-position: center 18%; }
@@ -1116,6 +1126,24 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .cms-ocr-title { font-family:var(--font-display); font-size:1.35rem; margin:.25rem 0 .9rem; }
 .cms-ocr-card p { max-width:75ch; line-height:1.8; margin:.8rem 0; }
 .cms-studio-card .admin-help { color:var(--ink-70); margin-bottom:1rem; }
+/* CMS studio form rows: keep action buttons clear of the text fields above/below.
+   Buttons align to the bottom of the row (next to inputs, not overlapping labels)
+   and the Save row is always separated from the sections list / selects. */
+.cms-studio-card .cms-form-row { align-items:flex-end; margin-bottom:0.9rem; }
+.cms-studio-card .cms-form-row:last-of-type { margin-bottom:0; }
+.cms-studio-card .cms-add-btn { flex-shrink:0; margin-bottom:1px; }
+#cmsSectionsList { margin:0.9rem 0 0; }
+#cmsSectionsList:empty { display:none; }
+#cmsSectionsList:empty + .cms-save-row { margin-top:0.9rem; }
+.cms-studio-card .cms-save-row { margin-top:1rem; padding-top:1rem; border-top:1px solid var(--line-10); }
+/* Book image uploads (admin) + reader rendering */
+.bk-cover-preview img { width:120px; height:120px; object-fit:cover; border-radius:0.875rem; box-shadow:0 0 0 1px var(--line-15); }
+.bk-cover-preview .bk-cover-actions { display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; margin-top:0.5rem; }
+.bk-cover-preview .bk-cover-url { font-size:0.8rem; color:var(--ink-70); word-break:break-all; }
+.bk-cover-preview .admin-btn { padding:0.35rem 0.8rem; font-size:0.8rem; }
+.book-content-figure { margin:1.25rem auto; max-width:34rem; text-align:center; }
+.book-content-img { width:100%; height:auto; border-radius:1rem; box-shadow:0 0 0 1px var(--line-10), var(--shadow-soft); }
+.book-content-figure figcaption { margin-top:0.5rem; font-size:0.88rem; color:var(--ink-70); }
 .cms-section-row { border:1px solid var(--line-10); border-radius:1rem; padding:1rem; margin-top:.75rem; background:var(--card); }
 .cms-section-head { display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; }
 .cms-section-head > b { flex:1; min-width:180px; }

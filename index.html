@@ -206,7 +206,7 @@
     </div>
     <p class="track-meta truncate">Evening bhajan set · Bhajan</p>
   </button>
-<button type="button" class="track-card disabled" data-slug="deepam-aaradhana" disabled>
+<button type="button" class="track-card is-coming-soon" data-slug="deepam-aaradhana" data-coming-soon="true">
     <div class="track-art">
       <img src="assets/deities/venkateswara.jpg" alt="" loading="lazy"/>
       <span class="track-play-btn" aria-hidden="true">▶</span>
@@ -358,7 +358,10 @@
               var a = document.createElement('a');
               a.className = 'book-card';
               a.href = 'books/' + b.slug + '.html';
-              a.innerHTML = '<img class="book-cover-img" src="assets/deities/venkateswara.jpg" alt="" loading="lazy"/>' +
+              var seen = false;
+              try { seen = JSON.parse(localStorage.getItem('saptarushi-seen-books') || '[]').indexOf(b.slug) >= 0; } catch (_) {}
+              var badge = (b.isNew && !seen) ? '<span class="book-new-badge">NEW</span>' : '';
+              a.innerHTML = badge + '<img class="book-cover-img" src="' + escAttr(b.imageUrl || b.coverUrl || 'assets/deities/venkateswara.jpg') + '" alt="" loading="lazy"/>' +
                 '<div class="min-w-0 flex-1"><p class="book-en">' + escAttr(b.title || b.en || b.slug) + '</p>' +
                 '<p class="book-meta">From the library</p></div>';
               grid.appendChild(a);

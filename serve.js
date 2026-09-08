@@ -298,7 +298,8 @@ function rebuildAudioManifest() {
 function generateBookPage(book) {
   const t = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const deity = String(book.deity || 'venkateswara').toLowerCase().split(/[^a-z]+/).filter(Boolean)[0] || 'venkateswara';
-  const img = fs.existsSync(path.join(root, 'assets', 'deities', deity + '.jpg')) ? '../assets/deities/' + deity + '.jpg' : '../assets/deities/venkateswara.jpg';
+  const fallbackImg = fs.existsSync(path.join(root, 'assets', 'deities', deity + '.jpg')) ? '../assets/deities/' + deity + '.jpg' : '../assets/deities/venkateswara.jpg';
+  const img = book.imageUrl || book.coverUrl || fallbackImg;
   return `<!DOCTYPE html>
 <html lang="en" data-text-size="base">
 <head>
@@ -551,7 +552,19 @@ http.createServer((req, res) => {
           if (!book.slug || !book.title) return json(res, 400, { error: 'Book needs slug + title' });
           const store = readStore();
           const idx = store.books.findIndex(b => b.slug === book.slug);
-          if (idx >= 0) store.books[idx] = book; else store.books.push(book);
+          if (idx >= 0) {
+            // Edit: keep the original NEW flag / first-added date so a
+            // re-save does not re-flag the book as new.
+            const prev = store.books[idx];
+            if (typeof book.isNew === 'undefined' && typeof prev.isNew !== 'undefined') book.isNew = prev.isNew;
+            if (!book.addedAt && prev.addedAt) book.addedAt = prev.addedAt;
+            store.books[idx] = book;
+          } else {
+            // New upload: flag the tile as NEW until a reader opens it.
+            book.isNew = true;
+            book.addedAt = new Date().toISOString();
+            store.books.push(book);
+          }
           writeStore(store);
           // also write a friendly JSON per book for the reader
           safeWrite(path.join(CONTENT_DIR, 'books', book.slug + '.json'), JSON.stringify(book, null, 2));

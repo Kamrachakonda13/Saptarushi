@@ -120,6 +120,7 @@ function header(rootDepth, active) {
         <a href="${temples}"${cls('temples')}>Temples</a>
         <a href="${panchang}"${cls('panchang')}>Panchang</a>
         <a href="${about}"${cls('about')}>About</a>
+        <a href="${R}admin.html" class="nav-admin">Admin</a>
       </nav>
       <div class="header-right">
         <span class="textsize-label">Text size</span>
@@ -139,6 +140,7 @@ function header(rootDepth, active) {
     <a href="${temples}"${cls('temples')}>Temples</a>
     <a href="${panchang}"${cls('panchang')}>Panchang</a>
     <a href="${about}"${cls('about')}>About</a>
+    <a href="${R}admin.html" class="nav-admin">Admin</a>
   </nav>`;
 }
 
@@ -161,9 +163,10 @@ function deityRail(rootDepth, currentSlug) {
 }
 
 function trackCard(rootDepth, t) {
-  const disabled = t.comingSoon ? ' disabled' : '';
+  const comingSoon = t.comingSoon ? ' is-coming-soon' : '';
+  const comingAttr = t.comingSoon ? ' data-coming-soon="true"' : '';
   const img = deityImgAsset(t.deity, rootDepth);
-  return `<button type="button" class="track-card${disabled}" data-slug="${t.slug}"${disabled ? ' disabled' : ''}>
+  return `<button type="button" class="track-card${comingSoon}" data-slug="${t.slug}"${comingAttr}>
     <div class="track-art">
       ${img ? `<img src="${img}" alt="" loading="lazy"/>` : ''}
       <span class="track-play-btn" aria-hidden="true">▶</span>
@@ -177,8 +180,10 @@ function trackCard(rootDepth, t) {
 }
 
 function bookCard(rootDepth, b) {
-  const img = deityImgAsset(b.deity, rootDepth);
+  const img = b.imageUrl || b.coverUrl || deityImgAsset(b.deity, rootDepth);
+  const badge = b.isNew ? `<span class="book-new-badge">NEW</span>` : '';
   return `<a class="book-card" href="${rel(rootDepth, 'books/' + b.slug + '.html')}">
+    ${badge}
     ${img ? `<img class="book-cover-img" src="${img}" alt="${esc(b.en)}" loading="lazy"/>` : ''}
     <div class="min-w-0 flex-1">
       <p class="book-te" lang="te">${b.te}</p>
@@ -273,8 +278,18 @@ function fabAndShell(rootDepth, extraScripts) {
 
   <script src="${base}data.js"></script>
   <script src="${base}stotras-runtime.js"></script>
+  <script src="${base}lang-editor.js"></script>
+  <script src="${base}media-player.js"></script>
+  <script src="${base}text-editor.js"></script>
   <script src="${base}app.js" data-base="${base}"></script>
   ${extraScripts || ''}
+  <footer class="app-footer">
+    <span class="footer-note">Saptarushi · తెలుగు భక్తి — listen &amp; read in the browser</span>
+    <span class="footer-links">
+      <a href="${base}about.html">About</a>
+      <a href="${base}admin.html">Admin</a>
+    </span>
+  </footer>
 </body>
 </html>`;
 }
@@ -907,7 +922,7 @@ function deityPage(slug) {
 function bookPage(slug) {
   const b = bookBySlug(slug);
   const d = deityBySlug(b.deity);
-  const cover = deityImgAsset(b.deity, 1);
+  const cover = b.imageUrl || b.coverUrl || deityImgAsset(b.deity, 1);
   const parts = [];
   parts.push(head(`${b.en} | Saptarushi`, b.en + ' — read ' + b.te + ' in a calm, large-text reader.', 1));
   parts.push(`<div class="bg-parch text-ink min-h-screen">`);

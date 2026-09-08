@@ -139,7 +139,7 @@
         title.classList.remove('editing');
         saveBtn.remove();
         cancelBtn.remove();
-        editBtn.style.display = '';
+        editBtn.style.display = (window.TextEditor && TextEditor.isAdmin()) ? '' : 'none';
         if (save) {
           const newName = title.textContent.trim();
           if (newName && newName !== (track.name || track.file)) {
